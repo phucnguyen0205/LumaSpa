@@ -3,7 +3,9 @@ import { initTranslations } from "@/i18n";
 import Header from "@/components/layout/header/page";
 import ContactSection from "@/components/home/contact-section";
 import Footer from "@/components/layout/footer/page";
-import HeroSection from "@/components/home/hero-section"; // Import component mới tách
+import HeroSection from "@/components/home/hero-section"; 
+import AboutImageSection from "@/components/about-image-section-1";
+import TestimonialSection from "@/components/home/testimonial-section";
 
 interface Props {
   params: Promise<{ locale: string }>; 
@@ -36,7 +38,8 @@ export default async function HomePage({ params }: Props) {
 
       {/* Gọi trực tiếp, không truyền t={t} */}
       <HeroSection /> 
-
+<AboutImageSection imageUrl="/images/sample-spa.jpg" />
+      <TestimonialSection />
       <ContactSection />
       <Footer />
     </main>

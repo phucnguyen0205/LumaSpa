@@ -1,0 +1,20 @@
+{
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Experience intensive treatments at Luma Spa",
+    "items": {
+      "massage_body": {
+        "name": "Therapeutic Body Massage",
+        "desc": "A perfect combination of traditional acupressure and herbal essential oils to relieve muscle tension."
+      },
+      "skin_care": {
+        "name": "Intensive Facial Care",
+        "desc": "Using modern technology and premium nutrients for bright, smooth, and rejuvenated skin."
+      },
+      "hair_care": {
+        "name": "Nourishing Shampoo",
+        "desc": "Relax your mind with herbal shampoo combined with neck and shoulder massage."
+      }
+    }
+  }
+}

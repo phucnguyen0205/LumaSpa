@@ -1,29 +1,36 @@
-import { useEffect, useState } from "react"
-
 export default function Banner() {
 
-  const [banner,setBanner] = useState(null)
+return (
 
-  useEffect(()=>{
-    fetch("/api/banner")
-      .then(res=>res.json())
-      .then(data=>setBanner(data))
-  },[])
+<section className="relative h-[500px]">
 
-  if(!banner) return null
+<img
+src="/images/banner.jpg"
+className="w-full h-full object-cover"
+/>
 
-  return (
+<div className="absolute inset-0 bg-black/40 flex items-center">
 
-    <section className="banner">
+<div className="max-w-7xl mx-auto px-6 text-white">
 
-      <img src={banner.image} />
+<h1 className="text-4xl md:text-6xl font-bold mb-4">
+LumaSpa Luxury
+</h1>
 
-      <div className="banner-content">
-        <h1>{banner.title}</h1>
-        <p>{banner.subtitle}</p>
-      </div>
+<p className="text-lg mb-6">
+Relax your body & mind
+</p>
 
-    </section>
+<button className="bg-pink-600 px-6 py-3 rounded-lg">
+Book Now
+</button>
 
-  )
+</div>
+
+</div>
+
+</section>
+
+)
+
 }

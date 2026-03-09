@@ -1,0 +1,19 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "news": "News",
+    "contact": "Contact",
+    "booking": "Book Now"
+  },
+  "footer": {
+    "about_title": "About Luma Spa",
+    "about_desc": "A sanctuary where natural beauty and energy are restored through professional skin and body care treatments.",
+    "links_title": "Quick Links",
+    "services_title": "Our Services",
+    "copyright": "© 2026 LumaSpa. All rights reserved.",
+    "address_label": "Our Location:",
+    "working_hours": "Opening Hours: 09:00 - 21:00 (Mon - Sun)"
+  }
+}

@@ -1,12 +1,29 @@
 {
-  "hero": {
-    "title": "LUMA SPA",
-    "subtitle": "AWAKEN YOUR NATURAL BEAUTY",
-    "description": "Experience 5-star skincare treatments with our leading team of experts.",
-    "cta": "DISCOVER SERVICES"
-  },
-  "intro": {
-    "title": "Why Choose Us",
-    "description": "We combine traditional techniques with modern technology to provide the best relaxation experience."
+  "testimonials": {
+    "title": "Customer Reviews",
+    "subtitle": "Customer experiences at ChillOut Spa",
+    "static_feedback_label": "FEEDBACK",
+    "items": {
+      "customer_1": {
+        "content": "I was introduced by an acquaintance; our team had 4 people. The salt rock sauna is spacious and comfortable. The staff's attitude here is extremely good.",
+        "author": "Nhat Anh Tran",
+        "role": "Traveler (Vietnam)"
+      },
+      "customer_2": {
+        "content": "Professional therapists and extremely clean facilities. The salt rock sauna is a must-try. Best relaxation in Da Nang!",
+        "author": "James Wilson",
+        "role": "Traveler (UK)"
+      },
+      "customer_3": {
+        "content": "The best spa center in Da Nang. Elegant environment and professional techniques. Highly recommended for tourists seeking a high-quality experience.",
+        "author": "Li Wei",
+        "role": "Tourist (China)"
+      },
+      "customer_4": {
+        "content": "It was the most satisfying spa in Da Nang. The salt room is very large and pleasant, and the staff are friendly.",
+        "author": "Park Ji-hye",
+        "role": "Tourist (Korea)"
+      }
+    }
   }
 }

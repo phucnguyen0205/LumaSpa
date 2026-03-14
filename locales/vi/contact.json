@@ -1,15 +1,9 @@
 {
-  "title": "Liên hệ với chúng tôi",
-  "subtitle": "Hãy để lại thông tin để được đội ngũ chuyên gia tư vấn.",
-  "form": {
-    "name": "Họ và tên *",
-    "phone": "Số điện thoại *",
-    "service": "Dịch vụ quan tâm",
-    "note": "Nội dung cần tư vấn",
-    "submit": "GỬI YÊU CẦU"
-  },
-  "info": {
-    "address": "123 Đường ABC, Quận 1, TP. HCM",
-    "hotline": "090x xxx xxx"
-  }
+"address_label": "Địa chỉ chi nhánh",
+"address_value": "190 Nguyễn Công Trứ, Đà Nẵng, Việt Nam",
+"phone_label": "Hotline đặt lịch",
+"phone_value": "0876 712 808",
+"email_label": "Email hỗ trợ",
+"email_value": "contact@lumaspa.com",
+"find_us": "Tìm đường đến chúng tôi"
 }

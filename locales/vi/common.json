@@ -1,15 +1,3 @@
 {
-  "header": {
-    "home": "Trang chủ",
-    "about": "Giới thiệu",
-    "services": "Dịch vụ",
-    "news": "Tin tức",
-    "contact": "Liên hệ",
-    "booking": "Đặt lịch ngay"
-  },
-  "footer": {
-    "about_title": "Về Luma Spa",
-    "about_desc": "Một chốn thanh tịnh nơi vẻ đẹp tự nhiên và năng lượng được phục hồi thông qua các liệu trình chăm sóc da và cơ thể chuyên nghiệp.",
-    "copyright": "© 2026 LumaSpa. Tất cả quyền được bảo lưu."
-  }
+ 
 }

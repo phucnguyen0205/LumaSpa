@@ -2,14 +2,16 @@
   "title": "Contact Us",
   "subtitle": "Please leave your information, our experts will contact you for the most suitable treatment advice.",
   "address_label": "Address",
-  "address_value": "123 ABC Street, District 1, Ho Chi Minh City",
   "phone_label": "Hotline",
-  "phone_value": "+84 90x xxx xxx",
   "email_label": "Support Email",
   "placeholder_name": "Full Name *",
   "placeholder_phone": "Phone Number *",
   "placeholder_service": "Interested Service",
   "placeholder_note": "How can we help you?",
   "btn_send": "SEND REQUEST",
-  "branch_title": "CONTACT INFORMATION"
+  "find_us": "Find Us on the Map",
+  "branch_title": "CONTACT INFORMATION",
+    "address_value": "190 Nguyen Cong Tru, Da Nang, Vietnam",
+    "phone_value": "+84 876 712 808",
+    "email_value": "contact@lumaspa.com"
 }

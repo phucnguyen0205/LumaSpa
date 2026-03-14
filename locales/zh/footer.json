@@ -1,0 +1,30 @@
+{
+  "about_title": "关于 Luma Spa",
+  "about_desc": "一个通过专业皮肤和身体护理疗程恢复自然美与能量的宁静之所。",
+  "copyright": "© 2026 LumaSpa. 版权所有。",
+  "links_title": "快速链接",
+  "services_title": "服务项目",
+  "address_value": "越南岘港市阮公著路190号",
+  "phone_value": "0876 712 808",
+  "email_value": "contact@lumaspa.com",
+  "working_hours": "营业时间：09:00 - 21:00 (周一至周日)",
+  "privacy_policy": "隐私政策",
+  "terms_of_service": "服务条款",
+  "booking": {
+    "branch_title": "岘港分店"
+  },
+  "header": {
+    "home": "首页",
+    "about": "关于我们",
+    "services": "服务项目",
+    "news": "新闻资讯",
+    "contact": "联系我们",
+    "booking": "立即预约"
+  },
+  "services": {
+    "body_massage": "全身按摩",
+    "facial_care": "面部护理",
+    "herbal_bath": "草本熏蒸",
+    "hot_stone": "热石按摩"
+  }
+}

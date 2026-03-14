@@ -1,0 +1,30 @@
+{
+  "about_title": "About Luma Spa",
+  "about_desc": "A sanctuary where natural beauty and energy are restored through professional skin and body care treatments.",
+  "copyright": "© 2026 LumaSpa. All rights reserved.",
+  "links_title": "Quick Links",
+  "services_title": "Services",
+  "address_value": "190 Nguyen Cong Tru, Da Nang, Vietnam",
+  "phone_value": "0876 712 808",
+  "email_value": "contact@lumaspa.com",
+  "working_hours": "Opening Hours: 09:00 - 21:00 (Mon - Sun)",
+  "privacy_policy": "Privacy Policy",
+  "terms_of_service": "Terms of Service",
+  "booking": {
+    "branch_title": "Da Nang Branch"
+  },
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "news": "News",
+    "contact": "Contact",
+    "booking": "Book Now"
+  },
+  "services": {
+    "body_massage": "Body Massage",
+    "facial_care": "Facial Care",
+    "herbal_bath": "Herbal Steam Bath",
+    "hot_stone": "Hot Stone Massage"
+  }
+}

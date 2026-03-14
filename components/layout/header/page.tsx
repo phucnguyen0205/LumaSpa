@@ -13,7 +13,7 @@ const languages = [
 ];
 
 export default function Header() {
-  const { t, i18n } = useTranslation('common');
+  const { t, i18n } = useTranslation('header');
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   
@@ -55,7 +55,7 @@ export default function Header() {
                 href={href} 
                 className={`text-sm uppercase font-medium transition-colors hover:text-amber-500 ${textColor}`}
               >
-                {t(`header.${item}`)}
+                {t(`${item}`)}
               </Link>
             );
           })}
@@ -94,7 +94,7 @@ export default function Header() {
         <div className="lg:hidden bg-white absolute top-full left-0 w-full shadow-xl border-t py-6 space-y-4 px-6 text-stone-800">
           {['home', 'about', 'services', 'news', 'contact'].map((item) => (
             <Link key={item} href={`/${item}`} className="block text-lg font-medium border-b pb-2" onClick={() => setIsOpen(false)}>
-              {t(`header.${item}`)}
+              {t(`${item}`)}
             </Link>
           ))}
           <div className="flex justify-between items-center pt-4">

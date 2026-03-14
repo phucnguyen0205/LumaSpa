@@ -31,7 +31,7 @@ export default function HeroSection() {
   }, [banners]);
 
   return (
-    <section className="relative h-[85vh] w-full flex items-center justify-center overflow-hidden bg-stone-900">
+    <section className="relative h-[100vh] w-full flex items-center justify-center overflow-hidden bg-stone-900">
       {/* Slideshow hiệu ứng mờ dần */}
       {banners.map((src, index) => (
         <div

@@ -1,1 +1,6 @@
-"home": "首页", "about": "关于我们", "services": "服务", "news": "新闻", "contact": "联系我们", "booking": "立即預約"
+{
+  "booking": {
+    "branch_title": "岘港分店",
+    "book_now": "立即預約"
+  }
+}

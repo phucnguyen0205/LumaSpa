@@ -43,7 +43,7 @@ export default function AboutImageSection({ imageUrl }: { imageUrl: string }) {
       className="relative w-full overflow-hidden bg-white"
     >
       {/* Giữ nguyên kích thước khung h-[60vh] md:h-[65vh] của bạn */}
-      <div className="relative h-[60vh] md:h-[65vh] w-full overflow-hidden">
+      <div className="relative h-[60vh] md:h-[70vh] w-full overflow-hidden">
         
         {/* PHẦN QUAN TRỌNG: 
             - Bỏ hoàn toàn 'bg-fixed'.

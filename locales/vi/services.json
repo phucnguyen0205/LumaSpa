@@ -1,25 +1,6 @@
 {
-  "services": {
-    "title": "Dịch vụ của chúng tôi",
-    "subtitle": "Trải nghiệm những liệu trình chăm sóc chuyên sâu tại Luma Spa",
-    "view_all": "Xem tất cả dịch vụ",
-    "items": {
-      "massage_body": {
-        "name": "Massage Body Trị Liệu",
-        "desc": "Sự kết hợp hoàn hảo giữa kỹ thuật ấn huyệt truyền thống và tinh dầu thảo mộc giúp giảm căng thẳng cơ bắp."
-      },
-      "skin_care": {
-        "name": "Chăm sóc da mặt chuyên sâu",
-        "desc": "Sử dụng công nghệ hiện đại cùng dưỡng chất cao cấp giúp làn da trắng sáng, mịn màng và trẻ hóa."
-      },
-      "hair_care": {
-        "name": "Gội đầu dưỡng sinh",
-        "desc": "Thư giãn tinh thần với liệu trình gội đầu thảo dược kết hợp massage cổ vai gáy giảm mệt mỏi."
-      },
-      "detox": {
-        "name": "Liệu trình Detox cơ thể",
-        "desc": "Thanh lọc độc tố, cải thiện lưu thông máu và mang lại nguồn năng lượng mới cho cơ thể."
-      }
-    }
-  }
+  "body_massage": "Massage Toàn Thân",
+    "facial_care": "Chăm sóc da mặt",
+    "herbal_bath": "Xông hơi thảo dược",
+    "hot_stone": "Massage đá nóng"
 }

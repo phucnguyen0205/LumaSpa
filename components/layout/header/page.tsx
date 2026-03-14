@@ -32,20 +32,18 @@ export default function Header() {
     setIsOpen(false);
   };
 
-  // Xác định màu chữ chủ đạo dựa trên trạng thái cuộn
   const textColor = isScrolled ? 'text-stone-800' : 'text-white';
-  const amberColor = 'text-amber-500';
 
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         
-        {/* LOGO */}
-        <Link href="/" className="text-2xl font-serif font-bold tracking-tighter text-amber-600">
+        {/* LOGO - Đã chuyển sang font-sans */}
+        <Link href="/" className="text-2xl font-sans font-extrabold tracking-[0.05em] text-amber-600">
           LUMA<span className={isScrolled ? 'text-stone-800' : 'text-white'}>SPA</span>
         </Link>
 
-        {/* DESKTOP MENU */}
+        {/* DESKTOP MENU - font-sans */}
         <nav className="hidden lg:flex space-x-8 items-center">
           {['home', 'about', 'services', 'news', 'contact'].map((item) => {
             const href = item === 'home' ? '/' : `/${item}`;
@@ -53,7 +51,7 @@ export default function Header() {
               <Link 
                 key={item} 
                 href={href} 
-                className={`text-sm uppercase font-medium transition-colors hover:text-amber-500 ${textColor}`}
+                className={`text-[13px] uppercase font-sans font-semibold tracking-[0.1em] transition-colors hover:text-amber-500 ${textColor}`}
               >
                 {t(`${item}`)}
               </Link>
@@ -61,20 +59,20 @@ export default function Header() {
           })}
         </nav>
 
-        {/* RIGHT SECTION */}
+        {/* RIGHT SECTION - font-sans */}
         <div className="hidden lg:flex items-center space-x-6">
           <div className="group relative py-2">
-            <button className={`flex items-center space-x-1 text-sm font-medium transition-colors hover:text-amber-500 ${textColor}`}>
+            <button className={`flex items-center space-x-1 text-sm font-sans font-medium transition-colors hover:text-amber-500 ${textColor}`}>
               <Globe size={18} className="text-amber-500" />
-              <span className="uppercase">{i18n.language}</span>
+              <span className="uppercase tracking-wider">{i18n.language}</span>
             </button>
             
-            <div className="absolute right-0 top-full w-32 bg-white border shadow-xl hidden group-hover:block rounded-md overflow-hidden animate-in fade-in slide-in-from-top-1 text-stone-800">
+            <div className="absolute right-0 top-full w-32 bg-white border shadow-xl hidden group-hover:block rounded-md overflow-hidden text-stone-800">
               {languages.map((lang) => (
                 <button
                   key={lang.code}
                   onClick={() => changeLanguage(lang.code)}
-                  className={`block w-full text-left px-4 py-2 text-xs hover:bg-amber-50 ${i18n.language === lang.code ? 'text-amber-600 font-bold bg-amber-50/50' : 'text-stone-600'}`}
+                  className={`block w-full text-left px-4 py-2 text-xs font-sans hover:bg-amber-50 ${i18n.language === lang.code ? 'text-amber-600 font-bold bg-amber-50/50' : 'text-stone-600'}`}
                 >
                   {lang.label}
                 </button>
@@ -84,28 +82,42 @@ export default function Header() {
         </div>
 
         {/* MOBILE MENU BUTTON */}
-        <button className={isScrolled ? 'text-stone-800' : 'text-white'} onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        <div className="lg:hidden flex items-center">
+            <button className={isScrolled ? 'text-stone-800' : 'text-white'} onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+        </div>
       </div>
 
-      {/* MOBILE MENU DRAWER */}
+      {/* MOBILE MENU DRAWER - font-sans */}
       {isOpen && (
-        <div className="lg:hidden bg-white absolute top-full left-0 w-full shadow-xl border-t py-6 space-y-4 px-6 text-stone-800">
+        <div className="lg:hidden bg-white absolute top-full left-0 w-full shadow-xl border-t py-6 space-y-4 px-6 text-stone-800 font-sans">
           {['home', 'about', 'services', 'news', 'contact'].map((item) => (
-            <Link key={item} href={`/${item}`} className="block text-lg font-medium border-b pb-2" onClick={() => setIsOpen(false)}>
+            <Link 
+              key={item} 
+              href={`/${item}`} 
+              className="block text-lg font-sans font-medium border-b border-stone-100 pb-2 tracking-wide" 
+              onClick={() => setIsOpen(false)}
+            >
               {t(`${item}`)}
             </Link>
           ))}
-          <div className="flex justify-between items-center pt-4">
-            <div className="flex space-x-3">
+          <div className="flex justify-between items-center pt-4 font-sans">
+            <div className="flex space-x-4">
               {languages.map(l => (
-                <button key={l.code} onClick={() => changeLanguage(l.code)} className={`text-xs p-1 ${i18n.language === l.code ? 'font-bold underline text-amber-600' : 'text-stone-500'}`}>
+                <button 
+                  key={l.code} 
+                  onClick={() => changeLanguage(l.code)} 
+                  className={`text-xs font-sans p-1 ${i18n.language === l.code ? 'font-bold underline text-amber-600' : 'text-stone-500'}`}
+                >
                   {l.code.toUpperCase()}
                 </button>
               ))}
             </div>
-            <Phone size={20} className="text-amber-600" />
+            <a href="tel:0876712808" className="flex items-center space-x-2 text-amber-600">
+              <span className="text-sm font-bold font-sans">HOTLINE</span>
+              <Phone size={20} />
+            </a>
           </div>
         </div>
       )}

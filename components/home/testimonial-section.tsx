@@ -13,13 +13,13 @@ export default function TestimonialSection() {
   return (
     <section className="bg-white py-16 md:py-24">
       <div className="container mx-auto px-4 max-w-7xl">
-        <div className="bg-[#D1B673] rounded-sm p-8 md:p-20 shadow-sm relative overflow-hidden">
+        <div className="bg-[#FFCC66] rounded-sm p-8 md:p-20 shadow-sm relative overflow-hidden">
           <div className="flex flex-col md:flex-row gap-16 items-start relative z-10">
             
             {/* CỘT TRÁI: KHUNG ẢNH CỐ ĐỊNH (GIỐNG ẢNH MẪU) */}
             <div className="w-full md:w-5/12 flex flex-col">
               <div className="mb-10 text-center md:text-left">
-                <h2 className="text-3xl md:text-5xl font-serif text-stone-800 mb-3 tracking-tight">
+                <h2 className="text-3xl md:text-4xl font-serif text-stone-800 mb-3 tracking-tight">
                   {t("testimonials.title")}
                 </h2>
                 <p className="text-stone-700 text-sm md:text-base italic font-light">
@@ -27,8 +27,8 @@ export default function TestimonialSection() {
                 </p>
               </div>
 
-              <div className="relative w-full aspect-square bg-[#5F6F52] rounded-sm shadow-2xl flex items-center justify-center overflow-hidden">
-                <span className="text-white/10 font-serif text-7xl md:text-[9rem] font-bold uppercase rotate-[-12deg] select-none">
+              <div className="relative w-full aspect-square bg-[#924816] rounded-sm shadow-2xl flex items-center justify-center overflow-hidden">
+                <span className="text-white/10 font-serif text-7xl md:text-[2rem] font-bold uppercase rotate-[-25deg] select-none">
                   {t("testimonials.static_feedback_label")}
                 </span>
 

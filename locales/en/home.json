@@ -1,7 +1,15 @@
 {
+  "seo": {
+    "title": "Luma Spa | Professional Massage & Foot Care in Da Nang",
+    "description": "Experience professional foot and body massage services in Da Nang. Luma Spa offers a cozy space and dedicated therapists."
+  },
+  "hero": {
+    "title": "Relax Your Body and Mind at Luma Spa",
+    "sub_title": "Professional Foot & Body Care"
+  },
   "testimonials": {
     "title": "Customer Reviews",
-    "subtitle": "Customer experiences at ChillOut Spa",
+    "subtitle": "Customer experiences at Luma Spa",
     "static_feedback_label": "FEEDBACK",
     "items": {
       "customer_1": {

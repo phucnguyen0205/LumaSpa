@@ -1,0 +1,46 @@
+{
+    "seo": {
+      "title": "Về Luma Spa | Spa Massage Đà Nẵng Thư Giãn & Chuyên Nghiệp",
+      "description": "Luma Spa - spa massage Đà Nẵng chuyên nghiệp, thư giãn với liệu trình foot & body care cao cấp. Đặt lịch ngay hôm nay!"
+    },
+    "hero": {
+      "title_part1": "Không chỉ là thư giãn, ",
+      "title_part2": "mà là hành trình phục hồi năng lượng",
+      "description": "Luma Spa mang đến trải nghiệm chăm sóc Foot & Body theo phong cách ấm áp, tinh tế và chuyên nghiệp. Chúng tôi tin rằng một cơ thể thư giãn là nền tảng của một tinh thần cân bằng."
+    },
+    "common": {
+      "view_services": "Xem dịch vụ",
+      "contact_now": "Liên hệ ngay"
+    },
+    "intro": {
+      "sublabel": "Về chúng tôi",
+      "title": "Một không gian chăm sóc cơ thể nhẹ nhàng và tinh tế",
+      "description_1": "Tại Luma Spa, chúng tôi tập trung vào trải nghiệm thư giãn toàn diện với các liệu trình foot massage, body massage, chăm sóc cơ thể và phục hồi năng lượng. Mỗi liệu trình đều được xây dựng để giúp khách hàng giảm căng thẳng, cải thiện tuần hoàn và tái tạo sự cân bằng.",
+      "description_2": "Không gian spa được thiết kế ấm cúng, mùi hương dễ chịu, đội ngũ kỹ thuật viên tận tâm và quy trình phục vụ chuyên nghiệp nhằm mang đến cảm giác thư thái ngay từ lần đầu trải nghiệm."
+    },
+    "features": {
+      "sublabel": "Điểm nổi bật",
+      "title": "Vì sao khách hàng chọn Luma Spa",
+      "item_1": {
+        "icon": "🌿",
+        "title": "Liệu trình thư giãn chuyên sâu",
+        "description": "Kết hợp kỹ thuật massage bài bản với trải nghiệm nhẹ nhàng, phù hợp cho khách hàng cần phục hồi sau ngày dài làm việc."
+      },
+      "item_2": {
+        "icon": "✨",
+        "title": "Không gian tinh tế, sạch sẽ",
+        "description": "Thiết kế ấm áp, ánh sáng dịu, mùi hương dễ chịu và tiêu chuẩn vệ sinh được chú trọng trong từng chi tiết."
+      },
+      "item_3": {
+        "icon": "💆",
+        "title": "Đội ngũ tận tâm",
+        "description": "Kỹ thuật viên được đào tạo kỹ năng chăm sóc khách hàng và thao tác chuyên nghiệp để mang lại cảm giác an tâm khi trải nghiệm."
+      }
+    },
+    "cta": {
+      "sublabel": "Trải nghiệm cùng Luma Spa",
+      "title": "Chăm sóc cơ thể, nuôi dưỡng sự thư thái",
+      "description": "Đặt lịch ngay hôm nay để tận hưởng không gian thư giãn và các liệu trình chăm sóc chuyên nghiệp dành riêng cho bạn.",
+      "button": "Đặt lịch tư vấn"
+    }
+}

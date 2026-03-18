@@ -1,3 +1,47 @@
 {
-  
+  "header": {
+    "home": "홈",
+    "about": "소개",
+    "services": "서비스",
+    "news": "뉴스",
+    "contact": "문의하기",
+    "booking": "예약하기"
+  },
+  "contact": {
+    "address_label": "지점 주소",
+    "address_val": "베트남 다낭, 190 Nguyen Cong Tru",
+    "phone_label": "예약 핫라인",
+    "phone_val": "+84 876 712 808",
+    "email_label": "지원 이메일",
+    "email_val": "contact@lumaspa.com",
+    "find_us": "지도에서 찾기",
+    "branch_name": "루마 스파 (Luma Spa) - 다낭 지점"
+  },
+  "booking": {
+    "booking_title": "상담 및 예약",
+    "booking_subtitle": "정보를 남겨주시면 가장 적합한 프로그램을 안내해 드리겠습니다.",
+    "placeholder_name": "성함 *",
+    "placeholder_phone": "연락처 *",
+    "placeholder_service": "관심 있는 서비스 선택",
+    "placeholder_note": "기타 요청 사항",
+    "btn_send": "지금 예약하기",
+    "success_msg": "예약이 접수되었습니다! 곧 연락드리겠습니다.",
+    "branch_title": "다낭 지점"
+  },
+  "footer": {
+    "about_title": "루마 스파 소개",
+    "about_desc": "전문적인 피부 및 바디 케어 프로그램을 통해 자연스러운 아름다움과 에너지를 되찾아 드리는 휴식 공간입니다.",
+    "links_title": "퀵 링크",
+    "services_title": "주요 서비스",
+    "working_hours": "영업시간: 09:00 - 21:00 (월 - 일)",
+    "copyright": "© 2026 LumaSpa. All rights reserved.",
+    "privacy_policy": "개인정보 처리방침",
+    "terms_of_service": "이용약관"
+  },
+  "services": {
+    "body_massage": "전신 마사지",
+    "facial_care": "페이셜 케어",
+    "herbal_bath": "한방 목욕",
+    "hot_stone": "핫스톤 테라피"
+  }
 }

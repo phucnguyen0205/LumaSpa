@@ -1,12 +1,20 @@
 {
+  "seo": {
+    "title": "Luma Spa | 岘港专业按摩与足部护理",
+    "description": "在岘港体验专业的足部和全身按摩服务。Luma Spa 提供温馨的空间和敬业的技师。"
+  },
+  "hero": {
+    "title": "在 Luma Spa 放松身心",
+    "sub_title": "专业的足部和身体护理"
+  },
   "testimonials": {
     "title": "고객 후기",
-    "subtitle": "ChillOut 스파에서의 고객 경험",
+    "subtitle": "Luma Spa 스파에서의 고객 경험",
     "static_feedback_label": "피드백",
     "items": {
       "customer_1": {
         "content": "지인의 소개로 4명이 함께 방문했습니다. 암염 사우나가 넓고 편안합니다. 직원들의 서비스 태도가 매우 좋습니다.",
-        "author": "쩐녓안",
+        "author": "쩐<tool_call>안",
         "role": "관광객 (베트남)"
       },
       "customer_2": {

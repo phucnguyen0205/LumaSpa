@@ -1,7 +1,15 @@
 {
+  "seo": {
+    "title": "Luma Spa | 岘港专业按摩与足部护理",
+    "description": "在岘港体验专业的足部和全身按摩服务。Luma Spa 提供温馨的空间和敬业的技师。"
+  },
+  "hero": {
+    "title": "在 Luma Spa 放松身心",
+    "sub_title": "专业的足部和身体护理"
+  },
   "testimonials": {
     "title": "客户评价",
-    "subtitle": "ChillOut Spa 的客户体验",
+    "subtitle": "Luma Spa 的客户体验",
     "static_feedback_label": "反馈",
     "items": {
       "customer_1": {

@@ -1,7 +1,15 @@
 {
+  "seo": {
+    "title": "Luma Spa | Foot & Body Massage Đà Nẵng Thư Giãn Tinh Tế",
+    "description": "Trải nghiệm dịch vụ massage chân và toàn thân chuyên nghiệp tại Đà Nẵng. Không gian ấm cúng, kỹ thuật viên tận tâm tại Luma Spa."
+  },
+  "hero": {
+    "title": "...",
+    "description": "..."
+  },
   "testimonials": {
     "title": "Đánh Giá Khách Hàng",
-    "subtitle": "Trải nghiệm của khách hàng tại ChillOut Spa",
+    "subtitle": "Trải nghiệm của khách hàng tại Luma Spa",
     "static_feedback_label": "FEEDBACK",
     "items": {
       "customer_1": {

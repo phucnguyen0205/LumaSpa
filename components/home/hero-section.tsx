@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
 export default function HeroSection() {
@@ -12,8 +11,12 @@ export default function HeroSection() {
     const loadBanners = () => {
       const saved = localStorage.getItem("luma_banners");
       if (saved) {
-        const parsed = JSON.parse(saved);
-        if (parsed.length > 0) setBanners(parsed);
+        try {
+          const parsed = JSON.parse(saved);
+          if (parsed.length > 0) setBanners(parsed);
+        } catch (e) {
+          console.error("Error parsing banners:", e);
+        }
       }
     };
 
@@ -26,13 +29,13 @@ export default function HeroSection() {
     if (banners.length <= 1) return;
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % banners.length);
-    }, 10000);
+    }, 5000);
     return () => clearInterval(interval);
   }, [banners]);
 
   return (
-    <section className="relative h-[100vh] w-full flex items-center justify-center overflow-hidden bg-stone-900">
-      {/* Slideshow hiệu ứng mờ dần */}
+    <section className="relative h-[100vh] w-full flex items-center justify-center overflow-hidden bg-stone-100">
+      {/* Slideshow hiệu ứng mờ dần cũ */}
       {banners.map((src, index) => (
         <div
           key={index}
@@ -40,32 +43,35 @@ export default function HeroSection() {
             index === currentIndex ? "opacity-100" : "opacity-0"
           }`}
         >
-          {/* Vì ảnh Base64 từ máy tính không có kích thước định sẵn, 
-              dùng thẻ img chuẩn hoặc unoptimized Image của Next.js */}
           <img
             src={src}
             alt="Luma Spa Banner"
-            className="w-full h-full object-cover brightness-[0.65]"
+            // brightness-[0.8] giúp giảm vùng tối (sáng hơn mức 0.65 cũ)
+            className="w-full h-full object-cover brightness-[0.8]"
           />
         </div>
       ))}
 
+      {/* Lớp phủ nhẹ ở dưới để chữ trắng vẫn nổi bật nhưng không làm tối toàn bộ banner */}
+      <div className="absolute inset-0 bg-black/10 z-[5]" />
+
       {/* Nội dung chữ */}
-      <div className="relative z-10 text-center text-white px-4 max-w-4xl">
-        <h2 className="text-amber-500 font-medium tracking-[0.4em] mb-4 uppercase drop-shadow-md">
+      <div className="relative z-10 text-center text-white px-4 max-w-4xl drop-shadow-sm">
+        <h2 className="text-[#dcc296] font-medium tracking-[0.4em] mb-4 uppercase">
           {t("hero.subtitle")}
         </h2>
-        <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 tracking-tight drop-shadow-lg">
+        <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 tracking-tight">
           {t("hero.title")}
         </h1>
         <p className="text-lg md:text-xl mb-10 font-light text-stone-100 max-w-2xl mx-auto">
           {t("hero.description")}
         </p>
-        <button className="group relative overflow-hidden border-2 border-amber-600 px-12 py-4 transition-all duration-300">
-          <span className="relative z-10 text-amber-500 group-hover:text-white font-bold tracking-widest uppercase">
+        
+        <button className="group relative overflow-hidden border-2 border-[#dcc296] px-12 py-4 transition-all duration-300">
+          <span className="relative z-10 text-[#dcc296] group-hover:text-white font-bold tracking-widest uppercase">
             {t("hero.cta")}
           </span>
-          <div className="absolute inset-0 bg-amber-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+          <div className="absolute inset-0 bg-[#dcc296] translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
         </button>
       </div>
 
@@ -77,7 +83,7 @@ export default function HeroSection() {
               key={i}
               onClick={() => setCurrentIndex(i)}
               className={`h-1 transition-all duration-500 ${
-                i === currentIndex ? "w-12 bg-amber-500" : "w-4 bg-white/30"
+                i === currentIndex ? "w-12 bg-[#dcc296]" : "w-4 bg-white/40"
               }`}
             />
           ))}

@@ -54,7 +54,7 @@ export default function Header() {
     },
     [pathname, locale, router]
   );
-
+  const SERVICES_PATH = `/${locale}/spa-services`;
   const textColor = isScrolled ? "text-stone-900" : "text-white";
 
   return (
@@ -66,23 +66,35 @@ export default function Header() {
           LUMA<span className={isScrolled ? "text-stone-900" : "text-white"}>SPA</span>
         </Link>
 
-        {/* DESKTOP NAVIGATION (Giữ nguyên không đổi) */}
+        {/* DESKTOP NAVIGATION */}
         <nav className="hidden lg:flex items-center space-x-10">
           <Link href={`/${locale}`} className={`text-[12px] uppercase font-serif font-bold tracking-[0.08em] transition hover:text-[#d48a1f] ${textColor}`}>{t("home")}</Link>
           <Link href={`/${locale}/about`} className={`text-[12px] uppercase font-serif font-bold tracking-[0.08em] transition hover:text-[#d48a1f] ${textColor}`}>{t("about")}</Link>
 
-          <div className="relative group" onMouseEnter={() => setShowServices(true)} onMouseLeave={() => setShowServices(false)}>
-            <button className={`flex items-center gap-1 text-[12px] uppercase font-serif font-bold tracking-[0.08em] transition hover:text-[#d48a1f] ${textColor}`}>
+          {/* DỊCH VỤ - ĐÃ THÊM LINK CLICKABLE */}
+          <div 
+            className="relative group" 
+            onMouseEnter={() => setShowServices(true)} 
+            onMouseLeave={() => setShowServices(false)}
+          >
+            {/* Chuyển button thành Link để click dẫn về trang tổng */}
+            <Link 
+              href={SERVICES_PATH}
+              className={`flex items-center gap-1 text-[12px] uppercase font-serif font-bold tracking-[0.08em] transition hover:text-[#d48a1f] ${textColor}`}
+            >
               {t("services")}
               <ChevronDown size={14} className={`transition-transform duration-300 ${showServices ? "rotate-180" : ""}`} />
-            </button>
+            </Link>
+
             <AnimatePresence>
               {showServices && (
                 <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} className="absolute top-full left-0 w-[280px] bg-white shadow-2xl rounded-lg mt-2 border border-stone-100 overflow-hidden">
                   <ul className="py-2">
                     {SERVICES_LIST.map((item) => (
                       <li key={item.key}>
-                        <Link href={`/${locale}/services/${item.slug}`} className="block px-6 py-3.5 font-serif font-bold text-[12px] text-stone-800 hover:bg-stone-50 hover:text-[#d48a1f] border-b border-stone-50 last:border-0 uppercase tracking-wider">{t(item.key)}</Link>
+                        <Link href={`/${locale}/services/${item.slug}`} className="block px-6 py-3.5 font-serif font-bold text-[12px] text-stone-800 hover:bg-stone-50 hover:text-[#d48a1f] border-b border-stone-50 last:border-0 uppercase tracking-wider">
+                          {t(item.key)}
+                        </Link>
                       </li>
                     ))}
                   </ul>

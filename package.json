@@ -16,6 +16,7 @@
     "framer-motion": "^12.38.0",
     "i18next": "^25.8.14",
     "i18next-resources-to-backend": "^1.2.1",
+    "js-cookie": "^3.0.5",
     "lucide-react": "^0.577.0",
     "next": "16.1.6",
     "next-intl": "^4.8.3",
@@ -31,6 +32,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/js-cookie": "^3.0.6",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

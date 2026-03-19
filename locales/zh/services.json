@@ -1,6 +1,26 @@
 {
-    "body_massage": "全身按摩",
-    "facial_care": "面部护理",
-    "herbal_bath": "草本沐浴",
-    "hot_stone": "热石疗法"
+   "hero": {
+      "quote": "放松是重生的开始",
+      "description": "在 Luma Spa，我们提供宁静的空间和深层疗法，帮助您找回身心的平衡。"
+    },
+    "menu": {
+      "updating": "服务菜单图片正在更新中...",
+      "alt": "Luma Spa 服务菜单"
+    },
+    "about": {
+      "subtitle": "在 Luma Spa 尽情放松",
+      "title": "客户是我们的核心价值",
+      "description": "Luma Spa 不断探索和学习新的治疗方法，以满足客户不断变化的需求。",
+      "contact": "联系我们"
+    },
+    "features": {
+      "tagline": "健康与放松",
+      "main_title": "为您量身定制的体验",
+      "item_1_title": "深度疗法",
+      "item_1_desc": "针对个人身体状况量身定制的治疗方法。",
+      "item_2_title": "专业团队",
+      "item_2_desc": "经验丰富、敬业且专业知识渊博的技术团队。",
+      "item_3_title": "宁静空间",
+      "item_3_desc": "伴随着柔和音乐和香气的绝对放松环境。"
+    }
 }

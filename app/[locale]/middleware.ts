@@ -1,19 +1,23 @@
+// middleware.ts
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  const ADMIN_PREFIX = '/mkt-@68';
+  const locales = ['vi', 'en', 'zh', 'ko'];
+  
+  // Kiểm tra prefix có dấu @ theo đúng ảnh cấu trúc thư mục
+  const isAdminRoute = locales.some(locale => pathname.startsWith(`/${locale}/mkt-@68`));
 
-  if (pathname.startsWith(ADMIN_PREFIX)) {
+  if (isAdminRoute) {
+    const currentLocale = pathname.split('/')[1];
+    const adminBase = `/${currentLocale}/mkt-68`;
     const token = request.cookies.get('admin_token')?.value;
-    if (!token && pathname !== `${ADMIN_PREFIX}/login`) {
-      return NextResponse.redirect(new URL(`${ADMIN_PREFIX}/login`, request.url));
+
+    if (!token && pathname !== `${adminBase}/login`) {
+      return NextResponse.redirect(new URL(`${adminBase}/login`, request.url));
     }
   }
+
   return NextResponse.next();
 }
-
-export const config = {
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
-};

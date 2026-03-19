@@ -7,7 +7,7 @@ export default function TestimonialSlider({ items }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
-  const AUTO_PLAY_INTERVAL = 3500;
+  const AUTO_PLAY_INTERVAL = 4000;
 
   useEffect(() => {
     if (isPaused) return; 

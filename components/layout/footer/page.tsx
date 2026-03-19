@@ -80,7 +80,7 @@ export default function Footer() {
 
             <div className="flex items-center gap-3 text-[14px] text-[#555]">
               <Mail className="shrink-0 text-[#a85a11]" size={16} />
-              <p itemProp="email">{t("email_val", { ns: "contact" })}</p>
+              <p itemProp="email">{t("email_value", { ns: "footer" })}</p>
             </div>
 
             <div className="w-full max-w-[160px] overflow-hidden rounded-md border-[3px] border-[#8b4300] bg-white shadow-sm mt-2">

@@ -3,36 +3,64 @@ import "./globals.css";
 import { initTranslations } from "@/i18n"; 
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server"; // 1. Thêm dòng này
 
-export default async function RootLayout({
-  children,
-  params
-}: {
+interface Props {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>; // Nhận params từ URL
-}) {
-  // 1. Lấy locale động từ params
+  params: Promise<{ locale: string }>;
+}
+
+export default async function RootLayout({ children, params }: Props) {
   const { locale } = await params;
 
-  // 2. Kiểm tra nếu locale không hợp lệ thì báo 404 (Tốt cho SEO)
+  // Kiểm tra locale hợp lệ
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
 
-  // 3. Load các bản dịch cơ bản dùng chung cho toàn bộ trang (header, footer, common)
-  const namespaces = ['common', 'header', 'footer'];
+  // 2. Lấy messages cho NextIntlClientProvider
+  const messages = await getMessages({ locale });
+
+  // 3. Load resources cho i18n (nếu bạn vẫn dùng i18next song song)
+  const namespaces = ['common', 'header', 'footer', 'services'];
   const { resources } = await initTranslations(locale, namespaces);
+
+  // 3. Schema SEO
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Spa",
+    name: "Luma Spa",
+    image: "https://yourdomain.com/logo.jpg",
+    telephone: "0876712808",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Da Nang, Vietnam",
+      addressLocality: "Da Nang",
+      addressCountry: "VN",
+    },
+  };
+
 
   return (
     <html lang={locale}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      </head>
       <body className="antialiased">
-        <TranslationsProvider 
-          locale={locale} 
-          namespaces={namespaces} 
-          resources={resources}
-        >
-          {children}
-        </TranslationsProvider>
+        {/* Bọc các Provider đúng thứ tự */}
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <TranslationsProvider 
+            locale={locale} 
+            namespaces={namespaces} 
+            resources={resources}
+          >
+            {children}
+          </TranslationsProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

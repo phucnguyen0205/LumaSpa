@@ -8,7 +8,7 @@ interface Props {
   params: Promise<{ locale: string }>;
 }
 
-const DOMAIN = "https://lumaspa.vn"; 
+const DOMAIN = "https://lumaspa..com.vn"; 
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
@@ -100,13 +100,16 @@ export default async function AboutPage({ params }: Props) {
         {t("hero.description")}
       </p>
 
-      <div className="mt-8 flex flex-wrap gap-4">
+    <div className="mt-8 flex flex-wrap gap-4">
+        {/* Nút Xem dịch vụ - Đã sửa link thành /spa-services và dùng font cũ */}
         <Link
-          href={`/${locale}/services`}
-          className="rounded-full bg-[#e7b56a] px-6 py-3 text-sm font-semibold text-[#2f241f] transition hover:scale-[1.02]"
+          href={`/${locale}/spa-services`}
+          className="rounded-full bg-[#e7b56a] px-6 py-3 text-sm font-semibold text-[#2f241f] transition hover:scale-[1.02] shadow-md"
         >
           {t("common.view_services")}
         </Link>
+
+        {/* Nút Liên hệ - Dùng font cũ */}
         <Link
           href={`/${locale}/contact`}
           className="rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"

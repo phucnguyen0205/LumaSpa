@@ -1,20 +1,26 @@
 {
-  "services": {
-    "title": "Our Services",
-    "subtitle": "Experience intensive treatments at Luma Spa",
-    "items": {
-      "massage_body": {
-        "name": "Therapeutic Body Massage",
-        "desc": "A perfect combination of traditional acupressure and herbal essential oils to relieve muscle tension."
-      },
-      "skin_care": {
-        "name": "Intensive Facial Care",
-        "desc": "Using modern technology and premium nutrients for bright, smooth, and rejuvenated skin."
-      },
-      "hair_care": {
-        "name": "Nourishing Shampoo",
-        "desc": "Relax your mind with herbal shampoo combined with neck and shoulder massage."
-      }
+    "hero": {
+      "quote": "Relaxation is the beginning of rejuvenation",
+      "description": "At Luma Spa, we provide a peaceful space and intensive therapies to help you find balance for both body and soul."
+    },
+    "menu": {
+      "updating": "Service menu images are being updated...",
+      "alt": "Luma Spa Service Menu"
+    },
+    "about": {
+      "subtitle": "Relax with Luma Spa",
+      "title": "Customers are our core value",
+      "description": "Luma Spa constantly strives to explore and learn new therapeutic methods to meet the ever-evolving needs of our clients.",
+      "contact": "Contact Us"
+    },
+    "features": {
+      "tagline": "Health & Relaxation",
+      "main_title": "Exclusive Experience",
+      "item_1_title": "Intensive Therapy",
+      "item_1_desc": "Therapeutic methods specifically designed for each individual's body condition.",
+      "item_2_title": "Professional Team",
+      "item_2_desc": "Experienced, dedicated, and highly knowledgeable technicians.",
+      "item_3_title": "Quiet Space",
+      "item_3_desc": "An environment of absolute relaxation with gentle music and scents."
     }
   }
-}

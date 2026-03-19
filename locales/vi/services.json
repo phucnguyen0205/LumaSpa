@@ -1,6 +1,26 @@
 {
-  "body_massage": "Massage Toàn Thân",
-    "facial_care": "Chăm sóc da mặt",
-    "herbal_bath": "Xông hơi thảo dược",
-    "hot_stone": "Massage đá nóng"
-}
+ "hero": {
+      "quote": "Thư giãn là khởi đầu của sự tái tạo",
+      "description": "Tại Luma Spa, chúng tôi mang đến không gian yên tĩnh và các liệu pháp chuyên sâu giúp bạn tìm lại sự cân bằng cho cơ thể và tâm hồn."
+    },
+    "menu": {
+      "updating": "Hình ảnh menu dịch vụ đang được cập nhật...",
+      "alt": "Menu dịch vụ Luma Spa"
+    },
+    "about": {
+      "subtitle": "Thư giãn đến với Luma Spa",
+      "title": "Khách hàng là yếu tố cốt lõi",
+      "description": "Luma Spa với khao khát tìm tòi, học hỏi những phương pháp, liệu pháp trị liệu mới để đáp ứng nhu cầu luôn thay đổi của khách hàng.",
+      "contact": "Liên hệ ngay"
+    },
+    "features": {
+      "tagline": "Sức khỏe & Thư giãn",
+      "main_title": "Trải nghiệm dành riêng cho bạn",
+      "item_1_title": "Liệu pháp chuyên sâu",
+      "item_1_desc": "Các phương pháp trị liệu được thiết kế riêng biệt cho từng tình trạng cơ thể.",
+      "item_2_title": "Đội ngũ chuyên nghiệp",
+      "item_2_desc": "Kỹ thuật viên giàu kinh nghiệm, tận tâm và am hiểu chuyên môn.",
+      "item_3_title": "Không gian yên tĩnh",
+      "item_3_desc": "Môi trường thư giãn tuyệt đối với âm nhạc và hương thơm dịu nhẹ."
+    }
+  }

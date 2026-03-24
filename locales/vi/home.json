@@ -4,8 +4,100 @@
     "description": "Trải nghiệm dịch vụ massage chân và toàn thân chuyên nghiệp tại Đà Nẵng. Không gian ấm cúng, kỹ thuật viên tận tâm tại Luma Spa."
   },
   "hero": {
-    "title": "...",
-    "description": "..."
+    "title": "Tái tạo năng lượng tại Luma Spa",
+    "description": "Nơi tâm hồn và cơ thể tìm thấy sự giao thoa nhẹ nhàng giữa không gian tinh tế và kỹ thuật trị liệu chuyên sâu."
+  },
+  "services": {
+    "label": "DỊCH VỤ",
+    "title": "Trải Nghiệm Chăm Sóc Tại Luma Spa",
+    "description": "Khám phá những liệu trình thư giãn được thiết kế để giúp cơ thể thả lỏng, tái tạo năng lượng và tận hưởng sự chăm sóc trọn vẹn trong không gian ấm cúng, tinh tế.",
+    "cta_booking": "Đặt Lịch Ngay",
+    "cta_details": "Chi tiết dịch vụ",
+    "must_try": "Gợi ý nên thử",
+    "best_choice": "LỰA CHỌN TỐT NHẤT",
+    "sections": {
+      "hair_scalp": {
+        "title": "Gội Đầu Dưỡng Sinh & Trị Liệu",
+        "subtitle": "Relax, Renew, Recharge"
+      },
+      "combos": {
+        "title": "Combo Thư Giãn Đặc Biệt",
+        "subtitle": "Ultimate Relaxation Experience"
+      }
+    },
+    "hair_scalp_items": {
+      "sea_calm": {
+        "name": "Sea Calm",
+        "time": "30 Minute",
+        "price": "129k",
+        "items": [
+          "Tẩy trang & Massage mặt",
+          "Đắp mặt nạ dưỡng da",
+          "Gội đầu thư giãn & Massage da đầu"
+        ]
+      },
+      "deep_ocean": {
+        "name": "Deep Ocean",
+        "time": "60 Minute",
+        "price": "239k",
+        "items": [
+          "Tẩy trang & Massage mặt",
+          "Đắp mặt nạ dưỡng da",
+          "Gội đầu thư giãn & Massage da đầu",
+          "Massage chuyên sâu Cổ - Vai - Gáy"
+        ]
+      },
+      "ocean_abyss": {
+        "name": "Ocean Abyss",
+        "time": "90 Minute",
+        "price": "339k",
+        "items": [
+          "Tẩy trang & Massage mặt",
+          "Đắp mặt nạ dưỡng da",
+          "Gội đầu & Massage da đầu",
+          "Massage chuyên sâu Cổ - Vai - Gáy",
+          "Liệu pháp đá nóng thư giãn",
+          "Massage tay nhẹ nhàng"
+        ]
+      }
+    },
+    "combo_items": {
+      "foot_neck_shoulder": "Foot + Neck & Shoulder",
+      "neck_shoulder": "Neck & Shoulder",
+      "foot": "Foot Massage",
+      "body": "Body Massage",
+      "thai": "Thai Massage",
+      "aroma": "Aroma Massage",
+      "extra": "Extra Services",
+      "coin_rubbing": "Cạo gió (Coin rubbing)",
+      "cupping": "Giác hơi (Cupping therapy)"
+    }
+  },
+  "why_choose_us": {
+    "label": "GIÁ TRỊ CỐT LÕI",
+    "title": "Tại Sao Nên Chọn Luma Spa?",
+    "items": {
+      "item_1": {
+        "title": "Kỹ Thuật Viên Chuyên Nghiệp",
+        "desc": "Đội ngũ được đào tạo bài bản, am hiểu sâu về huyệt đạo và kỹ thuật massage trị liệu chuyên sâu."
+      },
+      "item_2": {
+        "title": "Không Gian Tinh Tế",
+        "desc": "Sự kết hợp giữa kiến trúc truyền thống và hiện đại, mang lại cảm giác ấm cúng, riêng tư và thư thái."
+      },
+      "item_3": {
+        "title": "Sản Phẩm Tự Nhiên",
+        "desc": "Chúng tôi sử dụng các loại tinh dầu và thảo mộc 100% từ thiên nhiên, an toàn tuyệt đối cho sức khỏe."
+      },
+      "item_4": {
+        "title": "Trải Nghiệm Cá Nhân Hóa",
+        "desc": "Mỗi khách hàng đều được tư vấn liệu trình riêng biệt để phù hợp nhất với tình trạng sức khỏe hiện tại."
+      }
+    }
+  },
+  "panorama": {
+    "alt": "Không gian 360 độ của Luma Spa",
+    "hint": "Di chuyển để khám phá không gian 360°"
   },
   "testimonials": {
     "title": "Đánh Giá Khách Hàng",
@@ -23,7 +115,7 @@
         "role": "Traveler (UK)"
       },
       "customer_3": {
-        "content": "岘港最好的水疗中心。环境优雅，技术专业。强烈推荐给寻找高品质体验的游客。",
+        "content": "岘港最好的水疗中心。环境优雅，技术专业. 强烈推荐给寻找高品质体验의游客。",
         "author": "Li Wei",
         "role": "Tourist (China)"
       },
@@ -32,6 +124,20 @@
         "author": "Park Ji-hye",
         "role": "Tourist (Korea)"
       }
+    }
+  },
+  "commitments": {
+    "quality": {
+      "title": "Kỹ Thuật Chuyên Sâu",
+      "desc": "Cam kết mang lại hiệu quả trị liệu rõ rệt ngay từ lần đầu trải nghiệm."
+    },
+    "organic": {
+      "title": "Thảo Mộc Tự Nhiên",
+      "desc": "Sử dụng 100% tinh dầu nguyên chất và thảo mộc quý từ thiên nhiên."
+    },
+    "service": {
+      "title": "Tận Tâm Phục Vụ",
+      "desc": "Sự hài lòng và thư giãn tuyệt đối của khách hàng là ưu tiên số một của Luma."
     }
   }
 }

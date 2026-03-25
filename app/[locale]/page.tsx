@@ -4,12 +4,13 @@ import Footer from "@/components/layout/footer/page";
 import HeroSection from "@/components/home/hero-section"; 
 import AboutSection from "@/components/about-section/page";
 import ServicesSection from "@/components/home/services-section";
-import Hotel360Section from "@/components/360-section";
-import WhyChooseUs from "@/components/home/why-choose-us"; // ✅ Đã sửa đường dẫn viết thường
+import Hotel360Section from "@/components/home/360-section";
+import WhyChooseUs from "@/components/home/why-choose-us";
 import TestimonialSection from "@/components/home/testimonial-section";
 import ContactSection from "@/components/home/contact-section";
 import TranslationsProvider from "@/components/translations-provider";
 import CommitmentSection from "@/components/home/commitment-section";
+import NewsAndReview from "@/components/home/review";
 
 interface Props { params: Promise<{ locale: string }>; }
 
@@ -26,7 +27,8 @@ export default async function HomePage({ params }: Props) {
         <AboutSection />
         <ServicesSection />
         <Hotel360Section />
-        <WhyChooseUs /> {/* Hiển thị ngay dưới 360 */}
+        <WhyChooseUs /> 
+        <NewsAndReview />
         <TestimonialSection locale={locale} />
         <CommitmentSection />
         <ContactSection />

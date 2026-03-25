@@ -7,7 +7,7 @@ const AboutSection = () => {
 
   return (
     <section className="relative py-16 px-4 md:px-10 lg:px-20 bg-white overflow-hidden">
-      {/* Background Hoa Sen mờ - Tối ưu SEO bằng cách để alt rỗng vì là ảnh trang trí */}
+      {/* Background Hoa Sen mờ */}
       <div className="absolute left-0 top-1/2 -translate-y-1/2 opacity-10 pointer-events-none">
         <Image
           src="/images/lotus-bg.png"
@@ -26,14 +26,11 @@ const AboutSection = () => {
             <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-wide">
               {t("title")}
             </h2>
-            <div className="flex items-center gap-4">
-              
-            </div>
           </div>
-
+          
           <p className="font-semibold text-lg italic">
-            {t.rich("welcome", {
-              brand: (chunks) => <span className="text-[#b08b57]">Luma SPA</span>
+            {t("welcome", {
+              brand: "Luma SPA" 
             })}
           </p>
 
@@ -52,12 +49,12 @@ const AboutSection = () => {
           </button>
         </div>
 
-        {/* CỘT PHẢI: BỐ CỤC ẢNH - Tối ưu SEO với thẻ Alt chuẩn */}
+        {/* CỘT PHẢI: BỐ CỤC ẢNH - Đã cập nhật file từ folder images */}
         <div className="grid grid-cols-2 gap-4 h-[400px] md:h-[500px]">
           <div className="flex flex-col gap-4 h-full">
             <div className="relative h-1/2 rounded-2xl overflow-hidden shadow-md group">
               <Image
-                src="/images/spa-1.jpg"
+                src="/images/services-img.png"
                 alt={t("image_alt_1")}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -65,7 +62,7 @@ const AboutSection = () => {
             </div>
             <div className="relative h-1/2 rounded-2xl overflow-hidden shadow-md group">
               <Image
-                src="/images/spa-2.jpg"
+                src="/images/interior-img.png"
                 alt={t("image_alt_2")}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -74,7 +71,7 @@ const AboutSection = () => {
           </div>
           <div className="relative h-full rounded-2xl overflow-hidden shadow-md group">
             <Image
-              src="/images/spa-building.jpg"
+              src="/images/about-home-spa.png"
               alt={t("image_alt_3")}
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-110"

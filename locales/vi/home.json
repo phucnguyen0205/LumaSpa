@@ -4,7 +4,7 @@
     "description": "Trải nghiệm dịch vụ massage chân và toàn thân chuyên nghiệp tại Đà Nẵng. Không gian ấm cúng, kỹ thuật viên tận tâm tại Luma Spa."
   },
   "hero": {
-    "title": "Tái tạo năng lượng tại Luma Spa",
+    "title": "Luma Spa",
     "description": "Nơi tâm hồn và cơ thể tìm thấy sự giao thoa nhẹ nhàng giữa không gian tinh tế và kỹ thuật trị liệu chuyên sâu."
   },
   "services": {
@@ -127,6 +127,7 @@
     }
   },
   "commitments": {
+    "label": "Cam kết của chúng tôi",
     "quality": {
       "title": "Kỹ Thuật Chuyên Sâu",
       "desc": "Cam kết mang lại hiệu quả trị liệu rõ rệt ngay từ lần đầu trải nghiệm."

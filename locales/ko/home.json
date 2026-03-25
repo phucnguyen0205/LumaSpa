@@ -1,37 +1,144 @@
 {
   "seo": {
-    "title": "Luma Spa | 岘港专业按摩与足部护理",
-    "description": "在岘港体验专业的足部和全身按摩服务。Luma Spa 提供温馨的空间和敬业的技师。"
+    "title": "루마 스파 (Luma Spa) | 다낭 발 & 바디 마사지 고품격 힐링",
+    "description": "다낭 최고의 전문 발 및 전신 마사지 서비스를 경험하세요. 루마 스파의 아늑한 공간과 정성스러운 테라피스트."
   },
   "hero": {
-    "title": "",
-    "sub_title": "专业的足部和身体护理"
+    "title": "Luma Spa",
+    "description": "섬세한 공간과 전문적인 테라피 기술 사이에서 몸과 마음이 부드러운 조화를 이루는 곳입니다."
+  },
+  "services": {
+    "label": "서비스",
+    "title": "루마 스파에서의 케어 경험",
+    "description": "아늑하고 세련된 공간에서 몸을 이완시키고 에너지를 재생하며 완벽한 케어를 즐길 수 있도록 설계된 휴식 트리트먼트를 만나보세요.",
+    "cta_booking": "지금 예약하기",
+    "cta_details": "서비스 상세 보기",
+    "must_try": "추천 메뉴",
+    "best_choice": "최고의 선택",
+    "sections": {
+      "hair_scalp": {
+        "title": "두피 스파 & 헤어 케어",
+        "subtitle": "Relax, Renew, Recharge"
+      },
+      "combos": {
+        "title": "특별 힐링 콤보",
+        "subtitle": "Ultimate Relaxation Experience"
+      }
+    },
+    "hair_scalp_items": {
+      "sea_calm": {
+        "name": "Sea Calm (씨 캄)",
+        "time": "30분",
+        "price": "129k",
+        "items": [
+          "클렌징 및 얼굴 마사지",
+          "영양 마스크 팩",
+          "릴랙싱 샴푸 및 두피 마사지"
+        ]
+      },
+      "deep_ocean": {
+        "name": "Deep Ocean (딥 오션)",
+        "time": "60분",
+        "price": "239k",
+        "items": [
+          "클렌징 및 얼굴 마사지",
+          "영양 마스크 팩",
+          "릴랙싱 샴푸 및 두피 마사지",
+          "목 · 어깨 집중 마사지"
+        ]
+      },
+      "ocean_abyss": {
+        "name": "Ocean Abyss (오션 어비스)",
+        "time": "90분",
+        "price": "339k",
+        "items": [
+          "클렌징 및 얼굴 마사지",
+          "영양 마스크 팩",
+          "샴푸 및 두피 마사지",
+          "목 · 어깨 집중 마사지",
+          "릴랙싱 핫스톤 테라피",
+          "부드러운 손 마사지"
+        ]
+      }
+    },
+    "combo_items": {
+      "foot_neck_shoulder": "발 + 목 & 어깨",
+      "neck_shoulder": "목 & 어깨",
+      "foot": "발 마사지",
+      "body": "전신 마사지",
+      "thai": "타이 마사지",
+      "aroma": "아로마 마사지",
+      "extra": "추가 서비스",
+      "coin_rubbing": "동전 긁기 (Coin rubbing)",
+      "cupping": "부항 (Cupping)"
+    }
+  },
+  "why_choose_us": {
+    "label": "핵심 가치",
+    "title": "왜 루마 스파인가요?",
+    "items": {
+      "item_1": {
+        "title": "전문 테라피스트",
+        "desc": "혈자리와 전문 마사지 치료 기술을 깊이 이해하고 체계적인 교육을 받은 팀입니다."
+      },
+      "item_2": {
+        "title": "세련된 공간",
+        "desc": "전통과 현대 건축의 조화로 아늑하고 프라이빗하며 편안한 분위기를 제공합니다."
+      },
+      "item_3": {
+        "title": "천연 제품",
+        "desc": "100% 천연 에센셜 오일과 약초만을 사용하여 건강에 절대적으로 안전합니다."
+      },
+      "item_4": {
+        "title": "개인별 맞춤 경험",
+        "desc": "각 고객의 현재 건강 상태에 가장 적합한 개별 맞춤형 트리트먼트를 상담해 드립니다."
+      }
+    }
+  },
+  "panorama": {
+    "alt": "루마 스파 360도 공간",
+    "hint": "360° 공간을 탐색하려면 움직여보세요"
   },
   "testimonials": {
-    "title": "고객 후기",
-    "subtitle": "Luma Spa 스파에서의 고객 경험",
+    "title": "고객 리뷰",
+    "subtitle": "루마 스파에서의 고객 경험",
     "static_feedback_label": "피드백",
     "items": {
       "customer_1": {
-        "content": "지인의 소개로 4명이 함께 방문했습니다. 암염 사우나가 넓고 편안합니다. 직원들의 서비스 태도가 매우 좋습니다.",
-        "author": "쩐<tool_call>안",
-        "role": "관광객 (베트남)"
+        "content": "지인 소개로 4명 팀으로 방문했습니다. 소금방이 넓고 쾌적해서 좋았어요. 직원들의 서비스 태도가 정말 훌륭합니다.",
+        "author": "Tran Nhat Anh",
+        "role": "단골 고객 (베트남)"
       },
       "customer_2": {
-        "content": "전문적인 테라피스트와 매우 깨끗한 시설을 갖추고 있습니다. 암염 사우나는 꼭 경험해봐야 합니다. 다낭 최고의 휴식처!",
-        "author": "제임스 윌슨",
-        "role": "여행자 (영국)"
+        "content": "Professional therapists and extremely clean facilities. The salt rock sauna is a must-try. Best relaxation in Da Nang!",
+        "author": "James Wilson",
+        "role": "여행객 (영국)"
       },
       "customer_3": {
-        "content": "다낭 최고의 스파 센터입니다. 우아한 분위기와 전문적인 기술을 갖추고 있어 고품격 경험을 원하는 관광객에게 강력 추천합니다.",
-        "author": "리웨이",
-        "role": "관광객 (중국)"
+        "content": "岘港最好的水疗中心。环境优雅，技术专业. 强烈推荐给寻找高品质体验의游客。",
+        "author": "Li Wei",
+        "role": "여행객 (중국)"
       },
       "customer_4": {
         "content": "다낭에서 가장 만족스러운 스파였습니다. 소금방이 매우 넓고 쾌적하며 직원들이 친절합니다.",
-        "author": "박지혜",
-        "role": "관광객 (한국)"
+        "author": "Park Ji-hye",
+        "role": "여행객 (한국)"
       }
+    }
+  },
+  "commitments": {
+    "label": "우리의 약속",
+    "quality": {
+      "title": "전문 기술",
+      "desc": "첫 방문부터 눈에 띄는 치료 효과를 제공할 것을 약속드립니다."
+    },
+    "organic": {
+      "title": "천연 약초",
+      "desc": "100% 순수 에센셜 오일과 자연의 귀한 약초를 사용합니다."
+    },
+    "service": {
+      "title": "정성 어린 서비스",
+      "desc": "고객의 절대적인 만족과 휴식이 루마의 최우선 순위입니다."
     }
   }
 }

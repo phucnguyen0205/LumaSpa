@@ -1,46 +1,55 @@
 {
-    "seo": {
-  "title": "About Luma Spa | Professional Foot & Body Massage in Da Nang",
-  "description": "Discover the story of Luma Spa - a refined relaxation space in Da Nang, specializing in energy recovery and holistic body care."
-},
+  "title": "About Us",
+  "welcome": "Welcome to {brand} – Luma Spa – Your private sanctuary of relaxation",
+  "description_1": "Pamper yourself and discover a sense of rebirth at Luma Spa through our specialized services ranging from hair washes, massages, and facials to other wellness therapies. Our private, serene space and skilled technicians ensure a fully personalized experience.",
+  "description_2": "We are committed to accompanying you on your journey of health and beauty, aiming to make every visit to Luma Spa not just a treatment session, but a deep and lasting connection.",
+  "footer_text": "Step into a world of tranquility – where the journey of recovery and self-love begins.",
+  "cta": "READ MORE",
+  "image_alt_1": "Luma Spa Da Nang interior space",
+  "image_alt_2": "Professional therapeutic massage service",
+  "image_alt_3": "Full view of Luma Spa building",
+  "seo": {
+    "title": "About Luma Spa | Professional Foot & Body Massage in Da Nang",
+    "description": "Discover the story of Luma Spa - an exquisite relaxation space in Da Nang, specializing in energy recovery and holistic wellness."
+  },
   "hero": {
     "kicker": "Luma Spa • Foot & Body Care",
-    "title1": "More Than Just Relaxation",
-    "title2": "A Journey of Energy Restoration",
-    "description": "Luma Spa offers a warm, sophisticated, and professional Foot & Body care experience. We believe a relaxed body is the foundation of a balanced mind.",
+    "title1": "More than just relaxation",
+    "title2": "but a journey of energy recovery",
+    "description": "Luma Spa offers a Foot & Body care experience in a warm, sophisticated, and professional style. We believe a relaxed body is the foundation of a balanced mind.",
     "ctaServices": "View Services",
     "ctaContact": "Contact Now"
   },
   "about": {
     "label": "About Us",
-    "title": "A Gentle and Refined Body Care Sanctuary",
-    "paragraph1": "At Luma Spa, we focus on a holistic relaxation experience with foot massage, body massage, body care, and energy recovery treatments. Each session is designed to help guests relieve stress, improve circulation, and restore balance.",
-    "paragraph2": "The spa space is designed to be cozy with pleasant scents, dedicated technicians, and professional service procedures to provide a sense of tranquility from the very first moment.",
+    "title": "A gentle and sophisticated body care space",
+    "paragraph1": "At Luma Spa, we focus on a comprehensive relaxation experience with foot massage, body massage, and energy recovery treatments. Each session is designed to help clients reduce stress, improve circulation, and restore balance.",
+    "paragraph2": "The spa space is designed to be cozy with pleasant scents, a dedicated team of technicians, and professional service processes to bring a sense of relaxation from the very first experience.",
     "imageAlt": "Luma Spa interior"
   },
   "section": {
-    "label": "Corporate Values",
+    "label": "Business Values",
     "title": "Core Values & Mission of Luma Spa"
   },
   "coreValues": {
     "label": "Core Values",
-    "title": "The Foundation of a Unique Experience",
+    "title": "The foundation that creates a distinct experience",
     "items": {
       "dedication": {
         "title": "Dedication",
-        "desc": "Caring for every guest with thoughtfulness, gentleness, and understanding."
+        "desc": "Caring for every client with thoughtfulness, gentleness, and understanding."
       },
       "professional": {
-        "title": "Professionalism",
-        "desc": "Methodical procedures and high standards."
+        "title": "Professional",
+        "desc": "Methodical processes and high standards."
       },
       "refined": {
-        "title": "Refinement",
+        "title": "Refined",
         "desc": "Harmonious space and experience."
       },
       "sustainable": {
-        "title": "Sustainability",
-        "desc": "Long-term values for health and wellness."
+        "title": "Sustainable",
+        "desc": "Long-term value for health."
       }
     },
     "gallery": {
@@ -52,10 +61,10 @@
   },
   "mission": {
     "label": "Mission",
-    "title": "Bringing Balance to Body and Mind",
-    "paragraph1": "Luma Spa is a place to help you relax from the pressures of daily life.",
-    "paragraph2": "Providing high-quality massage treatments to restore energy and improve health.",
-    "paragraph3": "Not just about beauty, but a space for healing and emotional regeneration.",
+    "title": "Bringing balance to body and mind",
+    "paragraph1": "Luma Spa is the place that helps you relax after the pressures of life.",
+    "paragraph2": "Providing quality massage treatments to help recover energy and improve health.",
+    "paragraph3": "Not just beauty, but a space for healing and emotional regeneration.",
     "gallery": {
       "alt1": "Spa atmosphere",
       "alt2": "Foot massage",

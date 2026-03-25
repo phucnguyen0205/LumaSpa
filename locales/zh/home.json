@@ -1,37 +1,144 @@
 {
   "seo": {
-    "title": "Luma Spa | 岘港专业按摩与足部护理",
-    "description": "在岘港体验专业的足部和全身按摩服务。Luma Spa 提供温馨的空间和敬业的技师。"
+    "title": "Luma Spa | 岘港足部与全身按摩 极致放松体验",
+    "description": "在岘港体验专业的足部和全身按摩服务。Luma Spa 温馨的环境和专业的技师为您提供贴心服务。"
   },
   "hero": {
-    "title": "",
-    "sub_title": "专业的足部和身体护理"
+    "title": "Luma Spa",
+    "description": "在精致的空间与专业的疗愈技术之间，让身心找到温柔的共鸣。"
+  },
+  "services": {
+    "label": "服务项目",
+    "title": "Luma Spa 的呵护体验",
+    "description": "在温馨精致的空间中，探索旨在帮助身体放松、重燃活力并享受全程呵护的放松疗程。",
+    "cta_booking": "立即预约",
+    "cta_details": "服务详情",
+    "must_try": "店长推荐",
+    "best_choice": "最佳选择",
+    "sections": {
+      "hair_scalp": {
+        "title": "洗头养生与疗愈",
+        "subtitle": "放松 · 焕新 · 充能"
+      },
+      "combos": {
+        "title": "特别放松套餐",
+        "subtitle": "极致放松体验"
+      }
+    },
+    "hair_scalp_items": {
+      "sea_calm": {
+        "name": "Sea Calm (静海)",
+        "time": "30 分钟",
+        "price": "129k",
+        "items": [
+          "卸妆与面部按摩",
+          "敷养颜面贴",
+          "放松洗头与头部按摩"
+        ]
+      },
+      "deep_ocean": {
+        "name": "Deep Ocean (深海)",
+        "time": "60 分钟",
+        "price": "239k",
+        "items": [
+          "卸妆与面部按摩",
+          "敷养颜面贴",
+          "放松洗头与头部按摩",
+          "颈肩背深层按摩"
+        ]
+      },
+      "ocean_abyss": {
+        "name": "Ocean Abyss (深渊)",
+        "time": "90 分钟",
+        "price": "339k",
+        "items": [
+          "卸妆与面部按摩",
+          "敷养颜面贴",
+          "洗头与头部按摩",
+          "颈肩背深层按摩",
+          "放松热石疗法",
+          "温柔手部按摩"
+        ]
+      }
+    },
+    "combo_items": {
+      "foot_neck_shoulder": "足部 + 颈肩按摩",
+      "neck_shoulder": "颈肩按摩",
+      "foot": "足部按摩",
+      "body": "全身按摩",
+      "thai": "泰式按摩",
+      "aroma": "香薰按摩",
+      "extra": "额外服务",
+      "coin_rubbing": "刮痧",
+      "cupping": "拔罐"
+    }
+  },
+  "why_choose_us": {
+    "label": "核心价值",
+    "title": "为什么选择 Luma Spa？",
+    "items": {
+      "item_1": {
+        "title": "专业技师团队",
+        "desc": "团队经过严格培训，深谙穴位知识及深层按摩治疗技术。"
+      },
+      "item_2": {
+        "title": "精致空间",
+        "desc": "传统与现代建筑的结合，带来温馨、私密且放松的氛围。"
+      },
+      "item_3": {
+        "title": "天然产品",
+        "desc": "我们使用100%天然精油和草药，对您的健康绝对安全。"
+      },
+      "item_4": {
+        "title": "个性化体验",
+        "desc": "根据每位客户的健康状况，提供专属的疗程咨询。"
+      }
+    }
+  },
+  "panorama": {
+    "alt": "Luma Spa 360度全景",
+    "hint": "移动以探索 360° 空间"
   },
   "testimonials": {
     "title": "客户评价",
-    "subtitle": "Luma Spa 的客户体验",
+    "subtitle": "客户在 Luma Spa 的体验",
     "static_feedback_label": "反馈",
     "items": {
       "customer_1": {
-        "content": "经熟人介绍来的，我们团队一共4人。喜马拉雅盐疗房宽敞舒适。这里员工的服务态度非常好。",
-        "author": "陈日安",
-        "role": "游客 (越南)"
+        "content": "经熟人介绍过来的，我们一行4人。岩盐桑拿房宽敞舒适。这里员工的服务态度非常好。",
+        "author": "Tran Nhat Anh",
+        "role": "常客 (越南)"
       },
       "customer_2": {
-        "content": "专业的理疗师和极其干净的设施。岩盐桑拿是必试项目。岘港最好的放松去处！",
-        "author": "詹姆斯·威尔逊",
-        "role": "旅行者 (英国)"
+        "content": "Professional therapists and extremely clean facilities. The salt rock sauna is a must-try. Best relaxation in Da Nang!",
+        "author": "James Wilson",
+        "role": "游客 (英国)"
       },
       "customer_3": {
-        "content": "岘港最好的水疗中心。环境优雅，技术专业。强烈推荐给寻找高品质体验的游客。",
-        "author": "李伟",
+        "content": "岘港最好的水疗中心。环境优雅，技术专业. 强烈推荐给寻找高品质体验的游客。",
+        "author": "Li Wei",
         "role": "游客 (中国)"
       },
       "customer_4": {
-        "content": "这是岘港最令人满意的传统水疗中心。盐房非常宽敞舒适，员工也很亲切。",
-        "author": "朴智惠",
+        "content": "다낭에서 가장 만족스러운 스파였습니다. 소금방이 매우 넓고 쾌적하며 직원들이 친절합니다.",
+        "author": "Park Ji-hye",
         "role": "游客 (韩国)"
       }
+    }
+  },
+  "commitments": {
+    "label": "我们的承诺",
+    "quality": {
+      "title": "深层技术",
+      "desc": "承诺从第一次体验开始就带来显著的疗愈效果。"
+    },
+    "organic": {
+      "title": "天然草药",
+      "desc": "使用100%纯精油和来自大自然的珍贵草药。"
+    },
+    "service": {
+      "title": "悉心服务",
+      "desc": "客户的绝对满意与放松是 Luma 的首要任务。"
     }
   }
 }

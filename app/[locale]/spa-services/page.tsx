@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 import Header from "@/components/layout/header/page";
@@ -21,57 +20,42 @@ const fadeInUp: Variants = {
     y: 0, 
     transition: { 
       duration: 0.8, 
-      ease: "easeOut" // Bây giờ TypeScript sẽ chấp nhận chuỗi này
+      ease: "easeOut"
     } 
   }
 };
 
 export default function ServiceListPage() {
   const t = useTranslations("services"); 
-  const [adminMenus, setAdminMenus] = useState<string[]>([]);
-
-  useEffect(() => {
-    const saved = localStorage.getItem("luma_service_menus");
-    if (saved) {
-      try {
-        setAdminMenus(JSON.parse(saved));
-      } catch (error) {
-        console.error("Error parsing menus:", error);
-      }
-    }
-  }, []);
 
   return (
     <div className="min-h-screen bg-[#f8f5f0]">
       <Header />
       
       <main className="pt-32 pb-20 space-y-24 md:space-y-32 overflow-x-hidden">
-        {/* HERO + MENU (Hiện ngay lập tức, không cần hiệu ứng cuộn) */}
+        
+        {/* HERO SECTION - TẬP TRUNG VÀO THÔNG ĐIỆP CHỮ */}
         <div className="container mx-auto px-6 max-w-6xl space-y-12 md:space-y-16">
-          <section>
-            <h1 className="text-3xl md:text-4xl font-serif text-[#4a5d45] mb-6 leading-tight italic">
+          <section className="text-center md:text-left">
+            <motion.h1 
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="text-3xl md:text-5xl font-serif text-[#4a5d45] mb-8 leading-tight italic max-w-4xl"
+            >
               “{t("hero.quote")}”
-            </h1>
-            <p className="text-stone-600 max-w-3xl leading-relaxed">
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+              className="text-stone-600 max-w-2xl leading-relaxed text-lg italic"
+            >
               {t("hero.description")}
-            </p>
+            </motion.p>
           </section>
 
-          <section className="flex flex-col items-center space-y-12">
-            {adminMenus.length > 0 ? (
-              adminMenus.map((url, index) => (
-                <div key={index} className="w-full max-w-3xl shadow-2xl rounded-2xl overflow-hidden border border-stone-200 bg-white p-1 md:p-2">
-                  <div className="relative w-full overflow-hidden rounded-xl bg-stone-50">
-                    <img src={url} alt={t("menu.alt")} className="w-full h-auto object-contain max-h-[85vh]" />
-                  </div>
-                </div>
-              ))
-            ) : (
-              <div className="w-full h-64 flex flex-col items-center justify-center border-2 border-dashed border-stone-300 rounded-2xl bg-white/50">
-                <p className="text-stone-400 italic font-serif">{t("menu.updating")}</p>
-              </div>
-            )}
-          </section>
+          {/* DẢI PHÂN CÁCH NGHỆ THUẬT THAY CHO MENU ẢNH */}
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-stone-300 to-transparent" />
         </div>
 
         {/* --- SECTION: ABOUT (CÓ HIỆU ỨNG) --- */}
@@ -84,10 +68,10 @@ export default function ServiceListPage() {
         >
           <div className="container mx-auto px-6 max-w-6xl flex flex-col md:flex-row items-center gap-12 md:gap-20">
             <div className="w-full md:w-[45%]">
-              <div className="relative aspect-[4/5] overflow-hidden group">
+              <div className="relative aspect-[4/5] overflow-hidden group shadow-sm rounded-sm">
                 <Image
                   src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800" 
-                  alt="Luma Spa About"
+                  alt="Luma Spa Interior"
                   fill
                   className="object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
@@ -101,7 +85,7 @@ export default function ServiceListPage() {
               </div>
               <p className="text-stone-500 leading-relaxed italic text-lg">{t("about.description")}</p>
               <div className="pt-4">
-                <button className="border-b border-[#4a5d45] text-[#4a5d45] pb-1 text-sm font-bold tracking-[0.2em] uppercase hover:text-[#dcc296] transition-all">
+                <button className="border-b border-[#4a5d45] text-[#4a5d45] pb-1 text-sm font-bold tracking-[0.2em] uppercase hover:text-[#dcc296] hover:border-[#dcc296] transition-all">
                   {t("about.contact")}
                 </button>
               </div>
@@ -117,7 +101,7 @@ export default function ServiceListPage() {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={{
-              visible: { transition: { staggerChildren: 0.2 } } // Các ảnh xuất hiện lần lượt
+              visible: { transition: { staggerChildren: 0.2 } }
             }}
             className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 py-12 md:py-20"
           >
@@ -128,7 +112,7 @@ export default function ServiceListPage() {
                 className={`relative aspect-[3/4] overflow-hidden shadow-sm group border border-stone-100 transition-all duration-700
                   ${idx % 2 === 0 ? "md:-translate-y-8" : "md:translate-y-8"}`}
               >
-                <Image src={src} alt={`Luma Decor ${idx}`} fill className="object-cover transition-transform duration-1000 group-hover:scale-110 brightness-[0.95]" />
+                <Image src={src} alt={`Luma Gallery ${idx}`} fill className="object-cover transition-transform duration-1000 group-hover:scale-110 brightness-[0.95]" />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500" />
               </motion.div>
             ))}

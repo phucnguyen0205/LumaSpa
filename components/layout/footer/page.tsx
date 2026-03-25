@@ -67,7 +67,6 @@ export default function Footer() {
           </div>
 
           {/* CỘT 2: THÔNG TIN + QR */}
-         {/* CỘT 2: THÔNG TIN + QR */}
           <div className="space-y-4">
             <h4 className="text-lg font-bold uppercase tracking-wider text-[#1d1d1d]">
               {t("working_hours_title", { ns: "footer", defaultValue: "Thời gian làm việc" })}
@@ -83,9 +82,10 @@ export default function Footer() {
               <p itemProp="email">{t("email_value", { ns: "footer" })}</p>
             </div>
 
+            {/* CẬP NHẬT: Thay đổi đường dẫn ảnh sang qrcode.png */}
             <div className="w-full max-w-[160px] overflow-hidden rounded-md border-[3px] border-[#8b4300] bg-white shadow-sm mt-2">
               <img
-                src="/images/qr-booking.jpg"
+                src="/images/qrcode.png"
                 alt="QR Code Đặt lịch hẹn Luma Spa Đà Nẵng"
                 className="h-auto w-full object-cover"
               />
@@ -131,39 +131,38 @@ export default function Footer() {
           </div>
         </div>
 
-     <div className="mt-12 border-t border-black/10 pt-8">
-  <div className="flex flex-col items-center justify-between gap-6 lg:flex-row">
-    
-    {/* THAY ĐỔI Ở ĐÂY: Dùng flex thay vì grid để các mục nằm sát nhau */}
-    <div className="flex flex-col md:flex-row flex-wrap items-center gap-x-12 gap-y-4 text-sm text-[#4b4b4b] w-full lg:w-auto">
-      
-      {/* ADDRESS */}
-      <div className="flex items-center gap-3" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
-        <MapPin className="shrink-0 text-[#a85a11]" size={18} />
-        <p>
-          <span itemProp="streetAddress">{t("address_value", { ns: "footer" })}</span>
-          <meta itemProp="addressLocality" content="Da Nang" />
-          <meta itemProp="addressRegion" content="Da Nang" />
-          <meta itemProp="addressCountry" content="VN" />
-        </p>
-      </div>
+        <div className="mt-12 border-t border-black/10 pt-8">
+          <div className="flex flex-col items-center justify-between gap-6 lg:flex-row">
+            
+            <div className="flex flex-col md:flex-row flex-wrap items-center gap-x-12 gap-y-4 text-sm text-[#4b4b4b] w-full lg:w-auto">
+              
+              {/* ADDRESS */}
+              <div className="flex items-center gap-3" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
+                <MapPin className="shrink-0 text-[#a85a11]" size={18} />
+                <p>
+                  <span itemProp="streetAddress">{t("address_value", { ns: "footer" })}</span>
+                  <meta itemProp="addressLocality" content="Da Nang" />
+                  <meta itemProp="addressRegion" content="Da Nang" />
+                  <meta itemProp="addressCountry" content="VN" />
+                </p>
+              </div>
 
-      {/* PHONE */}
-      <div className="flex items-center gap-3">
-        <Phone className="shrink-0 text-[#a85a11]" size={18} />
-        <a href={`tel:${t("phone_val", { ns: "contact" })}`} itemProp="telephone" className="hover:text-[#a85a11] font-medium">
-          {t("phone_value", { ns: "footer" })}
-        </a>
-      </div>
+              {/* PHONE */}
+              <div className="flex items-center gap-3">
+                <Phone className="shrink-0 text-[#a85a11]" size={18} />
+                <a href={`tel:${t("phone_val", { ns: "contact" })}`} itemProp="telephone" className="hover:text-[#a85a11] font-medium">
+                  {t("phone_value", { ns: "footer" })}
+                </a>
+              </div>
 
-      {/* EMAIL */}
-      <div className="flex items-center gap-3">
-        <Mail className="shrink-0 text-[#a85a11]" size={18} />
-        <p itemProp="email" className="font-medium">{t("email_value", { ns: "footer" })}</p>
-      </div>
-    </div>
+              {/* EMAIL */}
+              <div className="flex items-center gap-3">
+                <Mail className="shrink-0 text-[#a85a11]" size={18} />
+                <p itemProp="email" className="font-medium">{t("email_value", { ns: "footer" })}</p>
+              </div>
+            </div>
 
-            {/* SOCIAL ICONS - ĐÃ CẬP NHẬT THEO YÊU CẦU */}
+            {/* SOCIAL ICONS */}
             <div className="flex items-center gap-4">
               <Link
                 href="https://www.facebook.com/profile.php?id=61576220537133"
@@ -202,7 +201,7 @@ export default function Footer() {
             <Link className="hover:underline" href={""}>
               {t("privacy_policy", { ns: "footer" })}
             </Link>
-            <Link  className="hover:underline" href={""}>
+            <Link className="hover:underline" href={""}>
               {t("terms_of_service", { ns: "footer" })}
             </Link>
           </div>

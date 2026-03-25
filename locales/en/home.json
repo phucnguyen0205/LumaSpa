@@ -1,11 +1,103 @@
 {
   "seo": {
-    "title": "Luma Spa | Professional Massage & Foot Care in Da Nang",
-    "description": "Experience professional foot and body massage services in Da Nang. Luma Spa offers a cozy space and dedicated therapists."
+    "title": "Luma Spa | Exquisite Foot & Body Massage in Da Nang",
+    "description": "Experience professional foot and body massage services in Da Nang. Cozy atmosphere and dedicated therapists at Luma Spa."
   },
   "hero": {
-    "title": "",
-    "sub_title": "Professional Foot & Body Care"
+    "title": "Luma Spa",
+    "description": "Where soul and body find a gentle harmony between exquisite space and intensive therapeutic techniques."
+  },
+  "services": {
+    "label": "SERVICES",
+    "title": "Care Experiences at Luma Spa",
+    "description": "Discover relaxation treatments designed to help your body unwind, regenerate energy, and enjoy complete care in a cozy, sophisticated space.",
+    "cta_booking": "Book Now",
+    "cta_details": "Service details",
+    "must_try": "Must try",
+    "best_choice": "BEST CHOICE",
+    "sections": {
+      "hair_scalp": {
+        "title": "Nourishing Hair Wash & Therapy",
+        "subtitle": "Relax, Renew, Recharge"
+      },
+      "combos": {
+        "title": "Special Relaxation Combos",
+        "subtitle": "Ultimate Relaxation Experience"
+      }
+    },
+    "hair_scalp_items": {
+      "sea_calm": {
+        "name": "Sea Calm",
+        "time": "30 Minutes",
+        "price": "129k",
+        "items": [
+          "Makeup removal & Facial massage",
+          "Nourishing face mask",
+          "Relaxing hair wash & Scalp massage"
+        ]
+      },
+      "deep_ocean": {
+        "name": "Deep Ocean",
+        "time": "60 Minutes",
+        "price": "239k",
+        "items": [
+          "Makeup removal & Facial massage",
+          "Nourishing face mask",
+          "Relaxing hair wash & Scalp massage",
+          "Intensive Neck - Shoulder - Nape massage"
+        ]
+      },
+      "ocean_abyss": {
+        "name": "Ocean Abyss",
+        "time": "90 Minutes",
+        "price": "339k",
+        "items": [
+          "Makeup removal & Facial massage",
+          "Nourishing face mask",
+          "Hair wash & Scalp massage",
+          "Intensive Neck - Shoulder - Nape massage",
+          "Relaxing hot stone therapy",
+          "Gentle hand massage"
+        ]
+      }
+    },
+    "combo_items": {
+      "foot_neck_shoulder": "Foot + Neck & Shoulder",
+      "neck_shoulder": "Neck & Shoulder",
+      "foot": "Foot Massage",
+      "body": "Body Massage",
+      "thai": "Thai Massage",
+      "aroma": "Aroma Massage",
+      "extra": "Extra Services",
+      "coin_rubbing": "Coin rubbing",
+      "cupping": "Cupping therapy"
+    }
+  },
+  "why_choose_us": {
+    "label": "CORE VALUES",
+    "title": "Why Choose Luma Spa?",
+    "items": {
+      "item_1": {
+        "title": "Professional Therapists",
+        "desc": "Well-trained team with deep knowledge of acupoints and intensive massage therapy techniques."
+      },
+      "item_2": {
+        "title": "Exquisite Space",
+        "desc": "A blend of traditional and modern architecture, providing a cozy, private, and relaxing atmosphere."
+      },
+      "item_3": {
+        "title": "Natural Products",
+        "desc": "We use 100% natural essential oils and herbs, absolutely safe for your health."
+      },
+      "item_4": {
+        "title": "Personalized Experience",
+        "desc": "Each client receives a consultation for a customized treatment plan tailored to their health condition."
+      }
+    }
+  },
+  "panorama": {
+    "alt": "360-degree space of Luma Spa",
+    "hint": "Move to explore 360° space"
   },
   "testimonials": {
     "title": "Customer Reviews",
@@ -13,9 +105,9 @@
     "static_feedback_label": "FEEDBACK",
     "items": {
       "customer_1": {
-        "content": "I was introduced by an acquaintance; our team had 4 people. The salt rock sauna is spacious and comfortable. The staff's attitude here is extremely good.",
-        "author": "Nhat Anh Tran",
-        "role": "Traveler (Vietnam)"
+        "content": "I was recommended by an acquaintance. We had a group of 4. The salt rock sauna is spacious and comfortable. The staff's service attitude is excellent.",
+        "author": "Tran Nhat Anh",
+        "role": "Frequent Customer (Vietnam)"
       },
       "customer_2": {
         "content": "Professional therapists and extremely clean facilities. The salt rock sauna is a must-try. Best relaxation in Da Nang!",
@@ -23,15 +115,30 @@
         "role": "Traveler (UK)"
       },
       "customer_3": {
-        "content": "The best spa center in Da Nang. Elegant environment and professional techniques. Highly recommended for tourists seeking a high-quality experience.",
+        "content": "岘港最好的水疗中心。环境优雅，技术专业. 强烈推荐给寻找高品质体验의游客。",
         "author": "Li Wei",
         "role": "Tourist (China)"
       },
       "customer_4": {
-        "content": "It was the most satisfying spa in Da Nang. The salt room is very large and pleasant, and the staff are friendly.",
+        "content": "다낭에서 가장 만족스러운 스파였습니다. 소금방이 매우 넓고 쾌적하며 직원들이 친절합니다.",
         "author": "Park Ji-hye",
         "role": "Tourist (Korea)"
       }
+    }
+  },
+  "commitments": {
+    "label": "Our Commitment",
+    "quality": {
+      "title": "Intensive Techniques",
+      "desc": "Commitment to bringing visible therapeutic effects from the very first session."
+    },
+    "organic": {
+      "title": "Natural Herbs",
+      "desc": "Using 100% pure essential oils and precious herbs from nature."
+    },
+    "service": {
+      "title": "Dedicated Service",
+      "desc": "Absolute customer satisfaction and relaxation is Luma's top priority."
     }
   }
 }

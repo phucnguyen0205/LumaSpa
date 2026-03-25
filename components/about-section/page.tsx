@@ -7,16 +7,22 @@ const AboutSection = () => {
 
   return (
     <section className="relative py-16 px-4 md:px-10 lg:px-20 bg-white overflow-hidden">
-      {/* Background Hoa Sen mờ */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 opacity-10 pointer-events-none">
-        <Image
-          src="/images/lotus-bg.png"
-          alt=""
-          width={500}
-          height={500}
-          priority={false}
-        />
-      </div>
+<div 
+  className="absolute left-[-220px] top-1/2 -translate-y-1/2 pointer-events-none z-0 opacity-25 hidden lg:block"
+  style={{
+    WebkitMaskImage: 'linear-gradient(to right, black 20%, transparent 80%)',
+    maskImage: 'linear-gradient(to right, black 20%, transparent 80%)',
+  }}
+>
+  <Image
+    src="/images/background-home.png"
+    alt=""
+    width={900}
+    height={900}
+    style={{ objectFit: 'contain', objectPosition: 'left' }}
+    priority={false}
+  />
+</div>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
         
@@ -49,7 +55,7 @@ const AboutSection = () => {
           </button>
         </div>
 
-        {/* CỘT PHẢI: BỐ CỤC ẢNH - Đã cập nhật file từ folder images */}
+        {/* CỘT PHẢI: BỐ CỤC ẢNH */}
         <div className="grid grid-cols-2 gap-4 h-[400px] md:h-[500px]">
           <div className="flex flex-col gap-4 h-full">
             <div className="relative h-1/2 rounded-2xl overflow-hidden shadow-md group">

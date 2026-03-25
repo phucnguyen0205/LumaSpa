@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { 
@@ -27,30 +27,29 @@ const ServicesSection = () => {
     { key: "foot", featured: false, prices: [{time: "45p", price: "250k"}, {time: "60p", price: "290k"}, {time: "90p", price: "400k"}, {time: "120p", price: "500k"}] },
   ];
 
+  // NHÂN BẢN 1 LẦN (Tổng cộng 2 bộ để tạo vòng lặp vô tận mượt mà)
   const duplicatedCombos = [...comboGroups, ...comboGroups];
 
-  // Logic cuộn vô tận nâng cao
   const baseX = useMotionValue(0);
   const [isPaused, setIsPaused] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
 
   useAnimationFrame((t, delta) => {
     if (isPaused) return;
 
     // Tốc độ di chuyển (giảm số này nếu muốn chậm lại)
-    let moveBy = -0.5 * (delta / 16); 
+    let moveBy = -0.1 * (delta / 50); 
     baseX.set(baseX.get() + moveBy);
   });
 
- const x = useTransform(baseX, (v) => {
-  return `${wrap(-50, 0, v)}%`;
-});
+  // WRAP Ở -50%: Vì ta có 2 bộ item giống hệt nhau nối tiếp, 
+  // khi bộ 1 chạy hết (-50%), nó nhảy về 0% ngay lập tức để không lộ khoảng trống.
+  const x = useTransform(baseX, (v) => `${wrap(-50, 0, v)}%`);
 
   return (
-  <section className="py-24 bg-[#fffbf2] overflow-hidden">
+    <section className="py-24 bg-[#fffbf2] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         
-        {/* HEADER SECTION - ĐÃ FIX LỖI CẤU TRÚC */}
+        {/* HEADER SECTION */}
         <div className="text-center mb-20 space-y-4">
           <p className="text-[#b08b57] uppercase tracking-[0.4em] text-xs font-bold">
             {t("services.label")}
@@ -66,9 +65,8 @@ const ServicesSection = () => {
           </div>
         </div>
 
-        {/* CONTAINER CHÍNH */}
         <div className="space-y-24">
-          {/* 1. HAIR & SCALP SECTION - GIỮ NGUYÊN 100% */}
+          {/* 1. HAIR & SCALP SECTION - GIỮ NGUYÊN */}
           <div className="space-y-12">
             <div className="text-center">
               <h3 className="text-[#6b4f3a] text-3xl md:text-4xl font-bold mb-3 uppercase tracking-tight">{t("services.sections.hair_scalp.title")}</h3>
@@ -87,8 +85,7 @@ const ServicesSection = () => {
                         <p className="text-[#8e8579] text-[10px] uppercase tracking-tighter">{t(`services.hair_scalp_items.${key}.time`)}</p>
                       </div>
                     </div>
-                  <ul className="space-y-4 mb-8 flex-grow">
-                      {/* FIX LỖI MISSING_MESSAGE: Kiểm tra sự tồn tại trước khi render */}
+                    <ul className="space-y-4 mb-8 flex-grow">
                       {[0, 1, 2, 3, 4, 5].map((i) => {
                         const messageKey = `services.hair_scalp_items.${key}.items.${i}`;
                         if (t.has(messageKey)) {
@@ -108,27 +105,22 @@ const ServicesSection = () => {
             </div>
           </div>
 
-          {/* 2. COMBO SECTION - ĐÃ FIX: CUỘN TIẾP + KÉO TAY ĐƯỢC */}
+          {/* 2. COMBO SECTION - ĐÃ LOẠI BỎ DRAG, CHỈ TỰ CUỘN VÀ HOVER STOP */}
           <div className="space-y-12">
             <div className="text-center">
               <h3 className="text-[#6b4f3a] text-3xl md:text-4xl font-bold mb-3 uppercase tracking-tight">{t("services.sections.combos.title")}</h3>
             </div>
 
             <div 
-              className="relative cursor-grab active:cursor-grabbing"
+              className="relative cursor-default"
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
             >
               <motion.div 
                 className="flex gap-6 w-max"
-                style={{ x: baseX }} // Dùng MotionValue để đồng bộ cả kéo tay và tự chạy
-                drag="x"
-                // Khi kéo tay, baseX sẽ tự cập nhật giá trị mới
-                onDragStart={() => setIsPaused(true)}
-                onDragEnd={() => setIsPaused(false)}
+                style={{ x }} // Sử dụng x đã wrap phần trăm để lặp vô tận
               >
-                {/* Lặp mảng 4 lần để đảm bảo kéo tay không bao giờ hết dữ liệu */}
-                {[...duplicatedCombos, ...duplicatedCombos].map((group, idx) => (
+                {duplicatedCombos.map((group, idx) => (
                   <div 
                     key={`${group.key}-${idx}`} 
                     className={`w-[280px] md:w-[320px] rounded-3xl p-6 border-2 flex-shrink-0 select-none ${group.featured ? "border-[#caa56a] bg-[#fffaf3] shadow-md" : "border-[#eadcc7] bg-white"} relative flex flex-col justify-between hover:shadow-xl transition-all duration-500`}
@@ -160,7 +152,7 @@ const ServicesSection = () => {
               </motion.div>
             </div>
 
-            {/* 3. EXTRA SERVICES - GIỮ NGUYÊN */}
+            {/* 3. EXTRA SERVICES */}
             <div className="max-w-4xl mx-auto pt-8">
               <div className="rounded-3xl p-8 border-2 border-dashed border-[#eadcc7] bg-[#fcf9f5] flex flex-col md:flex-row justify-between items-center gap-6">
                 <h4 className="text-[#6b4f3a] text-xl font-black mb-0 uppercase tracking-tighter flex items-center gap-3">

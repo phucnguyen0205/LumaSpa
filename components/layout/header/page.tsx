@@ -3,7 +3,8 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
-import { Globe, Menu, X, Phone, ChevronDown } from "lucide-react";
+// THÊM ICON PLAY VÀO ĐÂY
+import { Globe, Menu, X, Phone, ChevronDown, Play } from "lucide-react";
 import { useRouter, usePathname, useParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -13,6 +14,7 @@ const languages = [
   { code: "zh", label: "ZH" },
   { code: "ko", label: "KO" },
 ];
+
 const SERVICES_LIST = [
   { key: "thai_massage", slug: "thai-massage-da-nang" },
   { key: "hot_stone", slug: "hot-stone-massage-da-nang" },
@@ -30,7 +32,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showServices, setShowServices] = useState(false);
-  const [showMobileServices, setShowMobileServices] = useState(false); // State riêng cho mobile
+  const [showMobileServices, setShowMobileServices] = useState(false);
 
   const router = useRouter();
   const pathname = usePathname();
@@ -54,12 +56,24 @@ export default function Header() {
     },
     [pathname, locale, router]
   );
-  const SERVICES_PATH = `/${locale}/spa-services`;
+
+  const SERVICES_PATH = `/${locale}/services`;
   const textColor = isScrolled ? "text-stone-900" : "text-white";
 
   return (
     <header className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-md py-3" : "bg-transparent py-5"}`}>
-      <div className="container mx-auto px-4 flex justify-between items-center">
+      
+      {/* VÙNG TỐI NỀN (GRADIENT OVERLAY) - Chỉ hiển thị khi chưa scroll */}
+      <div 
+        className={`absolute inset-0 -z-10 transition-opacity duration-500 pointer-events-none ${
+          isScrolled ? "opacity-0" : "opacity-100"
+        }`}
+        style={{
+          background: "linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%)"
+        }}
+      />
+
+      <div className="container mx-auto px-4 flex justify-between items-center relative z-10">
         
         {/* LOGO */}
         <Link href={`/${locale}`} className="text-3xl font-serif font-black tracking-tighter text-[#d48a1f]">
@@ -71,13 +85,12 @@ export default function Header() {
           <Link href={`/${locale}`} className={`text-[12px] uppercase font-serif font-bold tracking-[0.08em] transition hover:text-[#d48a1f] ${textColor}`}>{t("home")}</Link>
           <Link href={`/${locale}/about`} className={`text-[12px] uppercase font-serif font-bold tracking-[0.08em] transition hover:text-[#d48a1f] ${textColor}`}>{t("about")}</Link>
 
-          {/* DỊCH VỤ - ĐÃ THÊM LINK CLICKABLE */}
+          {/* DỊCH VỤ */}
           <div 
             className="relative group" 
             onMouseEnter={() => setShowServices(true)} 
             onMouseLeave={() => setShowServices(false)}
           >
-            {/* Chuyển button thành Link để click dẫn về trang tổng */}
             <Link 
               href={SERVICES_PATH}
               className={`flex items-center gap-1 text-[12px] uppercase font-serif font-bold tracking-[0.08em] transition hover:text-[#d48a1f] ${textColor}`}
@@ -88,12 +101,24 @@ export default function Header() {
 
             <AnimatePresence>
               {showServices && (
-                <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} className="absolute top-full left-0 w-[280px] bg-white shadow-2xl rounded-lg mt-2 border border-stone-100 overflow-hidden">
+                <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} className="absolute top-full left-0 w-[320px] bg-white shadow-2xl rounded-lg mt-2 border border-stone-100 overflow-hidden">
                   <ul className="py-2">
                     {SERVICES_LIST.map((item) => (
-                      <li key={item.key}>
-                        <Link href={`/${locale}/services/${item.slug}`} className="block px-6 py-3.5 font-serif font-bold text-[12px] text-stone-800 hover:bg-stone-50 hover:text-[#d48a1f] border-b border-stone-50 last:border-0 uppercase tracking-wider">
+                      <li key={item.key} className="flex items-center justify-between px-6 py-3.5 hover:bg-stone-50 border-b border-stone-50 last:border-0 group/item">
+                        <Link 
+                          href={`/${locale}/services/${item.slug}`} 
+                          className="font-serif font-bold text-[12px] text-stone-800 group-hover/item:text-[#d48a1f] uppercase tracking-wider flex-grow"
+                        >
                           {t(item.key)}
+                        </Link>
+                        
+                        {/* NÚT PLAY VIDEO REVIEW */}
+                        <Link 
+                          href={`/${locale}/services/${item.slug}#video-review`}
+                          title="Xem video review"
+                          className="ml-3 p-1.5 rounded-full bg-red-50 text-red-600 hover:bg-red-600 hover:text-white transition-all transform group-hover/item:scale-110"
+                        >
+                          <Play size={12} fill="currentColor" stroke="none" />
                         </Link>
                       </li>
                     ))}
@@ -107,8 +132,9 @@ export default function Header() {
           <Link href={`/${locale}/contact`} className={`text-[12px] uppercase font-serif font-bold tracking-[0.08em] transition hover:text-[#d48a1f] ${textColor}`}>{t("contact")}</Link>
         </nav>
 
-        {/* RIGHT SECTION DESKTOP (Giữ nguyên Dropdown) */}
+        {/* RIGHT SECTION DESKTOP */}
         <div className="hidden lg:flex items-center space-x-8">
+          {/* Ngôn ngữ */}
           <div className="relative group py-2">
             <button className={`flex items-center gap-2 text-[13px] font-serif font-bold tracking-widest transition hover:text-[#d48a1f] ${textColor}`}>
               <Globe size={18} className="text-[#d48a1f]" />
@@ -164,9 +190,19 @@ export default function Header() {
                     {isServices && showMobileServices && (
                       <div className="bg-stone-50 px-4 flex flex-col pb-4">
                         {SERVICES_LIST.map((s) => (
-                          <Link key={s.key} href={`/${locale}/services/${s.slug}`} onClick={() => setIsOpen(false)} className="py-4 text-[15px] font-bold text-stone-700 border-l-2 border-[#d48a1f]/30 pl-4 my-1">
-                            {t(s.key)}
-                          </Link>
+                          <div key={s.key} className="flex items-center justify-between border-l-2 border-[#d48a1f]/30 pl-4 my-1">
+                            <Link href={`/${locale}/services/${s.slug}`} onClick={() => setIsOpen(false)} className="py-4 text-[15px] font-bold text-stone-700 flex-grow">
+                              {t(s.key)}
+                            </Link>
+                            {/* NÚT PLAY MOBILE */}
+                            <Link 
+                                href={`/${locale}/services/${s.slug}#video-review`}
+                                onClick={() => setIsOpen(false)}
+                                className="p-2 text-red-600 bg-red-50 rounded-full"
+                            >
+                                <Play size={16} fill="currentColor" stroke="none" />
+                            </Link>
+                          </div>
                         ))}
                       </div>
                     )}
@@ -174,7 +210,7 @@ export default function Header() {
                 );
               })}
             </nav>
-            {/* Footer Mobile: HOTLINE (Serif) & Ngôn ngữ (Hàng ngang) */}
+            {/* Footer Mobile */}
             <div className="mt-auto pt-6 border-t border-stone-100 flex flex-col gap-10">
               <a href="tel:0876712808" className="flex items-center gap-2 text-[#d48a1f] font-serif font-bold text-2xl tracking-tight uppercase">
                 HOTLINE

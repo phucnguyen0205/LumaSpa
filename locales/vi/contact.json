@@ -1,9 +1,75 @@
 {
-"address_label": "Địa chỉ chi nhánh",
+  "title": "Liên hệ",
+  "subtitle": "Chúng tôi luôn sẵn sàng lắng nghe bạn",
+  "brand_name": "Luma Spa Da Nang",
+  "hours_value": "09:00 - 22:00",
+  "address_label": "Địa chỉ chi nhánh",
 "address_value": "190 Nguyễn Công Trứ, Đà Nẵng, Việt Nam",
 "phone_label": "Hotline đặt lịch",
-"phone_value": "0876 712 808",
+"phone_value": "078 3237 168",
 "email_label": "Email hỗ trợ",
-"email_value": "contact@lumaspa.com",
-"find_us": "Tìm đường đến chúng tôi"
+"email_value": "lumaspadn@gmail.com",
+"find_us": "Tìm đường đến chúng tôi",
+"branch_name": "Luma Spa - Chi nhánh Đà Nẵng",
+  "quote": "Sự thư giãn của bạn là ưu tiên hàng đầu",
+  "info": {
+    "address": "Địa chỉ",
+    "phone": "Điện thoại",
+    "email": "Email",
+    "hours": "Giờ mở cửa",
+    "address_label": "Địa chỉ",
+    "phone_label": "Hotline đặt lịch",
+    "email_label": "Email hỗ trợ"
+  },
+  "form": {
+    "name": "Họ và tên",
+    "phone": "Số điện thoại",
+    "email": "Địa chỉ Email",
+    "subject": "Bạn cần giúp gì?",
+    "option_booking": "Đặt dịch vụ",
+    "option_feedback": "Phản hồi dịch vụ",
+    "option_other": "Yêu cầu khác",
+    "message": "Nội dung yêu cầu",
+    "submit": "Gửi yêu cầu",
+    "note": "NẾU QUÝ KHÁCH CÓ THẮC MẮC, Ý KIẾN PHẢN HỒI... Luma Spa xin chân thành cảm ơn!"
+  },
+  "seo": {
+    "meta_title": "Liên hệ Luma Spa Đà Nẵng | Trung tâm Massage & Chăm sóc sức khỏe hàng đầu",
+    "meta_desc": "Liên hệ Luma Spa Đà Nẵng để trải nghiệm dịch vụ Massage Thái, Gội đầu thảo dược và Chăm sóc da chuyên nghiệp. Hotline: 078 323 7168."
+  },
+  "attractions_title": "Địa danh du lịch lân cận",
+  "attractions_list": [
+    {
+      "title": "Thánh địa Mỹ Sơn",
+      "image": "/images/contact-thanhdiamyson.png"
+    },
+    {
+      "title": "Cầu Rồng Đà Nẵng",
+      "image": "/images/contact-caurong.png"
+    },
+    {
+      "title": "Bán đảo Sơn Trà",
+      "image": "/images/contact-bandaosontra.png"
+    },
+    {
+      "title": "Ngũ Hành Sơn",
+      "image": "/images/contact-nguhanhson.png"
+    },
+    {
+      "title": "Bà nà hills",
+      "image": "/images/contact-banahill.png"
+    },
+    {
+      "title": "Phố cổ Hội An",
+      "image": "/images/contact-phocohoian.png"
+    },
+    {
+      "title": "Chùa Linh Ứng",
+      "image": "/images/contact-chualinhung.png"
+    },
+    {
+      "title": "Bãi biển Mỹ Khê",
+      "image": "/images/contact-bienmykhe.png"
+    }
+  ]
 }

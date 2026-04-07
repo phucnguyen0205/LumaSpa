@@ -1,7 +1,16 @@
 {
     "home": "首页",
     "about": "关于我们",
-    "services": "服务",
-    "news": "新闻",
-    "contact": "联系我们"
+    "services": "服务项目",
+    "news": "新闻资讯",
+    "contact": "联系我们",
+    "thai_massage": "传统泰式按摩",
+    "hot_stone": "热石按摩",
+    "neck_shoulder": "颈肩按摩",
+    "body_massage": "全身按摩",
+    "foot_massage": "足底按摩",
+    "traditional_wash": "草本洗发",
+    "ocean_deep": "深海头皮疗法",
+    "combo_foot_neck": "足部与颈肩套装",
+    "facial_care": "面部护理"
 }

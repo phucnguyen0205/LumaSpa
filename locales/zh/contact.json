@@ -1,9 +1,47 @@
 {
-    "address_label": "分店地址",
-    "address_value": "越南 岘港市 阮公著路 190号",
-    "phone_label": "预约热线",
-    "phone_value": "+84 876 712 808",
-    "email_label": "客服邮箱",
-    "email_value": "contact@lumaspa.com",
-    "find_us": "在地图上查找"
+  "title": "联系我们",
+  "subtitle": "我们随时倾听您的声音",
+  "brand_name": "Luma Spa Da Nang",
+  "address_value": "越南岘港市阮公著路190号",
+  "phone_value": "078 3237 168",
+  "phone_value_2": "",
+  "email_value": "lumaspadn@gmail.com",
+  "hours_value": "09:00 - 22:00",
+    "address_label": "地址",
+    "phone_label": "预订热线",
+    "email_label": "支持邮箱",
+    "branch_name": "Luma Spa - 岘港分店",
+  "quote": "您的放松是我们的重中之重",
+  "info": {
+    "address": "地址",
+    "phone": "电话",
+    "email": "电子邮件",
+    "hours": "营业时间",
+    "address_label": "地址",
+    "phone_label": "预订热线",
+    "email_label": "支持邮箱"
+  },
+  "form": {
+    "name": "姓名",
+    "phone": "电话号码",
+    "email": "电子邮箱",
+    "subject": "我们能帮您什么？",
+    "option_booking": "预订服务",
+    "option_feedback": "服务反馈",
+    "option_other": "其他查询",
+    "message": "信息内容",
+    "submit": "发送请求",
+    "note": "如果您有任何疑问或反馈... Luma Spa 衷心感谢您！"
+  },
+  "seo": {
+    "meta_title": "联系 岘港 Luma Spa | 领先的按摩与健康中心",
+    "meta_desc": "联系岘港 Luma Spa，体验顶级泰式按摩、草本洗发和专业护肤服务。热线：078 323 7168。"
+  },
+  "attractions_title": "周边景点",
+  "attractions_list": [
+    { "title": "美山圣地", "image": "/images/myson.jpg" },
+    { "title": "岘港龙桥", "image": "/images/dragon.jpg" },
+    { "title": "山茶半岛", "image": "/images/sontra.jpg" },
+    { "title": "五行山", "image": "/images/nguhanhson.jpg" }
+  ]
 }

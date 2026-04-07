@@ -1,8 +1,16 @@
 {
-    "home": "홈",
+  "home": "홈",
     "about": "소개",
     "services": "서비스",
     "news": "뉴스",
     "contact": "문의하기",
-    "booking": "예약하기"
+    "thai_massage": "전통 태국 마사지",
+    "hot_stone": "핫스톤 마사지",
+    "neck_shoulder": "목 & 어깨 마사지",
+    "body_massage": "전신 마사지",
+    "foot_massage": "발 마사지",
+    "traditional_wash": "한방 샴푸",
+    "ocean_deep": "오션 어비스 두피 테라피",
+    "combo_foot_neck": "발 & 목 어깨 콤보",
+    "facial_care": "페이셜 케어"
 }

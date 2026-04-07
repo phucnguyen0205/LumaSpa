@@ -1,3 +1,24 @@
 {
- 
+  "header": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "services": "Dịch vụ",
+    "news": "Tin tức",
+    "contact": "Liên hệ",
+    "booking": "Đặt lịch ngay"
+  },
+  "footer": {
+    "about_title": "Về Luma Spa",
+    "about_desc": "Nơi vẻ đẹp tự nhiên và năng lượng được phục hồi thông qua các liệu trình chăm sóc da và cơ thể chuyên nghiệp.",
+    "links_title": "Liên kết nhanh",
+    "services_title": "Dịch vụ của chúng tôi",
+    "copyright": "© 2026 LumaSpa. Bảo lưu mọi quyền.",
+    "address_label": "Địa chỉ của chúng tôi:",
+    "working_hours": "Giờ mở cửa: 09:00 - 21:00 (Thứ 2 - Chủ Nhật)"
+  },
+  "contact": {
+    "address_val": "190 Nguyễn Công Trứ, Đà Nẵng, Việt Nam",
+    "phone_val": "+84 876 712 808",
+    "email_val": "lumaspadn@gmail.com"
+  }
 }

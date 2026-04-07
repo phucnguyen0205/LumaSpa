@@ -1,10 +1,47 @@
 {
-    "address_label": "지점 주소",
-    "address_val": "베트남 다낭, 190 Nguyen Cong Tru",
+  "title": "문의하기",
+  "subtitle": "우리는 항상 당신의 목소리에 귀를 기울이고 있습니다",
+  "brand_name": "Luma Spa Da Nang",
+  "address_value": "190 Nguyen Cong Tru, Da Nang, Vietnam",
+  "phone_value": "078 3237 168",
+  "phone_value_2": "",
+  "email_value": "lumaspadn@gmail.com",
+  "hours_value": "09:00 - 22:00",
+  "address_label": "주소",
+  "phone_label": "예약 핫라인",
+  "email_label": "지원 이메일",
+  "branch_name": "Luma Spa - 다낭 지점",
+  "quote": "당신의 휴식이 우리의 최우선 과제입니다",
+  "info": {
+    "address": "주소",
+    "phone": "전화번호",
+    "email": "이메일",
+    "hours": "영업 시간",
+    "address_label": "주소",
     "phone_label": "예약 핫라인",
-    "phone_val": "+84 876 712 808",
-    "email_label": "지원 이메일",
-    "email_val": "contact@lumaspa.com",
-    "find_us": "지도에서 찾기",
-    "branch_name": "루마 스파 (Luma Spa) - 다낭 지점"
+    "email_label": "지원 이메일"
+  },
+  "form": {
+    "name": "성함",
+    "phone": "전화번호",
+    "email": "이메일 주소",
+    "subject": "무엇을 도와드릴까요?",
+    "option_booking": "서비스 예약",
+    "option_feedback": "서비스 피드백",
+    "option_other": "기타 문의",
+    "message": "문의 내용",
+    "submit": "요청 보내기",
+    "note": "질문이나 피드백이 있으시면... 루마 스파는 진심으로 감사드립니다!"
+  },
+  "seo": {
+    "meta_title": "루마 스파 다낭 연락처 | 최고의 마사지 및 웰니스 센터",
+    "meta_desc": "다낭 루마 스파에 연락하여 프리미엄 태국 마사지, 한방 헤어 워시 및 전문 스킨케어를 경험해 보세요. 핫라인: 078 323 7168."
+  },
+  "attractions_title": "주변 관광 명소",
+  "attractions_list": [
+    { "title": "미선 유적지", "image": "/images/myson.jpg" },
+    { "title": "다낭 용다리", "image": "/images/dragon.jpg" },
+    { "title": "손트라 반도", "image": "/images/sontra.jpg" },
+    { "title": "오행산 (마블 마운틴)", "image": "/images/nguhanhson.jpg" }
+  ]
 }

@@ -1,17 +1,47 @@
 {
   "title": "Contact Us",
-  "subtitle": "Please leave your information, our experts will contact you for the most suitable treatment advice.",
+  "subtitle": "We are always here to listen to you",
+  "brand_name": "Luma Spa Da Nang",
+  "phone_value": "078 3237 168",
+  "phone_value_2": "",
+  "email_value": "lumaspadn@gmail.com",
+  "hours_value": "09:00 - 22:00",
   "address_label": "Address",
-  "phone_label": "Hotline",
+  "address_value": "190 Nguyen Cong Tru, Da Nang, Vietnam",
+  "phone_label": "Booking Hotline",
   "email_label": "Support Email",
-  "placeholder_name": "Full Name *",
-  "placeholder_phone": "Phone Number *",
-  "placeholder_service": "Interested Service",
-  "placeholder_note": "How can we help you?",
-  "btn_send": "SEND REQUEST",
-  "find_us": "Find Us on the Map",
-  "branch_title": "CONTACT INFORMATION",
-    "address_value": "190 Nguyen Cong Tru, Da Nang, Vietnam",
-    "phone_value": "+84 876 712 808",
-    "email_value": "contact@lumaspa.com"
+  "branch_name": "Luma Spa - Da Nang Branch",
+  "quote": "Your relaxation is our top priority",
+  "info": {
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Opening Hours",
+    "address_label": "Address",
+    "phone_label": "Booking Hotline",
+    "email_label": "Support Email"
+  },
+  "form": {
+    "name": "Full Name",
+    "phone": "Phone Number",
+    "email": "Email Address",
+    "subject": "How can we help?",
+    "option_booking": "Book a Service",
+    "option_feedback": "Service Feedback",
+    "option_other": "Other Inquiry",
+    "message": "Message Content",
+    "submit": "Send Request",
+    "note": "IF YOU HAVE ANY QUESTIONS OR FEEDBACK... Luma Spa sincerely thanks you!"
+  },
+  "seo": {
+    "meta_title": "Contact Luma Spa Da Nang | Leading Massage & Wellness Center",
+    "meta_desc": "Contact Luma Spa Da Nang to experience premium Thai Massage, Herbal Hair Wash, and Professional Skincare. Hotline: 078 323 7168."
+  },
+  "attractions_title": "Nearby Attractions",
+  "attractions_list": [
+    { "title": "My Son Sanctuary", "image": "/images/myson.jpg" },
+    { "title": "Dragon Bridge Da Nang", "image": "/images/dragon.jpg" },
+    { "title": "Son Tra Peninsula", "image": "/images/sontra.jpg" },
+    { "title": "Marble Mountains", "image": "/images/nguhanhson.jpg" }
+  ]
 }

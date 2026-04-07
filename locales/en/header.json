@@ -1,8 +1,16 @@
 {
-    "home": "Home",
-    "about": "About Us",
+   "home": "Home",
+    "about": "About",
     "services": "Services",
     "news": "News",
     "contact": "Contact",
-    "booking": "Book Now"
+    "thai_massage": "Traditional Thai Massage",
+    "hot_stone": "Hot Stone Massage",
+    "neck_shoulder": "Neck & Shoulder Massage",
+    "body_massage": "Body Massage",
+    "foot_massage": "Foot Massage",
+    "traditional_wash": "Herbal Hair Wash",
+    "ocean_deep": "Ocean Abyss Scalp Therapy",
+    "combo_foot_neck": "Foot & Neck Shoulder Combo",
+    "facial_care": "Facial Treatment"
 }

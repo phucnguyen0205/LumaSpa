@@ -1,26 +1,35 @@
 {
-    "hero": {
-      "quote": "Relaxation is the beginning of rejuvenation",
-      "description": "At Luma Spa, we provide a peaceful space and intensive therapies to help you find balance for both body and soul."
-    },
-    "menu": {
-      "updating": "Service menu images are being updated...",
-      "alt": "Luma Spa Service Menu"
-    },
-    "about": {
-      "subtitle": "Relax with Luma Spa",
-      "title": "Customers are our core value",
-      "description": "Luma Spa constantly strives to explore and learn new therapeutic methods to meet the ever-evolving needs of our clients.",
-      "contact": "Contact Us"
-    },
-    "features": {
-      "tagline": "Health & Relaxation",
-      "main_title": "Exclusive Experience",
-      "item_1_title": "Intensive Therapy",
-      "item_1_desc": "Therapeutic methods specifically designed for each individual's body condition.",
-      "item_2_title": "Professional Team",
-      "item_2_desc": "Experienced, dedicated, and highly knowledgeable technicians.",
-      "item_3_title": "Quiet Space",
-      "item_3_desc": "An environment of absolute relaxation with gentle music and scents."
-    }
+  "seo": {
+    "meta_title": "Massage & Wellness Services",
+    "meta_desc": "Discover Luma Spa services: Thai Massage, Herbal Hair Wash, and Professional Skincare in Da Nang."
+  },
+  "hero": {
+    "quote": "Relaxation is the beginning of rejuvenation",
+    "description": "At Luma Spa, we provide a peaceful space and intensive therapies to help you find balance for body and soul."
+  },
+  "menu": {
+    "updating": "Service menu images are being updated...",
+    "alt": "Luma Spa Service Menu"
+  },
+  "about": {
+    "subtitle": "Relax with Luma Spa",
+    "title": "Customers are our core value",
+    "description": "Luma Spa constantly strives to research and learn new therapeutic methods to meet the increasing needs of customers.",
+    "contact": "Contact Us"
+  },
+  "features": {
+    "tagline": "Health & Relaxation",
+    "main_title": "Privileged Experience",
+    "item_1_title": "Intensive Therapy",
+    "item_1_desc": "Therapeutic methods individually designed for each body condition.",
+    "item_2_title": "Professional Team",
+    "item_2_desc": "Experienced, dedicated, and deeply knowledgeable technicians.",
+    "item_3_title": "Quiet Space",
+    "item_3_desc": "Absolute relaxing environment with soft music and fragrance."
+  },
+  "list": {
+    "title": "Treatment Menu",
+    "description": "Choose a suitable treatment to recharge your energy after stressful working hours.",
+    "discover": "Discover Now"
   }
+}

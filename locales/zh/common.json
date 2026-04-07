@@ -1,6 +1,24 @@
 {
-  "booking": {
-    "branch_title": "岘港分店",
-    "book_now": "立即預約"
+  "header": {
+    "home": "首页",
+    "about": "关于我们",
+    "services": "服务项目",
+    "news": "新闻资讯",
+    "contact": "联系我们",
+    "booking": "立即预约"
+  },
+  "footer": {
+    "about_title": "关于 Luma Spa",
+    "about_desc": "一个通过专业的皮肤和身体护理疗程，恢复自然美与能量的避风港。",
+    "links_title": "快速链接",
+    "services_title": "我们的服务",
+    "copyright": "© 2026 LumaSpa. All rights reserved.",
+    "address_label": "我们的位置:",
+    "working_hours": "营业时间: 09:00 - 21:00 (周一至周日)"
+  },
+  "contact": {
+    "address_val": "190 Nguyen Cong Tru, Da Nang, Vietnam",
+    "phone_val": "+84 876 712 808",
+    "email_val": "lumaspadn@gmail.com"
   }
 }

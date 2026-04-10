@@ -4,8 +4,10 @@
     "description": "Experience professional foot and body massage services in Da Nang. Cozy atmosphere and dedicated therapists at Luma Spa."
   },
   "hero": {
+    "subtitle": "WELCOME TO",
     "title": "Luma Spa",
-    "description": "Where soul and body find a gentle harmony between exquisite space and intensive therapeutic techniques."
+    "description": "Where soul and body find a gentle harmony between exquisite space and intensive therapeutic techniques.",
+    "cta": "BOOK NOW"
   },
   "services": {
     "label": "SERVICES",

@@ -4,8 +4,10 @@
     "description": "Trải nghiệm dịch vụ massage chân và toàn thân chuyên nghiệp tại Đà Nẵng. Không gian ấm cúng, kỹ thuật viên tận tâm tại Luma Spa."
   },
   "hero": {
+    "subtitle": "CHÀO MỪNG ĐẾN VỚI",
     "title": "Luma Spa",
-    "description": "Nơi tâm hồn và cơ thể tìm thấy sự giao thoa nhẹ nhàng giữa không gian tinh tế và kỹ thuật trị liệu chuyên sâu."
+    "description": "Nơi tâm hồn và cơ thể tìm thấy sự giao thoa nhẹ nhàng giữa không gian tinh tế và kỹ thuật trị liệu chuyên sâu.",
+    "cta": "ĐẶT LỊCH NGAY"
   },
   "services": {
     "label": "DỊCH VỤ",
@@ -28,7 +30,7 @@
     "hair_scalp_items": {
       "sea_calm": {
         "name": "Sea Calm",
-        "time": "30 Minute",
+        "time": "30 Phút",
         "price": "129k",
         "items": [
           "Tẩy trang & Massage mặt",
@@ -38,7 +40,7 @@
       },
       "deep_ocean": {
         "name": "Deep Ocean",
-        "time": "60 Minute",
+        "time": "60 Phút",
         "price": "239k",
         "items": [
           "Tẩy trang & Massage mặt",
@@ -49,7 +51,7 @@
       },
       "ocean_abyss": {
         "name": "Ocean Abyss",
-        "time": "90 Minute",
+        "time": "90 Phút",
         "price": "339k",
         "items": [
           "Tẩy trang & Massage mặt",
@@ -62,13 +64,13 @@
       }
     },
     "combo_items": {
-      "foot_neck_shoulder": "Foot + Neck & Shoulder",
-      "neck_shoulder": "Neck & Shoulder",
-      "foot": "Foot Massage",
-      "body": "Body Massage",
-      "thai": "Thai Massage",
-      "aroma": "Aroma Massage",
-      "extra": "Extra Services",
+      "foot_neck_shoulder": "Chân + Cổ Vai Gáy",
+      "neck_shoulder": "Massage Cổ Vai Gáy",
+      "foot": "Massage Chân",
+      "body": "Massage Toàn Thân",
+      "thai": "Massage Thái",
+      "aroma": "Massage Tinh Dầu",
+      "extra": "Dịch Vụ Thêm",
       "coin_rubbing": "Cạo gió (Coin rubbing)",
       "cupping": "Giác hơi (Cupping therapy)"
     }
@@ -112,17 +114,17 @@
       "customer_2": {
         "content": "Professional therapists and extremely clean facilities. The salt rock sauna is a must-try. Best relaxation in Da Nang!",
         "author": "James Wilson",
-        "role": "Traveler (UK)"
+        "role": "Khách du lịch (Anh Quốc)"
       },
       "customer_3": {
         "content": "岘港最好的水疗中心。环境优雅，技术专业. 强烈推荐给寻找高品质体验의游客。",
         "author": "Li Wei",
-        "role": "Tourist (China)"
+        "role": "Khách du lịch (Trung Quốc)"
       },
       "customer_4": {
         "content": "다낭에서 가장 만족스러운 스파였습니다. 소금방이 매우 넓고 쾌적하며 직원들이 친절합니다.",
         "author": "Park Ji-hye",
-        "role": "Tourist (Korea)"
+        "role": "Khách du lịch (Hàn Quốc)"
       }
     }
   },

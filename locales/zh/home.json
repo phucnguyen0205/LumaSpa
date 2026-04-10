@@ -4,8 +4,10 @@
     "description": "在岘港体验专业的足部和全身按摩服务。Luma Spa 温馨的环境和专业的技师为您提供贴心服务。"
   },
   "hero": {
+    "subtitle": "欢迎光临",
     "title": "Luma Spa",
-    "description": "在精致的空间与专业的疗愈技术之间，让身心找到温柔的共鸣。"
+    "description": "在精致的空间与专业的疗愈技术之间，让身心找到温柔的共鸣。",
+    "cta": "立即预约"
   },
   "services": {
     "label": "服务项目",
@@ -69,8 +71,8 @@
       "thai": "泰式按摩",
       "aroma": "香薰按摩",
       "extra": "额外服务",
-      "coin_rubbing": "刮痧",
-      "cupping": "拔罐"
+      "coin_rubbing": "刮痧 (Coin rubbing)",
+      "cupping": "拔罐 (Cupping)"
     }
   },
   "why_choose_us": {

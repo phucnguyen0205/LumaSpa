@@ -35,7 +35,7 @@ const PanoramaFullWidth = () => {
   };
 
   return (
-    <section className="relative w-full h-[60vh] md:h-[80vh] lg:h-[90vh] overflow-hidden bg-[#121212]">
+    <section className="relative w-full h-[70vh] md:h-[70vh] lg:h-[90vh] overflow-hidden bg-[#121212]">
       <div
         ref={containerRef}
         onMouseMove={(e) => handleMove(e.clientX)}

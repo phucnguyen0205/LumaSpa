@@ -68,7 +68,7 @@ const AboutSection = () => {
             </div>
             <div className="relative h-1/2 rounded-2xl overflow-hidden shadow-md group">
               <Image
-                src="/images/interior-img.png"
+                src="/images/interior.png"
                 alt={t("image_alt_2")}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -77,7 +77,7 @@ const AboutSection = () => {
           </div>
           <div className="relative h-full rounded-2xl overflow-hidden shadow-md group">
             <Image
-              src="/images/about-home-spa.png"
+              src="/images/about-home.png"
               alt={t("image_alt_3")}
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-110"

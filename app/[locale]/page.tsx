@@ -6,11 +6,12 @@ import AboutSection from "@/components/about-section/page";
 import ServicesSection from "@/components/home/services-section";
 import Hotel360Section from "@/components/home/360-section";
 import WhyChooseUs from "@/components/home/why-choose-us";
-import TestimonialSection from "@/components/home/testimonial-section";
+import TestimonialSlider from "@/components/home/testimonial-slider";
 import ContactSection from "@/components/home/contact-section";
 import TranslationsProvider from "@/components/translations-provider";
 import CommitmentSection from "@/components/home/commitment-section";
 import NewsAndReview from "@/components/home/review";
+import AboutImageSection from "@/components/home/about-image-section-1";
 
 interface Props { params: Promise<{ locale: string }>; }
 
@@ -25,11 +26,12 @@ export default async function HomePage({ params }: Props) {
         <Header />
         <HeroSection /> 
         <AboutSection />
+        <AboutImageSection imageUrl={""} />
         <ServicesSection />
         <Hotel360Section />
         <WhyChooseUs /> 
         <NewsAndReview />
-        <TestimonialSection locale={locale} />
+        <TestimonialSlider items={undefined} title={undefined} subtitle={undefined} label={undefined} />
         <CommitmentSection />
         <ContactSection />
         <Footer />

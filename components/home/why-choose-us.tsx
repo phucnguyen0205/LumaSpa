@@ -6,7 +6,6 @@ import { useTranslations } from "next-intl";
 const WhyChooseUs = () => {
   const t = useTranslations("home");
   
-  // Mapping các icon phù hợp với phong cách sang trọng của Spa
   const features = [
     { 
       key: "item_1", 
@@ -43,19 +42,22 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    /* THAY ĐỔI 1: Nền chuyển sang màu nâu cà phê đậm #3d2b1f để hòa hợp với ServicesSection */
+    <section className="py-24 bg-[#3d2b1f] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         
         {/* Tiêu đề phần Why Choose Us */}
         <div className="text-center mb-20 space-y-4">
-          <p className="text-[#b08b57] uppercase tracking-[0.4em] text-xs font-bold mb-4">
+          <p className="text-[#CC6600] uppercase tracking-[0.4em] text-xs font-bold mb-4">
             {t("why_choose_us.label")}
           </p>
-          <h2 className="text-[#2f2a26] text-4xl md:text-5xl font-bold tracking-tight">
+          {/* Chữ tiêu đề màu trắng kem #fcfaf7 */}
+          <h2 className="text-[#fcfaf7] text-4xl md:text-5xl font-serif font-bold tracking-tight">
             {t("why_choose_us.title")}
           </h2>
           <div className="flex justify-center mt-6">
-             <div className="h-[1px] w-20 bg-[#b08b57]"></div>
+             {/* Thanh gạch ngang màu đồng #8B795E */}
+             <div className="h-[2px] w-20 bg-[#8B795E]"></div>
           </div>
         </div>
 
@@ -64,21 +66,26 @@ const WhyChooseUs = () => {
           {features.map((item, index) => (
             <div 
               key={index} 
-              className="text-center group cursor-default"
+              className="text-center group cursor-default p-8 rounded-3xl transition-all duration-500 hover:bg-white/5"
             >
-              {/* Icon Circle với hiệu ứng hover mượt mà */}
-              <div className="relative w-24 h-24 mx-auto mb-8">
-                <div className="absolute inset-0 rounded-full border border-[#eadcc7] group-hover:scale-110 group-hover:border-[#b08b57] transition-all duration-500 ease-out"></div>
-                <div className="absolute inset-2 rounded-full flex items-center justify-center text-[#b08b57] group-hover:bg-[#b08b57] group-hover:text-white transition-all duration-500 shadow-sm">
+              {/* Icon Circle: Kết hợp mã #8B795E và #CC6600 */}
+              <div className="relative w-24 h-24 mx-auto mb-10">
+                {/* Viền tròn màu đồng mờ #8B795E */}
+                <div className="absolute inset-0 rounded-full border border-[#8B795E]/30 group-hover:scale-110 group-hover:border-[#CC6600] transition-all duration-500 ease-out"></div>
+                
+                {/* Vòng tròn icon dùng màu nền #8B795E */}
+                <div className="absolute inset-2 rounded-full flex items-center justify-center text-[#fcfaf7] bg-[#8B795E] group-hover:bg-[#CC6600] transition-all duration-500 shadow-xl">
                   {item.icon}
                 </div>
               </div>
 
               {/* Nội dung text */}
-              <h3 className="text-[#6b4f3a] text-lg font-bold mb-4 tracking-wide uppercase transition-colors duration-300 group-hover:text-[#b08b57]">
+              <h3 className="text-[#f3d5b5] text-lg font-serif font-bold mb-4 tracking-wide uppercase transition-colors duration-300 group-hover:text-[#CC6600]">
                 {t(`why_choose_us.items.${item.key}.title`)}
               </h3>
-              <p className="text-[#6b6258] text-[14px] leading-relaxed max-w-[280px] mx-auto font-light">
+              
+              {/* Mô tả text kem mờ #fcfaf7/70 */}
+              <p className="text-[#fcfaf7]/70 text-[14px] leading-relaxed max-w-[280px] mx-auto font-light">
                 {t(`why_choose_us.items.${item.key}.desc`)}
               </p>
             </div>

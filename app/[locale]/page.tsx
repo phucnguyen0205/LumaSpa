@@ -12,6 +12,7 @@ import TranslationsProvider from "@/components/translations-provider";
 import CommitmentSection from "@/components/home/commitment-section";
 import NewsAndReview from "@/components/home/review";
 import AboutImageSection from "@/components/home/about-image-section-1";
+import TestimonialSection from "@/components/home/testimonial-section";
 
 interface Props { params: Promise<{ locale: string }>; }
 
@@ -26,12 +27,12 @@ export default async function HomePage({ params }: Props) {
         <Header />
         <HeroSection /> 
         <AboutSection />
-        <AboutImageSection imageUrl={""} />
+        <AboutImageSection imageUrl={"/images/sample-spa.jpg"} />
         <ServicesSection />
         <Hotel360Section />
         <WhyChooseUs /> 
         <NewsAndReview />
-        <TestimonialSlider items={undefined} title={undefined} subtitle={undefined} label={undefined} />
+        <TestimonialSection locale={""} />
         <CommitmentSection />
         <ContactSection />
         <Footer />

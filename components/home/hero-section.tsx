@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 
 export default function HeroSection() {
   const { t } = useTranslation("home");
+  
+  // Mặc định ban đầu là ảnh local, sau đó sẽ được cập nhật từ localStorage
   const [banners, setBanners] = useState<string[]>(["/images/hero-banner.jpg"]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -13,18 +15,24 @@ export default function HeroSection() {
       if (saved) {
         try {
           const parsed = JSON.parse(saved);
-          if (parsed.length > 0) setBanners(parsed);
+          // Nếu trong localStorage có mảng ảnh và mảng đó không rỗng thì mới set
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            setBanners(parsed);
+          }
         } catch (e) {
-          console.error("Error parsing banners:", e);
+          console.error("Lỗi đọc dữ liệu banner từ Cloudinary:", e);
         }
       }
     };
 
     loadBanners();
+
+    // Lắng nghe sự kiện 'storage' để cập nhật ảnh ngay lập tức nếu Admin đang mở ở tab khác
     window.addEventListener("storage", loadBanners);
     return () => window.removeEventListener("storage", loadBanners);
   }, []);
 
+  // Logic chuyển slide tự động
   useEffect(() => {
     if (banners.length <= 1) return;
     const interval = setInterval(() => {
@@ -35,27 +43,25 @@ export default function HeroSection() {
 
   return (
     <section className="relative h-[100vh] w-full flex items-center justify-center overflow-hidden bg-stone-100">
-      {/* Slideshow hiệu ứng mờ dần cũ */}
       {banners.map((src, index) => (
         <div
-          key={index}
+          key={src} // Dùng chính URL làm key để tránh lỗi render khi xóa/thêm ảnh
           className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
             index === currentIndex ? "opacity-100" : "opacity-0"
           }`}
         >
           <img
             src={src}
-            alt="Luma Spa Banner"
-            // brightness-[0.8] giúp giảm vùng tối (sáng hơn mức 0.65 cũ)
+            alt={`Luma Spa Banner ${index + 1}`}
             className="w-full h-full object-cover brightness-[0.8]"
+            // Thêm thuộc tính này để ảnh load mượt hơn nếu là ảnh online
+            loading={index === 0 ? "eager" : "lazy"} 
           />
         </div>
       ))}
 
-      {/* Lớp phủ nhẹ ở dưới để chữ trắng vẫn nổi bật nhưng không làm tối toàn bộ banner */}
       <div className="absolute inset-0 bg-black/10 z-[5]" />
 
-      {/* Nội dung chữ */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl drop-shadow-sm">
         <h2 className="text-[#dcc296] font-medium tracking-[0.4em] mb-4 uppercase">
           {t("hero.subtitle")}
@@ -75,7 +81,6 @@ export default function HeroSection() {
         </button>
       </div>
 
-      {/* Chấm chỉ số slide */}
       {banners.length > 1 && (
         <div className="absolute bottom-10 flex gap-3 z-20">
           {banners.map((_, i) => (

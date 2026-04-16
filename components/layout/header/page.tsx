@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
-// THÊM ICON PLAY VÀO ĐÂY
+import Image from "next/image";
 import { Globe, Menu, X, Phone, ChevronDown, Play } from "lucide-react";
 import { useRouter, usePathname, useParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -74,12 +74,49 @@ export default function Header() {
       />
 
       <div className="container mx-auto px-4 flex justify-between items-center relative z-10">
-        
-        {/* LOGO */}
-        <Link href={`/${locale}`} className="text-3xl font-serif font-black tracking-tighter text-[#d48a1f]">
-          LUMA<span className={isScrolled ? "text-stone-900" : "text-white"}>SPA</span>
-        </Link>
+   <Link 
+  href={`/${locale}`} 
+  className="relative block w-40 md:w-52 h-12 md:h-14 transition-all duration-400 hover:scale-110 origin-right" // Căn gốc phóng to về bên phải
+>
+  {/* Logo 1: Màu trắng */}
+  <motion.div
+    initial={false}
+    animate={{ 
+      opacity: isScrolled ? 0 : 1,
+      scale: isScrolled ? 1.1 : 1.1 
+    }}
+    transition={{ duration: 0.5 }}
+    className="absolute inset-0"
+  >
+    <Image
+      src="/images/logo.png" 
+      alt="Luma Spa Logo Light"
+      fill
+      priority
+      className="object-contain object-right" // Căn ảnh sang phải trong khung
+    />
+  </motion.div>
 
+  {/* Logo 2: Màu gốc (Khi cuộn) */}
+  <motion.div
+    initial={false}
+    animate={{ 
+      opacity: isScrolled ? 1 : 0,
+      // Lưu ý: scale nên để giá trị dương (ví dụ 1.2 hoặc 1.5) để tránh ảnh bị lật ngược
+      scale: isScrolled ? 1.1 : 0.9 
+    }}
+    transition={{ duration: 0.5 }}
+    className="absolute inset-0"
+  >
+    <Image
+      src="/images/logospa.png" 
+      alt="Luma Spa Logo Dark"
+      fill
+      priority
+      className="object-contain object-right" // Căn ảnh sang phải trong khung
+    />
+  </motion.div>
+</Link>
         {/* DESKTOP NAVIGATION */}
         <nav className="hidden lg:flex items-center space-x-10">
           <Link href={`/${locale}`} className={`text-[12px] uppercase font-serif font-bold tracking-[0.08em] transition hover:text-[#d48a1f] ${textColor}`}>{t("home")}</Link>

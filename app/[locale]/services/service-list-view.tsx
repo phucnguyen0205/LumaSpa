@@ -20,19 +20,26 @@ interface Props {
   translations: {
     heroQuote: string;
     heroDesc: string;
+    // Bổ sung thêm stats nếu bạn muốn dùng ở Hero
+    heroStats?: { experience: string; rating: string; customers: string }; 
     aboutSubtitle: string;
     aboutTitle: string;
     aboutDesc: string;
     aboutContact: string;
     featuresTagline: string;
     featuresTitle: string;
-    featuresItems: { title: string; desc: string }[];
+    // NÂNG CẤP Ở ĐÂY: Thêm tag và highlight
+    featuresItems: { 
+      title: string; 
+      desc: string; 
+      tag: string; 
+      highlight: string 
+    }[];
     treatmentTitle: string;
     treatmentDesc: string;
     discover: string;
   };
 }
-
 export default function ServiceListView({ gallery, services, locale, translations }: Props) {
   return (
     /* THAY ĐỔI: Nền nâu cà phê tối #3d2b1f cho toàn bộ trang */
@@ -119,38 +126,55 @@ export default function ServiceListView({ gallery, services, locale, translation
         </motion.section>
 
         {/* SECTION: FEATURES */}
-        <motion.section 
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={fadeInUp}
-          className="text-center"
-        >
-          <p className="text-[#CC6600] text-lg font-serif mb-2 italic">{translations.featuresTagline}</p>
-          <h2 className="text-3xl md:text-4xl font-serif text-[#fcfaf7] mb-16">{translations.featuresTitle}</h2>
-          <div className="grid md:grid-cols-3 gap-12 md:gap-8">
-            {translations.featuresItems.map((item, i) => (
-              <motion.div 
-                key={i} 
-                variants={{
-                  hidden: { opacity: 0, scale: 0.9 },
-                  visible: { opacity: 1, scale: 1, transition: { delay: i * 0.2 } }
-                }}
-                className="flex flex-col items-center group px-4"
-              >
-                {/* Circle Icon chuyển sang màu đồng #8B795E */}
-                <div className="w-16 h-16 mb-8 flex items-center justify-center rounded-full border border-[#8B795E]/30 text-[#f3d5b5] bg-[#8B795E]/10 group-hover:bg-[#CC6600] group-hover:text-white transition-all duration-500 shadow-xl">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <h3 className="font-bold text-[#f3d5b5] mb-4 uppercase tracking-[0.2em] text-sm">{item.title}</h3>
-                <p className="text-sm text-[#fcfaf7]/60 leading-relaxed italic max-w-[280px]">{item.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
+      <motion.section 
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, margin: "-100px" }}
+  variants={fadeInUp}
+  className="text-center"
+>
+  <p className="text-[#CC6600] text-lg font-serif mb-2 italic">
+    {translations.featuresTagline}
+  </p>
+  <h2 className="text-3xl md:text-4xl font-serif text-[#fcfaf7] mb-16">
+    {translations.featuresTitle}
+  </h2>
 
+  <div className="grid md:grid-cols-3 gap-12 md:gap-8">
+    {translations.featuresItems.map((item, i) => (
+      <motion.div 
+        key={i} 
+        variants={{
+          hidden: { opacity: 0, y: 20 },
+          visible: { opacity: 1, y: 0, transition: { delay: i * 0.2 } }
+        }}
+        className="flex flex-col items-center group px-4"
+      >
+        {/* Circle Icon */}
+        <div className="w-16 h-16 mb-8 flex items-center justify-center rounded-full border border-[#8B795E]/30 text-[#f3d5b5] bg-[#8B795E]/10 group-hover:bg-[#8B795E] group-hover:text-white transition-all duration-500 shadow-xl relative">
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M5 13l4 4L19 7" />
+          </svg>
+          {/* Hiệu ứng vòng tròn bên ngoài khi hover */}
+          <div className="absolute inset-0 rounded-full border border-[#CC6600] scale-100 opacity-0 group-hover:scale-125 group-hover:opacity-100 transition-all duration-700" />
+        </div>
+
+        <h3 className="font-bold text-[#f3d5b5] mb-2 uppercase tracking-[0.2em] text-sm">
+          {item.title}
+        </h3>
+
+        {/* Điểm nhấn quan trọng (Highlight) - Tăng tính thuyết phục */}
+        <p className="text-[#CC6600] text-[11px] font-bold mb-4 italic opacity-90">
+          {item.highlight}
+        </p>
+
+        <p className="text-sm text-[#fcfaf7]/60 leading-relaxed italic max-w-[280px]">
+          {item.desc}
+        </p>
+      </motion.div>
+    ))}
+  </div>
+</motion.section>
         {/* SECTION: SERVICE GRID */}
         <section className="pb-32">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 border-b border-white/10 pb-8">

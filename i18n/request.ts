@@ -9,7 +9,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     locale = routing.defaultLocale;
   }
 
-  const files = ['common', 'contact', 'footer', 'header', 'home', 'services', 'about', 'news'];
+  const files = ['common', 'contact', 'footer', 'header', 'home', 'services', 'about', 'news', 'review'];
   
   const messages = {};
   for (const file of files) {

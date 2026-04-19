@@ -1,35 +1,41 @@
 {
   "seo": {
-    "meta_title": "按摩与健康服务",
-    "meta_desc": "探索 Luma Spa 服务：岘港泰式按摩、草本洗发和专业护肤。"
+    "meta_title": "按摩与健康护理服务",
+    "meta_desc": "探索 Luma Spa 的服务：岘港泰式按摩、草本洗发、深层皮肤护理。"
   },
-  "hero": {
-    "quote": "放松是焕发活力的开始",
-    "description": "在 Luma Spa，我们提供宁静的空间和深层疗法，帮助您找回身心的平衡。"
-  },
+  "heroQuote": "放松是焕发活力的开始",
+  "heroDesc": "在 Luma Spa，我们为您提供宁静的空间和深层疗法，帮助您找回身心的平衡。",
   "menu": {
-    "updating": "服务菜单图片正在更新中...",
+    "updating": "服务价目表图片正在更新中...",
     "alt": "Luma Spa 服务菜单"
   },
-  "about": {
-    "subtitle": "在 Luma Spa 尽情放松",
-    "title": "客户是我们的核心价值",
-    "description": "Luma Spa 不断致力于研究和学习新的治疗方法，以满足客户日益增长的需求。",
-    "contact": "联系我们"
-  },
-  "features": {
-    "tagline": "健康与放松",
-    "main_title": "特权体验",
-    "item_1_title": "深度疗法",
-    "item_1_desc": "针对每种身体状况单独设计的治疗方法。",
-    "item_2_title": "专业团队",
-    "item_2_desc": "经验丰富、敬业且知识渊博的理疗师团队。",
-    "item_3_title": "安静空间",
-    "item_3_desc": "伴随着轻柔音乐和芳香的绝对放松环境。"
-  },
-  "list": {
-    "title": "疗程目录",
-    "description": "在繁忙的工作之余，选择适合您的疗程来恢复活力。",
-    "discover": "立即探索"
-  }
+  "aboutSubtitle": "在 Luma Spa 尽情放松",
+  "aboutTitle": "客户是我们的核心价值",
+  "aboutDesc": "Luma Spa 不断努力探索和学习新的疗法，以满足客户日益增长的需求。",
+  "aboutContact": "联系我们",
+  "featuresTagline": "健康与放松",
+  "featuresTitle": "尊享体验",
+  "featuresItems": [
+    {
+      "tag": "专业知识",
+      "title": "深层理疗",
+      "highlight": "专业技法",
+      "desc": "根据个人身体状况量身定制的理疗方案。"
+    },
+    {
+      "tag": "专业团队",
+      "title": "专业团队",
+      "highlight": "尽职尽责的技师",
+      "desc": "经验丰富、专业精湛且全心全意为您服务的技师团队。"
+    },
+    {
+      "tag": "私密空间",
+      "title": "宁静空间",
+      "highlight": "绝对放松",
+      "desc": "伴随着轻柔的音乐和芬芳的香薰，营造绝对放松的环境。"
+    }
+  ],
+  "treatmentTitle": "理疗项目",
+  "treatmentDesc": "选择适合您的疗程，在繁忙的工作之余重获活力。",
+  "discover": "立即探索"
 }

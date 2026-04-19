@@ -40,7 +40,7 @@ const RippleEffect = memo(({ color = "#B38B59" }: { color?: string }) => {
 RippleEffect.displayName = "RippleEffect";
 
 const NewsAndReview = () => {
-  const t = useTranslations("home");
+  const t = useTranslations("review"); // Đã đổi namespace cho rõ ràng
   const locale = useLocale();
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -60,7 +60,7 @@ const NewsAndReview = () => {
                 <Play size={18} className="text-[#3d2b1f] fill-current" />
               </div>
               <h2 className="text-lg md:text-xl font-serif font-bold text-[#FDFBF7] uppercase tracking-wider">
-                Không gian tại Luma Spa
+                {t("videoTitle")}
               </h2>
             </div>
 
@@ -75,23 +75,19 @@ const NewsAndReview = () => {
                     onClick={() => setIsPlaying(true)}
                     className="absolute inset-0 cursor-pointer group flex items-center justify-center"
                   >
-                    {/* LỚP NỀN VÀNG CÁT ĐẬM MỜ (BACKDROP) */}
                     <div className="absolute inset-0 bg-[#B38B59]/30 backdrop-blur-2xl transition-all duration-700 group-hover:bg-[#B38B59]/45" />
 
-                    {/* ẢNH THUMBNAIL - ĐÃ BỎ CLASS ZOOM (group-hover:scale-110) */}
                     <div className="relative w-full h-full overflow-hidden">
                       <Image
                         src="/images/video-thumbnail.png" 
-                        alt="Luma Spa Space"
+                        alt={t("videoAlt")}
                         fill
                         className="object-cover brightness-[0.4] transition-all duration-700"
                       />
                     </div>
                     
-                    {/* LỚP PHỦ GRADIENT */}
                     <div className="absolute inset-0 bg-gradient-to-t from-[#3d2b1f] via-transparent to-[#B38B59]/20 opacity-80 group-hover:opacity-60 transition-opacity duration-500" />
 
-                    {/* HIỆU ỨNG SÓNG VÀ NÚT PLAY */}
                     <div className="absolute inset-0 flex items-center justify-center">
                       <RippleEffect color="#B38B59" />
                       
@@ -110,7 +106,7 @@ const NewsAndReview = () => {
                     <iframe
                       className="w-full h-full"
                       src="https://www.youtube.com/embed/3F1P6HPpfPE?autoplay=1&rel=0" 
-                      title="Luma Spa Review Video"
+                      title={t("videoIframeTitle")}
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                     ></iframe>
@@ -126,7 +122,7 @@ const NewsAndReview = () => {
                 rel="noopener noreferrer"
                 className="text-[#B38B59]/70 hover:text-[#B38B59] text-xs uppercase tracking-[0.2em] transition-colors flex items-center gap-2 group font-medium"
               >
-                Xem trực tiếp trên YouTube 
+                {t("watchOnYoutube")}
                 <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
@@ -139,7 +135,7 @@ const NewsAndReview = () => {
                 <Square size={18} className="text-[#B38B59] fill-[#B38B59]/30" />
               </div>
               <h2 className="text-lg md:text-xl font-serif font-bold text-[#FDFBF7] uppercase tracking-wider">
-                Tin làm đẹp
+                {t("newsTitle")}
               </h2>
             </div>
 
@@ -180,7 +176,7 @@ const NewsAndReview = () => {
                 href={`/${locale}/news`}
                 className="flex items-center gap-3 bg-[#B38B59] hover:bg-[#FDFBF7] text-[#3d2b1f] px-10 py-4 rounded-full font-bold text-xs transition-all shadow-xl group uppercase tracking-[0.2em]"
               >
-                Xem thêm tin mới
+                {t("viewMoreBtn")}
                 <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>

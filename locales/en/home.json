@@ -101,33 +101,6 @@
     "alt": "360-degree space of Luma Spa",
     "hint": "Move to explore 360° space"
   },
-  "testimonials": {
-    "title": "Customer Reviews",
-    "subtitle": "Customer experiences at Luma Spa",
-    "static_feedback_label": "FEEDBACK",
-    "items": {
-      "customer_1": {
-        "content": "I was recommended by an acquaintance. We had a group of 4. The salt rock sauna is spacious and comfortable. The staff's service attitude is excellent.",
-        "author": "Tran Nhat Anh",
-        "role": "Frequent Customer (Vietnam)"
-      },
-      "customer_2": {
-        "content": "Professional therapists and extremely clean facilities. The salt rock sauna is a must-try. Best relaxation in Da Nang!",
-        "author": "James Wilson",
-        "role": "Traveler (UK)"
-      },
-      "customer_3": {
-        "content": "岘港最好的水疗中心。环境优雅，技术专业. 强烈推荐给寻找高品质体验의游客。",
-        "author": "Li Wei",
-        "role": "Tourist (China)"
-      },
-      "customer_4": {
-        "content": "다낭에서 가장 만족스러운 스파였습니다. 소금방이 매우 넓고 쾌적하며 직원들이 친절합니다.",
-        "author": "Park Ji-hye",
-        "role": "Tourist (Korea)"
-      }
-    }
-  },
   "commitments": {
     "label": "Our Commitment",
     "quality": {

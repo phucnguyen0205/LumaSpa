@@ -101,33 +101,6 @@
     "alt": "루마 스파 360도 공간",
     "hint": "360° 공간을 탐색하려면 움직여보세요"
   },
-  "testimonials": {
-    "title": "고객 리뷰",
-    "subtitle": "루마 스파에서의 고객 경험",
-    "static_feedback_label": "피드백",
-    "items": {
-      "customer_1": {
-        "content": "지인 소개로 4명 팀으로 방문했습니다. 소금방이 넓고 쾌적해서 좋았어요. 직원들의 서비스 태도가 정말 훌륭합니다.",
-        "author": "Tran Nhat Anh",
-        "role": "단골 고객 (베트남)"
-      },
-      "customer_2": {
-        "content": "Professional therapists and extremely clean facilities. The salt rock sauna is a must-try. Best relaxation in Da Nang!",
-        "author": "James Wilson",
-        "role": "여행객 (영국)"
-      },
-      "customer_3": {
-        "content": "岘港最好的水疗中心。环境优雅，技术专业. 强烈推荐给寻找高品质体验의游客。",
-        "author": "Li Wei",
-        "role": "여행객 (중국)"
-      },
-      "customer_4": {
-        "content": "다낭에서 가장 만족스러운 스파였습니다. 소금방이 매우 넓고 쾌적하며 직원들이 친절합니다.",
-        "author": "Park Ji-hye",
-        "role": "여행객 (한국)"
-      }
-    }
-  },
   "commitments": {
     "label": "우리의 약속",
     "quality": {

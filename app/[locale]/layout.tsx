@@ -24,7 +24,7 @@ export default async function RootLayout({ children, params }: Props) {
   const messages = await getMessages({ locale });
 
   // 3. Load resources cho i18n (nếu bạn vẫn dùng i18next song song)
-  const namespaces = ['common', 'header', 'footer', 'services', 'contact', 'home', 'about'];
+  const namespaces = ['common', 'header', 'footer', 'services', 'contact', 'home', 'about', 'review'];
   const { resources } = await initTranslations(locale, namespaces);
 
   // 3. Schema SEO

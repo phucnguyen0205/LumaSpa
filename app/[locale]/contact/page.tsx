@@ -4,10 +4,13 @@ import Header from "@/components/layout/header/page";
 import Footer from "@/components/layout/footer/page";
 import ContactClient from "./contact-client";
 
-// Metadata giữ nguyên logic cũ
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations("contact");
+  const t = await getTranslations({ locale, namespace: "contact" });
 
   return {
     title: `${t("seo.meta_title")} | Luma Spa Da Nang`,
@@ -15,31 +18,31 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     openGraph: {
       title: t("seo.meta_title"),
       description: t("seo.meta_desc"),
-      url: `https://lumaspa.com.vi/${locale}/contact`,
+      url: `https://lumaspa.com.vn/${locale}/contact`,
       siteName: "Luma Spa",
       images: [{ url: "/images/og-contact.jpg" }],
       locale: locale,
       type: "website",
     },
     alternates: {
-      canonical: `https://lumaspa.com.vi/${locale}/contact`,
+      canonical: `https://lumaspa.com.vn/${locale}/contact`,
       languages: {
-        'vi-VN': 'https://lumaspa.com.vi/vi/contact',
-        'en-US': 'https://lumaspa.com.vi/en/contact',
-        'ko-KR': 'https://lumaspa.com.vi/ko/contact',
-        'zh-CN': 'https://lumaspa.com.vi/zh/contact',
+        'vi-VN': 'https://lumaspa.com.vn/vi/contact',
+        'en-US': 'https://lumaspa.com.vn/en/contact',
+        'ko-KR': 'https://lumaspa.com.vn/ko/contact',
+        'zh-CN': 'https://lumaspa.com.vn/zh/contact',
       },
     },
   };
 }
 
-export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
+// 2. Component chính ContactPage
+export default async function ContactPage({ params }: Props) {
   const { locale } = await params;
   
-  // Lấy hàm t từ namespace "contact"
-  const t = await getTranslations("contact");
+  // QUAN TRỌNG: Phải truyền { locale } vào đây để lấy đúng file json tương ứng
+  const t = await getTranslations({ locale, namespace: "contact" });
 
-  // ĐỊNH NGHĨA BIẾN NÀY: Gom dữ liệu từ file JSON vào object
   const contactMessages = {
     title: t("title"),
     subtitle: t("subtitle"),
@@ -63,7 +66,6 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       note: t("form.note"),
     },
     attractions_title: t("attractions_title"),
-    // Dùng t.raw cho mảng (list) để không bị lỗi render
     attractions_list: t.raw("attractions_list"),
   };
 
@@ -73,13 +75,13 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
     "name": "Luma Spa Da Nang",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Da Nang",
+      "streetAddress": "190 Nguyen Cong Tru",
       "addressLocality": "Da Nang",
       "addressCountry": "VN"
     },
-    "telephone": "0876712808",
+    "telephone": "0783237168",
     "openingHours": "Mo-Su 09:00-22:00",
-    "image": "https://lumaspa.com/logo.png"
+    "image": "https://lumaspa.com.vn/logo.png"
   };
 
   return (
@@ -91,8 +93,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       
       <Header />
       
-      <main className="flex-grow">
-        {/* Bây giờ contactMessages đã được định nghĩa và có đầy đủ info.address_label */}
+      <main className="flex-grow pt-20"> {/* Thêm pt-20 để không bị header đè */}
         <ContactClient messages={contactMessages} />
       </main>
 

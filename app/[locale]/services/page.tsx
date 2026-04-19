@@ -14,7 +14,7 @@ type PageProps = {
   params: Promise<{ locale: string }>;
 };
 
-// 1. Hàm tạo Metadata (SEO)
+// 1. Hàm tạo Metadata (SEO) - Phần này bạn đã làm đúng
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "services" });
@@ -33,7 +33,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 // 2. Component chính của trang
 export default async function ServiceListPage({ params }: PageProps) {
   const { locale } = await params;
-  const t = await getTranslations("services");
+
+  // LỖI TẠI ĐÂY CŨ: Cần thêm { locale } vào để lấy đúng ngôn ngữ
+  const t = await getTranslations({ locale, namespace: "services" });
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -47,8 +49,8 @@ export default async function ServiceListPage({ params }: PageProps) {
       "item": {
         "@type": "Service",
         "name": service.name[locale as keyof typeof service.name],
-        "url": `https://lumaspa.com/${locale}/services/${service.slug}`,
-        "image": `https://lumaspa.com${service.image}`,
+        "url": `https://lumaspa.com.vn/${locale}/services/${service.slug}`,
+        "image": `https://lumaspa.com.vn${service.image}`,
         "description": service.description[locale as keyof typeof service.description]
       }
     }))

@@ -16,7 +16,6 @@ interface ContactProps {
     brand_name: string;
     address_value: string;
     phone_value: string;
-    phone_value_2?: string;
     email_value: string;
     quote: string;
     info: {
@@ -100,10 +99,9 @@ export default function ContactClient({ messages }: ContactProps) {
                       {messages.info.phone_label}
                     </p>
                     <div className="space-y-1 text-lg">
-                      <p className="text-[#c2410c] font-bold">{messages.phone_value}</p>
-                      {messages.phone_value_2 && (
-                        <p className="text-[#c2410c] font-bold">{messages.phone_value_2}</p>
-                      )}
+                        <p className="text-[#c2410c] font-bold">{messages.phone_value}</p>
+
+
                     </div>
                   </div>
                 </div>

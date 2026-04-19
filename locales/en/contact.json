@@ -1,15 +1,15 @@
 {
   "title": "Contact Us",
-  "subtitle": "We are always here to listen to you",
+  "subtitle": "We are always ready to listen to you",
   "brand_name": "Luma Spa Da Nang",
-  "phone_value": "078 3237 168",
-  "phone_value_2": "",
-  "email_value": "lumaspadn@gmail.com",
-  "hours_value": "09:00 - 22:00",
-  "address_label": "Address",
+  "hours_value": "09:00 AM - 10:00 PM",
+  "address_label": "Branch Address",
   "address_value": "190 Nguyen Cong Tru, Da Nang, Vietnam",
   "phone_label": "Booking Hotline",
+  "phone_value": "078 3237 168",
   "email_label": "Support Email",
+  "email_value": "lumaspadn@gmail.com",
+  "find_us": "Get Directions",
   "branch_name": "Luma Spa - Da Nang Branch",
   "quote": "Your relaxation is our top priority",
   "info": {
@@ -28,20 +28,24 @@
     "subject": "How can we help?",
     "option_booking": "Book a Service",
     "option_feedback": "Service Feedback",
-    "option_other": "Other Inquiry",
+    "option_other": "Other Requests",
     "message": "Message Content",
     "submit": "Send Request",
     "note": "IF YOU HAVE ANY QUESTIONS OR FEEDBACK... Luma Spa sincerely thanks you!"
   },
   "seo": {
     "meta_title": "Contact Luma Spa Da Nang | Leading Massage & Wellness Center",
-    "meta_desc": "Contact Luma Spa Da Nang to experience premium Thai Massage, Herbal Hair Wash, and Professional Skincare. Hotline: 078 323 7168."
+    "meta_desc": "Contact Luma Spa Da Nang for professional Thai Massage, Herbal Hair Wash, and Skin Care services. Hotline: 078 323 7168."
   },
   "attractions_title": "Nearby Attractions",
   "attractions_list": [
-    { "title": "My Son Sanctuary", "image": "/images/myson.jpg" },
-    { "title": "Dragon Bridge Da Nang", "image": "/images/dragon.jpg" },
-    { "title": "Son Tra Peninsula", "image": "/images/sontra.jpg" },
-    { "title": "Marble Mountains", "image": "/images/nguhanhson.jpg" }
+    { "title": "My Son Sanctuary", "image": "/images/contact-thanhdiamyson.png" },
+    { "title": "Dragon Bridge", "image": "/images/contact-caurong.png" },
+    { "title": "Son Tra Peninsula", "image": "/images/contact-bandaosontra.png" },
+    { "title": "Marble Mountains", "image": "/images/contact-nguhanhson.png" },
+    { "title": "Ba Na Hills", "image": "/images/contact-banahill.png" },
+    { "title": "Hoi An Ancient Town", "image": "/images/contact-phocohoian.png" },
+    { "title": "Linh Ung Pagoda", "image": "/images/contact-chualinhung.png" },
+    { "title": "My Khe Beach", "image": "/images/contact-bienmykhe.png" }
   ]
 }

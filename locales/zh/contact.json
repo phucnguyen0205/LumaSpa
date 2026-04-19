@@ -1,47 +1,51 @@
 {
-  "title": "联系我们",
-  "subtitle": "我们随时倾听您的声音",
+  "title": "聯繫我們",
+  "subtitle": "我們隨時準備傾聽您的需求",
   "brand_name": "Luma Spa Da Nang",
-  "address_value": "越南岘港市阮公著路190号",
-  "phone_value": "078 3237 168",
-  "phone_value_2": "",
-  "email_value": "lumaspadn@gmail.com",
   "hours_value": "09:00 - 22:00",
-    "address_label": "地址",
-    "phone_label": "预订热线",
-    "email_label": "支持邮箱",
-    "branch_name": "Luma Spa - 岘港分店",
-  "quote": "您的放松是我们的重中之重",
+  "address_label": "分店地址",
+  "address_value": "190 Nguyen Cong Tru, Da Nang, Vietnam",
+  "phone_label": "預約熱線",
+  "phone_value": "078 3237 168",
+  "email_label": "支援郵箱",
+  "email_value": "lumaspadn@gmail.com",
+  "find_us": "查看路線",
+  "branch_name": "Luma Spa - 峴港分店",
+  "quote": "您的放鬆是我們的首要任務",
   "info": {
     "address": "地址",
-    "phone": "电话",
-    "email": "电子邮件",
-    "hours": "营业时间",
+    "phone": "電話",
+    "email": "電子郵件",
+    "hours": "營業時間",
     "address_label": "地址",
-    "phone_label": "预订热线",
-    "email_label": "支持邮箱"
+    "phone_label": "預約熱線",
+    "email_label": "支援郵箱"
   },
   "form": {
     "name": "姓名",
-    "phone": "电话号码",
-    "email": "电子邮箱",
-    "subject": "我们能帮您什么？",
-    "option_booking": "预订服务",
-    "option_feedback": "服务反馈",
-    "option_other": "其他查询",
-    "message": "信息内容",
-    "submit": "发送请求",
-    "note": "如果您有任何疑问或反馈... Luma Spa 衷心感谢您！"
+    "phone": "電話號碼",
+    "email": "電子郵件地址",
+    "subject": "我們能為您提供什麼幫助？",
+    "option_booking": "預約服務",
+    "option_feedback": "服務反饋",
+    "option_other": "其他諮詢",
+    "message": "諮詢內容",
+    "submit": "提交諮詢",
+    "note": "如果您有任何疑問或反饋，請隨時與我們聯繫... Luma Spa 衷心感謝您！"
   },
   "seo": {
-    "meta_title": "联系 岘港 Luma Spa | 领先的按摩与健康中心",
-    "meta_desc": "联系岘港 Luma Spa，体验顶级泰式按摩、草本洗发和专业护肤服务。热线：078 323 7168。"
+    "meta_title": "聯繫峴港 Luma Spa | 頂級按摩與健康護理中心",
+    "meta_desc": "聯繫峴港 Luma Spa，體驗專業的泰式按摩、草本洗髮和皮膚護理服務。熱線：078 323 7168。"
   },
-  "attractions_title": "周边景点",
+  "attractions_title": "周邊熱門景點",
   "attractions_list": [
-    { "title": "美山圣地", "image": "/images/myson.jpg" },
-    { "title": "岘港龙桥", "image": "/images/dragon.jpg" },
-    { "title": "山茶半岛", "image": "/images/sontra.jpg" },
-    { "title": "五行山", "image": "/images/nguhanhson.jpg" }
+    { "title": "美山聖地", "image": "/images/contact-thanhdiamyson.png" },
+    { "title": "峴港龍橋", "image": "/images/contact-caurong.png" },
+    { "title": "山茶半島", "image": "/images/contact-bandaosontra.png" },
+    { "title": "五行山", "image": "/images/contact-nguhanhson.png" },
+    { "title": "巴拿山", "image": "/images/contact-banahill.png" },
+    { "title": "會安古鎮", "image": "/images/contact-phocohoian.png" },
+    { "title": "靈應寺", "image": "/images/contact-chualinhung.png" },
+    { "title": "美溪沙灘", "image": "/images/contact-bienmykhe.png" }
   ]
 }

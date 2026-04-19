@@ -39,40 +39,51 @@ export default async function BlogPost({ params }: Props) {
   return (
     <>
       <Header />
-      {/* Background chính dùng màu Nâu Cafe #3d2b1f */}
-      <main className="pt-32 pb-16 bg-[#3d2b1f]">
-        <article className="container mx-auto px-4 max-w-4xl">
-          <header className="mb-12 text-center">
-            {/* Tiêu đề dùng màu Trắng Kem #fcfaf7 để nổi bật trên nền nâu */}
-            <h1 className="text-3xl md:text-5xl font-serif font-bold text-[#fcfaf7] mb-6 leading-tight">
+      <main className="bg-white min-h-screen">
+        {/* PHẦN HERO: Ép H1 xuống size XL trên mobile để không bị tràn */}
+        <section className="bg-[#3d2b1f] pt-32 pb-8 md:pt-48 md:pb-24">
+          <div className="container mx-auto px-6 max-w-4xl text-center">
+            <h1 className="text-xl md:text-5xl font-serif font-bold text-[#fcfaf7] mb-6 leading-tight">
               {post.title}
             </h1>
-            <div className="flex items-center justify-center gap-4 text-[#fcfaf7]/70 font-medium tracking-widest uppercase text-xs">
+            <div className="flex items-center justify-center gap-3 text-[#fcfaf7]/50 font-medium tracking-[0.2em] uppercase text-[9px]">
               <span className="text-[#d48a1f]">Luma Spa</span>
               <span>•</span>
               <span>{t("postedOn")}: {post.date}</span>
             </div>
-          </header>
+          </div>
+        </section>
 
-          <div className="relative aspect-video mb-16">
+        <article className="w-full">
+          {/* Ảnh banner chính: Thu nhỏ h-48 trên mobile */}
+          <div className="w-full h-[200px] md:h-[600px] relative">
             <img 
               src={post.image} 
               alt={post.title} 
-              className="w-full h-full object-cover rounded-[2.5rem] shadow-2xl shadow-black/30" 
+              className="w-full h-full object-cover" 
             />
           </div>
 
-          {/* Nội dung bài viết nằm trong card màu Trắng Kem #fcfaf7 để dễ đọc */}
-          <div className="bg-[#fcfaf7] p-8 md:p-16 rounded-[2.5rem] shadow-xl">
-            <div 
-              className="prose prose-stone prose-lg max-w-none 
-                         prose-headings:font-serif prose-headings:text-[#3d2b1f]
-                         prose-strong:text-[#3d2b1f]
-                         prose-p:text-stone-700 prose-p:leading-relaxed
-                         prose-img:rounded-2xl"
-              dangerouslySetInnerHTML={{ __html: post.content }} 
-            />
-          </div>
+          {/* DÙNG PROSE ĐỂ KHỐNG CHẾ TOÀN BỘ NỘI DUNG HTML */}
+          <div 
+            className="w-full prose prose-stone max-w-none
+                       /* Text chính: 14px cho mobile | 16px cho desktop */
+                       text-sm md:text-base 
+                       
+                       /* ÉP H1/H2 TRONG NỘI DUNG (Cái bạn bị to ở ảnh) */
+                       prose-h1:text-xl md:prose-h1:text-4xl
+                       prose-h2:text-lg md:prose-h2:text-3xl
+                       prose-h2:mt-10 prose-h2:mb-4
+                       
+                       /* ÉP H3 TRONG NỘI DUNG */
+                       prose-h3:text-base md:prose-h3:text-2xl
+                       prose-h3:mt-8 prose-h3:mb-3
+                       
+                       /* Giảm khoảng cách padding/margin thừa trên mobile */
+                       prose-p:my-3 prose-p:leading-relaxed
+                       antialiased"
+            dangerouslySetInnerHTML={{ __html: post.content }} 
+          />
         </article>
       </main>
       <Footer />

@@ -1,8 +1,9 @@
-// src/app/[locale]/services/data.ts
-
 export interface ServiceData {
   slug: string;
-  youtubeId: string; // ID từ link Youtube để nhúng vào iframe
+  youtubeId: string;
+  image: string;
+  price: string;
+  highlight?: boolean;
   name: {
     vi: string;
     en: string;
@@ -21,15 +22,19 @@ export interface ServiceData {
     zh: string;
     ko: string;
   };
-  price: string;
-  image: string;
-  highlight?: boolean;
+  // --- Các Key mới để tối ưu đa ngôn ngữ và làm sạch Page.tsx ---
+  longDescription: { [key: string]: string };
+  whyChoose: { [key: string]: string };
+  benefits: { [key: string]: string[] }; // Mảng 3 lợi ích tương ứng 3 icon trên UI
+  footerAddress: { [key: string]: string };
 }
 
 export const SERVICES_DATA: ServiceData[] = [
   {
     slug: "thai-massage-da-nang",
-    youtubeId: "dQw4w9WgXcQ", // Thay bằng ID thực tế
+    youtubeId: "dQw4w9WgXcQ",
+    image: "/images/Gemini_Generated_Image_qwy0gvqwy0gvqwy0.png",
+    price: "360.000đ - 560.000đ",
     name: {
       vi: "Massage Thái Cổ Truyền",
       en: "Traditional Thai Massage",
@@ -37,211 +42,335 @@ export const SERVICES_DATA: ServiceData[] = [
       ko: "전통 태국 마사지",
     },
     keywords: {
-      vi: "massage thái đà nẵng, spa đà nẵng, massage trị liệu, luma spa",
-      en: "thai massage da nang, best spa in da nang, therapy massage, luma spa",
-      zh: "岘港按摩, 岘港泰式按摩, 岘港水疗, Luma Spa",
-      ko: "다낭 마사지, 다낭 태국 마사지, 다낭 스파, 루마 스파",
+      vi: "massage thái đà nẵng, thai massage da nang, massage trị liệu xương khớp, luma spa massage thái, spa uy tín đà nẵng",
+      en: "thai massage da nang, traditional thai massage, deep tissue massage da nang, best thai spa da nang, luma spa",
+      zh: "岘港按摩, 岘港泰式按摩, 岘港水疗, Luma Spa, 传统泰式按摩 岘港",
+      ko: "다낭 마사지, 다낭 태국 마사지, 다낭 스파, 루마 스파, 다낭 타이 마사지 추천",
     },
     description: {
-      vi: "Massage Thái tại Đà Nẵng giúp thư giãn, giảm đau nhức và cải thiện lưu thông máu.",
-      en: "Thai massage in Da Nang for relaxation, pain relief and better circulation.",
-      zh: "岘港泰式按摩，放松身心，缓解酸痛，促进血液循环。",
-      ko: "다낭 태국 마사지는 휴식, 통증 완화 및 혈액 순환 개선에 도움이 됩니다.",
+      vi: "Trải nghiệm liệu pháp ấn huyệt và kéo giãn đặc trưng của Thái Lan ngay tại Đà Nẵng.",
+      en: "Experience authentic Thai pressure point therapy and stretching in Da Nang.",
+      zh: "在岘港体验地道的泰式穴位压力疗法和拉伸。",
+      ko: "다낭에서 정통 태국식 지압과 스트레칭을 경험해 보세요.",
     },
-    price: "360.000đ - 560.000đ",
-    image: "/images/ser-1png",
+    longDescription: {
+      vi: "Tại Luma Spa Đà Nẵng, chúng tôi mang đến không gian tĩnh lặng giúp bạn tái tạo năng lượng hoàn hảo. Mỗi động tác ấn huyệt, miết cơ đều được thực hiện với sự tận tâm nhất.",
+      en: "At Luma Spa Da Nang, we provide a tranquil space to perfectly regenerate your energy. Every acupressure and muscle stroke is performed with utmost dedication.",
+      zh: "在岘港 Luma Spa，我们提供宁静的空间，助您完美重塑能量。每一次穴位按摩和肌肉推拿都倾注了我们的专业与用心。",
+      ko: "루마 스파 다낭에서는 에너지를 완벽하게 재충전할 수 있는 고요한 공간을 제공합니다. 모든 지압과 근육 이완 동작은 정성을 다해 수행됩니다.",
+    },
+    whyChoose: { vi: "Tại sao nên chọn dịch vụ này?", en: "Why Choose This Service?", ko: "왜 이 서비스를 선택해야 할까요?", zh: "为什么选择这项服务？" },
+    benefits: {
+      vi: ["Giải phóng năng lượng", "Giảm đau xương khớp", "Cơ thể linh hoạt"],
+      en: ["Release blockages", "Relieve joint pain", "Body flexibility"],
+      ko: ["에너지 흐름 개선", "관절 통증 완화", "신체 유연성 회복"],
+      zh: ["释放能量阻塞", "缓解关节疼痛", "恢复身体柔韧性"]
+    },
+    footerAddress: { vi: "Đà Nẵng, Việt Nam", en: "Da Nang, Vietnam", ko: "베트남 다낭", zh: "越南岘港" }
   },
   {
-    keywords: {
-      vi: "massage đá nóng đà nẵng, spa đà nẵng, massage trị liệu, luma spa",
-      en: "hot stone massage da nang, best spa in da nang, therapy massage, luma spa",
-      zh: "岘港热石按摩, 岘港水疗, 岘港按摩治疗, Luma Spa",
-      ko: "다낭 핫스톤 마사지, 다낭 스파, 다낭 치료 마사지, 루마 스파",
-    },
     slug: "hot-stone-massage-da-nang",
     youtubeId: "v7AYKz67YpY",
+    image: "/images/Gemini_Generated_Image_qwy0gvqwy0gvqwy0.png",
+    price: "450.000đ - 650.000đ",
     name: {
       vi: "Massage Đá Nóng",
       en: "Hot Stone Massage",
       zh: "热石按摩",
       ko: "핫스톤 마사지",
     },
-    description: {
-      vi: "Sử dụng đá núi lửa kết hợp tinh dầu để thải độc và giảm căng thẳng cơ bắp.",
-      en: "Using volcanic stones combined with essential oils to detoxify and reduce muscle tension.",
-      zh: "采用火山石结合精油，排毒并缓解肌肉紧张。",
-      ko: "화산석과 에센셜 오일을 사용하여 독소를 배출하고 근육 긴장을 완화합니다.",
-    },
-    price: "450.000đ - 650.000đ",
-    image: "/images/services/hot-stone.jpg",
-  },
-  {
     keywords: {
-      vi: "massage cổ vai gáy đà nẵng, spa đà nẵng, massage trị liệu, luma spa",
-      en: "neck shoulder massage da nang, best spa in da nang, therapy massage, luma spa",
-      zh: "岘港颈肩按摩, 岘港水疗, 岘港按摩治疗, Luma Spa",
-      ko: "다낭 목 어깨 마사지, 다낭 스파, 다낭 치료 마사지, 루마 스파",
-    },
-    slug: "neck-shoulder-massage-da-nang",
-    youtubeId: "example_id_3",
-    name: {
-      vi: "Massage Cổ Vai Gáy",
-      en: "Neck & Shoulder Massage",
-      zh: "颈肩按摩",
-      ko: "목 & 어깨 마사지",
+      vi: "massage đá nóng đà nẵng, hot stone massage da nang, massage thư giãn",
+      en: "hot stone massage da nang, volcanic stone massage, detox massage",
+      zh: "岘港热石按摩, 岘港水疗, 岘港排毒按摩",
+      ko: "다낭 핫스톤 마사지, 다낭 스파, 다낭 마사지 잘하는곳",
     },
     description: {
-      vi: "Giải pháp hoàn hảo cho dân văn phòng, giảm đau mỏi vùng cổ và vai tức thì.",
-      en: "Perfect solution for office workers, instant relief for neck and shoulder pain.",
-      zh: "上班族的完美选择，即刻缓解颈肩酸痛。",
-      ko: "사무직 종사자에게 완벽한 솔루션, 목과 어깨 통증을 즉시 완화해 줍니다.",
+      vi: "Sự kết hợp hoàn hảo giữa nhiệt năng từ đá núi lửa và tinh dầu thảo mộc.",
+      en: "A perfect blend of volcanic stone heat and herbal essential oils to detoxify.",
+      zh: "火山石的热能与草本精油的完美结合，排毒排汗。",
+      ko: "화산석의 열기와 허브 에센셜 오일의 완벽한 조화로 독소를 배출합니다.",
     },
-    price: "250.000đ - 400.000đ",
-    image: "/images/services/neck.jpg",
+    longDescription: {
+      vi: "Nhiệt năng từ đá núi lửa len lỏi vào các mô cơ, giúp sưởi ấm kinh lạc và đưa bạn vào trạng thái thư giãn sâu nhất tại Luma Spa.",
+      en: "Heat from volcanic stones penetrates muscle tissues, warming meridians and bringing you into the deepest state of relaxation.",
+      zh: "来自火山石的热能渗透进肌肉组织，温暖经络，带您进入最深层放松的状态。",
+      ko: "화산석의 열기가 근육 조직 깊숙이 침투하여 경락을 따뜻하게 하고 깊은 휴식의 상태로 안내합니다.",
+    },
+    whyChoose: { vi: "Lợi ích của Đá Nóng?", en: "Benefits of Hot Stone?", ko: "핫스톤의 장점은?", zh: "热石按摩的好处？" },
+    benefits: {
+      vi: ["Thải độc cơ thể", "Sưởi ấm kinh lạc", "Thư giãn sâu"],
+      en: ["Body detox", "Warm meridians", "Deep relaxation"],
+      ko: ["독소 배출", "경락 온열", "심층 휴식"],
+      zh: ["排毒养颜", "温暖经络", "深度放松"]
+    },
+    footerAddress: { vi: "Đà Nẵng, Việt Nam", en: "Da Nang, Vietnam", ko: "베트남 다낭", zh: "越南岘港" }
   },
   {
-    keywords: {
-      vi: "massage toàn thân đà nẵng, spa đà nẵng, massage trị liệu, luma spa",
-      en: "body massage da nang, best spa in da nang, therapy massage, luma spa",
-      zh: "岘港全身按摩, 岘港水疗, 岘港按摩治疗, Luma Spa",
-      ko: "다낭 전신 마사지, 다낭 스파, 다낭 치료 마사지, 루마 스파",
-    },
-    slug: "body-massage-da-nang",
-    youtubeId: "example_id_4",
-    name: {
-      vi: "Massage Toàn Thân",
-      en: "Body Massage",
-      zh: "全身按摩",
-      ko: "전신 마사지",
-    },
-    description: {
-      vi: "Kết hợp các kỹ thuật ấn huyệt và miết cơ giúp phục hồi năng lượng toàn diện.",
-      en: "Combining acupressure and muscle stroking techniques for full energy recovery.",
-      zh: "结合穴位按摩和肌肉推拿技术，全面恢复活力。",
-      ko: "지압과 근육 마사지 기술을 결합하여 에너지를 전면적으로 회복시킵니다.",
-    },
-    price: "400.000đ - 600.000đ",
-    image: "/images/services/body.jpg",
-  },
-  {
-    keywords: {
-      vi: "massage chân đà nẵng, spa đà nẵng, massage trị liệu, luma spa",
-      en: "foot massage da nang, best spa in da nang, therapy massage, luma spa",
-      zh: "岘港足底按摩, 岘港水疗, 岘港按摩治疗, Luma Spa",
-      ko: "다낭 발 마사지, 다낭 스파, 다낭 치료 마사지, 루마 스파",
-    },
-    slug: "foot-massage-da-nang",
-    youtubeId: "example_id_5",
-    name: {
-      vi: "Massage Chân",
-      en: "Foot Massage",
-      zh: "足底按摩",
-      ko: "발 마사지",
-    },
-    description: {
-      vi: "Tập trung vào các huyệt đạo ở lòng bàn chân, giúp xua tan mệt mỏi sau ngày dài di chuyển.",
-      en: "Focusing on pressure points on the soles, helping to dispel fatigue after a long day of moving.",
-      zh: "针对足底穴位，缓解长途跋涉后的疲劳。",
-      ko: "발바닥의 지압점에 집중하여 장시간 이동 후의 피로를 풀어줍니다.",
-    },
-    price: "200.000đ - 350.000đ",
-    image: "/images/services/foot.jpg",
-  },
-  {
-    keywords: {
-      vi: "gội đầu thảo dược đà nẵng, spa đà nẵng, chăm sóc tóc, luma spa",
-      en: "herbal hair wash da nang, best spa in da nang, hair care, luma spa",
-      zh: "岘港草本洗发, 岘港水疗, 岘港头发护理, Luma Spa",
-      ko: "다낭 허브 헤어 워시, 다낭 스파, 헤어 케어, 루마 스파",
-    },
-    slug: "herbal-hair-wash-da-nang",
-    youtubeId: "example_id_6",
-    name: {
-      vi: "Gội Đầu Thảo Dược",
-      en: "Herbal Hair Wash",
-      zh: "草本洗发",
-      ko: "한방 샴푸",
-    },
-    description: {
-      vi: "Sử dụng các loại thảo mộc tự nhiên giúp làm sạch da đầu và thư giãn trí óc.",
-      en: "Using natural herbs to cleanse the scalp and relax the mind.",
-      zh: "采用天然草本清洁头皮，放松心情。",
-      ko: "천연 허브를 사용하여 두피를 세정하고 마음을 편안하게 해줍니다.",
-    },
-    price: "150.000đ - 250.000đ",
-    image: "/images/services/hair-wash.jpg",
-  },
-  {
-    keywords: {
-      vi: "gội đầu ocean abyss đà nẵng, spa đà nẵng, chăm sóc tóc, luma spa",
-      en: "ocean abyss scalp therapy da nang, best spa in da nang, hair care, luma spa",
-      zh: "岘港深海头皮疗法, 岘港水疗, 岘港头发护理, Luma Spa",
-      ko: "다낭 오션 어비스 두피 테라피, 다낭 스파, 헤어 케어, 루마 스파",
-    },
     slug: "ocean-abyss-scalp-therapy-da-nang",
-    youtubeId: "example_id_7",
+    youtubeId: "dQw4w9WgXcQ",
+    image: "/images/Gemini_Generated_Image_qwy0gvqwy0gvqwy0.png",
+    price: "239.000đ - 339.000đ",
+    highlight: true,
     name: {
       vi: "Gội Đầu Ocean Abyss",
       en: "Ocean Abyss Scalp Therapy",
       zh: "深海头皮疗法",
       ko: "오션 어비스 두피 테라피",
     },
-    description: {
-      vi: "Gội đầu dưỡng sinh cao cấp kết hợp massage thư giãn chuyên sâu tại Đà Nẵng.",
-      en: "Premium scalp therapy with relaxing massage in Da Nang.",
-      zh: "岘港高级养生洗发，结合深度放松按摩。",
-      ko: "다낭의 심층 릴랙스 마사지와 결합된 프리미엄 두피 테라피.",
+    keywords: {
+      vi: "gội đầu ocean abyss đà nẵng, gội đầu dưỡng sinh cao cấp, luma spa highlight",
+      en: "ocean abyss scalp therapy da nang, premium scalp treatment, luma spa signature",
+      zh: "岘港深海头皮疗法, 岘港顶级水疗, 岘港头发护理",
+      ko: "다낭 오션 어비스 두피 테라피, 다낭 프리미엄 스파, 루마 스파 시그니처",
     },
-    price: "239.000đ - 339.000đ",
-    image: "/images/services/ocean.jpg",
-    highlight: true,
+    description: {
+      vi: "Liệu trình đặc biệt kết hợp gội đầu dưỡng sinh với massage bấm huyệt chuyên sâu.",
+      en: "A special treatment combining nutritional hair wash with intensive acupressure.",
+      zh: "将养生洗发与深度穴位按摩及香薰疗法相结合的特色疗程。",
+      ko: "영양 샴푸와 집중 지압 마사지, 아로마 테라피를 결합한 특별한 트리트먼트입니다.",
+    },
+    longDescription: {
+      vi: "Liệu trình đặc biệt tại Luma Spa giúp tái tạo năng lượng từ sâu bên trong thông qua liệu pháp mùi hương và bấm huyệt vùng đầu.",
+      en: "A special treatment at Luma Spa that regenerates energy from within through aromatherapy and scalp acupressure.",
+      zh: "Luma Spa 的特色疗程，通过香薰疗法和头部分按，从内而外再生能量。",
+      ko: "루마 스파만의 특별한 트리트먼트로, 아로마 테라피와 두피 지압을 통해 내면의 에너지를 재생시켜 드립니다.",
+    },
+    whyChoose: { vi: "Điểm đặc biệt của Luma?", en: "Why Luma Signature?", ko: "루마만의 특별함?", zh: "Luma 的特色之处？" },
+    benefits: {
+      vi: ["Tái tạo năng lượng", "Giảm căng thẳng", "Chăm sóc da đầu"],
+      en: ["Energy regeneration", "Reduce stress", "Scalp care"],
+      ko: ["에너지 재충전", "스트레스 해소", "두피 케어"],
+      zh: ["能量再生", "减轻压力", "头皮护理"]
+    },
+    footerAddress: { vi: "Đà Nẵng, Việt Nam", en: "Da Nang, Vietnam", ko: "베트남 다낭", zh: "越南岘港" }
   },
   {
-    keywords: {
-      vi: "combo chân cổ vai gáy đà nẵng, spa đà nẵng, massage trị liệu, luma spa",
-      en: "foot neck shoulder combo da nang, best spa in da nang, therapy massage, luma spa",
-      zh: "岘港足部颈肩套装, 岘港水疗, 岘港按摩治疗, Luma Spa",
-      ko: "다낭 발 목 어깨 콤보, 다낭 스파, 다낭 치료 마사지, 루마 스파",
+    slug: "neck-shoulder-massage-da-nang",
+    youtubeId: "example_id_3",
+    image: "/images/Gemini_Generated_Image_qwy0gvqwy0gvqwy0.png",
+    price: "250.000đ - 400.000đ",
+    name: {
+      vi: "Massage Cổ Vai Gáy",
+      en: "Neck & Shoulder Massage",
+      zh: "颈肩按摩",
+      ko: "목 & 어깨 마사지",
     },
+    keywords: {
+      vi: "massage cổ vai gáy đà nẵng, trị liệu cổ vai gáy, luma spa trị liệu",
+      en: "neck and shoulder massage da nang, office syndrome treatment",
+      zh: "岘港颈肩按摩, 岘港水疗, 缓解颈部疼痛",
+      ko: "다낭 목 어깨 마사지, 다낭 스파, 어깨 통증 완화",
+    },
+    description: {
+      vi: "Kỹ thuật miết cơ chuyên sâu giúp đánh tan các nút thắt cơ vùng vai gáy.",
+      en: "Intensive muscle stroking techniques dissolve knots in the neck and shoulders.",
+      zh: "深度肌肉按摩技术可消除颈肩部位的结节。",
+      ko: "집중적인 근육 마사지 기술로 목과 어깨의 뭉친 근육을 풀어줍니다.",
+    },
+    longDescription: {
+      vi: "Cứu cánh cho những cơn đau mỏi do ngồi máy tính lâu. Chúng tôi tập trung vào các điểm căng cứng để giải phóng áp lực tức thì cho vùng cổ vai gáy.",
+      en: "A lifesaver for pains caused by long hours at the computer. We focus on tension points to provide instant pressure relief for the neck and shoulders.",
+      zh: "长时间坐在电脑前的救星。我们专注于压力点，为您立刻缓解颈肩部压力。",
+      ko: "장시간 컴퓨터 사용으로 인한 통증의 해결사입니다. 긴장된 부위에 집중하여 즉각적인 압박 해소 효과를 선사합니다.",
+    },
+    whyChoose: { vi: "Hiệu quả tức thì?", en: "Instant Relief?", ko: "즉각적인 효과?", zh: "效果立刻见效？" },
+    benefits: {
+      vi: ["Tan nút thắt cơ", "Giảm đau tức thì", "Cải thiện tư thế"],
+      en: ["Dissolve knots", "Instant relief", "Improve posture"],
+      ko: ["근육 뭉침 해제", "통증 즉각 완화", "자세 개선"],
+      zh: ["消除肌肉结节", "立刻缓解疼痛", "改善体态"]
+    },
+    footerAddress: { vi: "Đà Nẵng, Việt Nam", en: "Da Nang, Vietnam", ko: "베트남 다낭", zh: "越南岘港" }
+  },
+  {
+    slug: "foot-massage-da-nang",
+    youtubeId: "example_id_5",
+    image: "/images/Gemini_Generated_Image_qwy0gvqwy0gvqwy0.png",
+    price: "200.000đ - 350.000đ",
+    name: {
+      vi: "Massage Chân Chuyên Sâu",
+      en: "Intensive Foot Massage",
+      zh: "深度足底按摩",
+      ko: "집중 발 마사지",
+    },
+    keywords: {
+      vi: "massage chân đà nẵng, foot massage da nang, luma spa foot massage",
+      en: "foot massage da nang, reflexology massage, foot spa da nang",
+      zh: "岘港足底按摩, 岘港水疗, 足部反射疗法",
+      ko: "다낭 발 마사지, 다낭 스파, 발 반사요법",
+    },
+    description: {
+      vi: "Tập trung vào hệ thống phản xạ học tại lòng bàn chân để xua tan mệt mỏi.",
+      en: "Focuses on the reflexology system in the soles to dispel fatigue.",
+      zh: "专注于足底反射系统，驱散全身疲劳。",
+      ko: "발바닥의 반사 체계에 집중하여 피로를 말끔히 씻어줍니다.",
+    },
+    longDescription: {
+      vi: "Lý tưởng sau một ngày dài khám phá Đà Nẵng. Liệu pháp bấm huyệt lòng bàn chân giúp kích thích các cơ quan nội tạng và hồi phục đôi chân mệt mỏi.",
+      en: "Ideal after a long day of exploring Da Nang. Foot reflexology helps stimulate internal organs and recover tired feet.",
+      zh: "漫步岘港一整天后的理想选择。足底反射疗法有助于刺激内脏器官，恢复疲惫的双足。",
+      ko: "다낭을 여행한 긴 하루 후에 이상적입니다. 발 반사요법은 내장 기관을 자극하고 지친 발의 회복을 돕습니다.",
+    },
+    whyChoose: { vi: "Tại sao cần Foot Massage?", en: "Why Foot Massage?", ko: "발 마사지가 필요한 이유?", zh: "为什么需要足部按摩？" },
+    benefits: {
+      vi: ["Giảm mỏi chân", "Kích thích nội tạng", "Ngủ ngon hơn"],
+      en: ["Reduce leg fatigue", "Stimulate organs", "Better sleep"],
+      ko: ["발 피로 해소", "장기 기능 자극", "숙면 유도"],
+      zh: ["缓解腿部疲劳", "刺激内脏器官", "改善睡眠"]
+    },
+    footerAddress: { vi: "Đà Nẵng, Việt Nam", en: "Da Nang, Vietnam", ko: "베트남 다낭", zh: "越南岘港" }
+  },
+  {
+    slug: "body-massage-da-nang",
+    youtubeId: "example_id_4",
+    image: "/images/Gemini_Generated_Image_qwy0gvqwy0gvqwy0.png",
+    price: "400.000đ - 600.000đ",
+    name: {
+      vi: "Massage Toàn Thân Luma",
+      en: "Luma Signature Body Massage",
+      zh: "Luma 特色全身按摩",
+      ko: "루마 시그니처 전신 마사지",
+    },
+    keywords: {
+      vi: "massage toàn thân đà nẵng, body massage da nang, luma spa massage body",
+      en: "full body massage da nang, luma signature massage",
+      zh: "岘港全身按摩, 岘港水疗, Luma Spa 特色",
+      ko: "다낭 전신 마사지, 다낭 스파, 루마 시그니처",
+    },
+    description: {
+      vi: "Sự hòa quyện giữa kỹ thuật Thụy Điển nhẹ nhàng và ấn huyệt phương Đông.",
+      en: "A harmony of gentle Swedish techniques and Oriental acupressure.",
+      zh: "揉合了温和的瑞典技术和东方穴位按摩。",
+      ko: "부드러운 스웨디시 기법과 동양의 지압이 조화를 이룹니다.",
+    },
+    longDescription: {
+      vi: "Liệu trình signature giúp tái tạo năng lượng, làm mềm cơ và cải thiện giấc ngủ ngon thông qua sự kết hợp tinh tế giữa các trường phái massage.",
+      en: "Our signature treatment regenerates energy, softens muscles, and improves sleep quality through a delicate combination of massage styles.",
+      zh: "特色疗程有助于能量再生，柔化肌肉，并通过多种按摩风格的精妙结合改善睡眠质量。",
+      ko: "다양한 마사지 기법의 정교한 조합을 통해 에너지를 재충전하고 근육을 부드럽게 하며 숙면을 돕는 시그니처 트리트먼트입니다.",
+    },
+    whyChoose: { vi: "Signature có gì?", en: "What's in Signature?", ko: "시그니처의 특징?", zh: "特色按摩包含什么？" },
+    benefits: {
+      vi: ["Tái tạo năng lượng", "Làm mềm cơ", "Ngủ ngon sâu"],
+      en: ["Regenerate energy", "Soften muscles", "Deep sleep"],
+      ko: ["에너지 재충전", "근육 이완", "숙면 유도"],
+      zh: ["能量再生", "柔化肌肉", "深度睡眠"]
+    },
+    footerAddress: { vi: "Đà Nẵng, Việt Nam", en: "Da Nang, Vietnam", ko: "베트남 다낭", zh: "越南岘港" }
+  },
+  {
+    slug: "herbal-hair-wash-da-nang",
+    youtubeId: "example_id_6",
+    image: "/images/Gemini_Generated_Image_qwy0gvqwy0gvqwy0.png",
+    price: "150.000đ - 250.000đ",
+    name: {
+      vi: "Gội Đầu Thảo Dược Nam Bộ",
+      en: "Vietnamese Herbal Hair Wash",
+      zh: "越南草本洗发",
+      ko: "베트남식 한방 샴푸",
+    },
+    keywords: {
+      vi: "gội đầu thảo dược đà nẵng, gội đầu dưỡng sinh đà nẵng, luma spa gội đầu",
+      en: "herbal hair wash da nang, scalp treatment da nang",
+      zh: "岘港草本洗发, 岘港水疗, 养生洗发",
+      ko: "다낭 허브 헤어 워시, 다낭 두피 마사지, 베트남 샴푸",
+    },
+    description: {
+      vi: "Làm sạch tóc và thư giãn da đầu với hương thơm từ bồ kết, sả, chanh.",
+      en: "Cleanse hair and relax the scalp with fragrances of lemongrass and herbs.",
+      zh: "享受皂角、香茅、柠檬和名贵草本的芳香，清洁并放松头皮。",
+      ko: "보켓, 레몬그라스, 레몬의 향기와 함께 두피를 세정하고 휴식을 선사합니다.",
+    },
+    longDescription: {
+      vi: "Không chỉ làm sạch tóc, chúng tôi sử dụng các loại thảo mộc tự nhiên giúp nuôi dưỡng mái tóc khỏe mạnh và giảm căng thẳng trí óc hoàn hảo.",
+      en: "Beyond cleaning, we use natural herbs to nourish healthy hair and provide perfect mental stress relief.",
+      zh: "不仅是清洁头发，我们还使用天然草本滋养秀发，并完美缓解精神压力。",
+      ko: "단순한 세정을 넘어 천연 허브를 사용하여 건강한 모발을 가꾸어주고 정신적 스트레스를 말끔히 해소해 드립니다.",
+    },
+    whyChoose: { vi: "Thảo dược tự nhiên?", en: "Natural Herbs?", ko: "천연 허브의 힘?", zh: "天然草本护理？" },
+    benefits: {
+      vi: ["Sạch sâu da đầu", "Giảm stress trí óc", "Tóc chắc khỏe"],
+      en: ["Deep scalp clean", "Reduce stress", "Strong hair"],
+      ko: ["두피 딥클렌징", "스트레스 감소", "모발 강화"],
+      zh: ["头皮深层清洁", "减轻压力", "强韧发质"]
+    },
+    footerAddress: { vi: "Đà Nẵng, Việt Nam", en: "Da Nang, Vietnam", ko: "베트남 다낭", zh: "越南岘港" }
+  },
+  {
     slug: "foot-neck-shoulder-combo-da-nang",
     youtubeId: "example_id_8",
+    image: "/images/Gemini_Generated_Image_qwy0gvqwy0gvqwy0.png",
+    price: "450.000đ - 700.000đ",
     name: {
       vi: "Combo Chân & Cổ Vai Gáy",
       en: "Foot & Neck Shoulder Combo",
       zh: "足部与颈肩套装",
       ko: "발 & 목 어깨 콤보",
     },
-    description: {
-      vi: "Sự kết hợp hoàn hảo để chăm sóc các vùng mệt mỏi nhất trên cơ thể.",
-      en: "The perfect combination to care for the most tired areas of the body.",
-      zh: "呵护身体最疲劳部位 promotion 的完美结合。",
-      ko: "신체에서 가장 피로한 부위를 관리하기 위한 완벽한 조합.",
+    keywords: {
+      vi: "combo massage đà nẵng, massage chân cổ vai gáy, luma spa combo",
+      en: "foot and neck shoulder combo da nang, best value spa combo",
+      zh: "岘港足部颈肩套装, 岘港水疗套餐, 按摩优惠",
+      ko: "다낭 마사지 콤보, 발 목 어깨 마사지, 가성비 마사지",
     },
-    price: "450.000đ - 700.000đ",
-    image: "/images/services/combo.jpg",
+    description: {
+      vi: "Chăm sóc toàn diện các vùng chịu áp lực lớn nhất với mức giá tối ưu.",
+      en: "Comprehensive care for high-pressure areas at an optimal price.",
+      zh: "以最优价格为压力最大的部位提供全面呵护。",
+      ko: "가장 압박이 심한 부위를 합리적인 가격으로 종합 관리해 드립니다.",
+    },
+    longDescription: {
+      vi: "Gói dịch vụ được yêu thích nhất cho những ai bận rộn, giúp cơ thể phục hồi nhanh chóng sau những chuyến đi dài tại Đà Nẵng.",
+      en: "The most popular package for busy individuals, helping the body recover quickly after long trips in Da Nang.",
+      zh: "最受忙碌人士欢迎的套餐，帮助身体在岘港长途旅行后快速恢复。",
+      ko: "바쁜 분들에게 가장 인기 있는 패키지로, 다낭 여행 후 지친 몸을 빠르게 회복시켜 드립니다.",
+    },
+    whyChoose: { vi: "Tại sao chọn Combo?", en: "Why choose Combo?", ko: "콤보를 선택하는 이유?", zh: "为什么选择套餐？" },
+    benefits: {
+      vi: ["Phục hồi nhanh", "Tiết kiệm chi phí", "Chăm sóc toàn diện"],
+      en: ["Fast recovery", "Cost saving", "Full care"],
+      ko: ["빠른 회복", "비용 절감", "종합 케어"],
+      zh: ["快速恢复", "节省费用", "全面护理"]
+    },
+    footerAddress: { vi: "Đà Nẵng, Việt Nam", en: "Da Nang, Vietnam", ko: "베트남 다낭", zh: "越南岘港" }
   },
   {
-    keywords: {
-      vi: "chăm sóc da mặt đà nẵng, spa đà nẵng, facial treatment, luma spa",
-      en: "facial treatment da nang, best spa in da nang, skin care, luma spa",
-      zh: "岘港面部护理, 岘港水疗, 岘港护肤, Luma Spa",
-      ko: "다낭 페이셜 트리트먼트, 다낭 스파, 피부 관리, 루마 스파",
-    },
     slug: "facial-treatment-da-nang",
     youtubeId: "example_id_9",
+    image: "/images/Gemini_Generated_Image_qwy0gvqwy0gvqwy0.png",
+    price: "300.000đ - 800.000đ",
     name: {
-      vi: "Chăm Sóc Da Mặt",
-      en: "Facial Treatment",
-      zh: "面部护理",
-      ko: "페이셜 케어",
+      vi: "Chăm Sóc Da Mặt Chuyên Sâu",
+      en: "Intensive Facial Treatment",
+      zh: "面部深度护理",
+      ko: "집중 페이셜 케어",
+    },
+    keywords: {
+      vi: "chăm sóc da mặt đà nẵng, facial treatment da nang, luma spa facial",
+      en: "facial treatment da nang, professional skin care",
+      zh: "岘港面部护理, 护肤, 美容护理",
+      ko: "다낭 페이셜 케어, 피부관리, 미용 스파",
     },
     description: {
-      vi: "Liệu trình chăm sóc da chuyên sâu, mang lại làn da tươi trẻ và mịn màng.",
-      en: "Intensive skin care treatment, providing youthful and smooth skin.",
-      zh: "深度肌肤护理，打造年轻水润肌肤。",
-      ko: "생기 있고 매끄러운 피부를 선사하는 집중 스킨케어 트리트먼트.",
+      vi: "Làn da được nuông chiều với liệu trình làm sạch sâu và đắp mặt nạ dưỡng chất.",
+      en: "Pamper your skin with deep cleansing and nutrient-rich masks.",
+      zh: "通过深度清洁和营养面膜宠爱您的肌肤，重现光彩。",
+      ko: "딥 클렌징과 영양 마스크로 피부에 진정한 휴식을 선사합니다.",
     },
-    price: "300.000đ - 800.000đ",
-    image: "/images/services/facial.jpg",
+    longDescription: {
+      vi: "Liệu trình giúp mang lại vẻ ngoài rạng rỡ, tràn đầy sức sống thông qua kỹ thuật nâng cơ và cấp ẩm chuyên sâu cho mọi loại da.",
+      en: "The treatment brings a radiant, vital look through lifting techniques and intensive hydration for all skin types.",
+      zh: "通过对各类肌肤的提拉技术和深度补水，让您重现光彩照人、充满活力的面容。",
+      ko: "리프팅 기법과 집중 보습을 통해 모든 피부 타입에 생기와 광채를 되찾아 드립니다.",
+    },
+    whyChoose: { vi: "Hiệu quả cho da?", en: "Skin results?", ko: "피부 개선 효과?", zh: "护肤效果？" },
+    benefits: {
+      vi: ["Sáng da rạng rỡ", "Cấp ẩm chuyên sâu", "Nâng cơ mặt"],
+      en: ["Radiant skin", "Intensive hydration", "Facial lifting"],
+      ko: ["피부 광채", "집중 보습", "페이셜 리프팅"],
+      zh: ["提亮肤色", "深度补水", "面部提拉"]
+    },
+    footerAddress: { vi: "Đà Nẵng, Việt Nam", en: "Da Nang, Vietnam", ko: "베트남 다낭", zh: "越南岘港" }
   },
 ];

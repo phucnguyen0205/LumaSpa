@@ -52,7 +52,7 @@ export default function ContactClient({ messages }: ContactProps) {
         {/* 1. BANNER ẢNH PHÒNG */}
         <section className="relative h-[400px] md:h-[550px] w-full overflow-hidden">
           <Image
-            src="/images/contact-banner.jpg" 
+            src="/images/Gemini_Generated_Image_qwy0gvqwy0gvqwy0.png" 
             alt="Luma Spa Banner"
             fill
             className="object-cover brightness-75"
@@ -189,7 +189,7 @@ export default function ContactClient({ messages }: ContactProps) {
         {/* 3. SECTION BẢN ĐỒ */}
         <section className="w-full h-[500px] grayscale hover:grayscale-0 transition-all duration-1000 border-y border-white/10">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.911650302781!2d108.23112347585573!3d16.07009493941454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142177f15b49721%3A0xc3f8379435b62b08!2zMTkwIE5ndXnhu4VuIEPDtG5nIFRyw6ksIEFuIEjhuqNpIELhuq9jLCBTxqFuIFRyw6AsIMSQw6AgTuG6t25nIDU1MDAwMCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1713531456789!5m2!1sen!2s"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.967745319754!2d108.23160771006347!3d16.067163484547834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142182bc828bdcb%3A0xae3e3ccbd687f481!2zMTkwIE5ndXnhu4VuIEPDtG5nIFRy4bupLCBBbiBI4bqjaSwgU8ahbiBUcsOgLCDEkMOgIE7hurVuZyA1OTAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1773061290970!5m2!1svi!2s"
             className="w-full h-full border-0"
             allowFullScreen
             loading="lazy"

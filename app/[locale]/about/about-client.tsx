@@ -79,8 +79,8 @@ export default function AboutClient({ dict, locale }: { dict: any; locale: strin
 
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
-                href={`/${locale}/spa-services`}
-                className="group relative overflow-hidden rounded-full bg-[#CC6600] px-6 py-3 text-sm font-semibold text-white transition-all hover:scale-105 hover:shadow-xl"
+                href={`/${locale}/services`}
+                className="group relative overflow-hidden rounded-full bg-[#8B795E] px-6 py-3 text-sm font-semibold text-white transition-all hover:scale-105 hover:shadow-xl"
               >
                 <span className="relative z-10">{dict.hero.ctaServices}</span>
                 <div className="absolute inset-0 translate-y-full bg-white/20 transition-transform duration-300 group-hover:translate-y-0" />

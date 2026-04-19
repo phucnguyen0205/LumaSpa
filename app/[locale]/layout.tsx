@@ -4,23 +4,8 @@ import { initTranslations } from "@/i18n";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
-<<<<<<< HEAD
-import { getMessages } from "next-intl/server";
-import { Metadata } from "next"; // Thêm dòng này
-
-// --- THÊM ĐOẠN NÀY ĐỂ HẾT LỖI METADATABASE ---
-export const metadata: Metadata = {
-  metadataBase: new URL('https://lumaspa.com.vn'), // Thay bằng domain thật của bạn sau này
-  title: {
-    default: "Luma Spa Da Nang | Luxury Wellness & Massage",
-    template: "%s | Luma Spa Da Nang"
-  },
-  description: "Best Luxury Spa in Da Nang. Experience Traditional Massage, Herbal Hair Wash and more at 190 Nguyen Cong Tru.",
-};
-=======
 import { getMessages } from "next-intl/server"; // 1. Thêm dòng này
 import FloatingContact from "@/components/home/floating-contact";
->>>>>>> 6f91964 (update color background)
 
 interface Props {
   children: React.ReactNode;
@@ -30,27 +15,33 @@ interface Props {
 export default async function RootLayout({ children, params }: Props) {
   const { locale } = await params;
 
+  // Kiểm tra locale hợp lệ
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
 
+  // 2. Lấy messages cho NextIntlClientProvider
   const messages = await getMessages({ locale });
+
+  // 3. Load resources cho i18n (nếu bạn vẫn dùng i18next song song)
   const namespaces = ['common', 'header', 'footer', 'services', 'contact', 'home', 'about'];
   const { resources } = await initTranslations(locale, namespaces);
 
+  // 3. Schema SEO
   const schema = {
     "@context": "https://schema.org",
     "@type": "Spa",
     name: "Luma Spa",
-    image: "https://lumaspa.com.vn/logo.jpg", // Cập nhật domain cho đồng bộ
-    telephone: "0783237168", // Cập nhật đúng số hotline của Luma
+    image: "https://yourdomain.com/logo.jpg",
+    telephone: "0876712808",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "190 Nguyen Cong Tru",
+      streetAddress: "Da Nang, Vietnam",
       addressLocality: "Da Nang",
       addressCountry: "VN",
     },
   };
+
 
   return (
     <html lang={locale}>
@@ -61,6 +52,7 @@ export default async function RootLayout({ children, params }: Props) {
         />
       </head>
       <body className="antialiased">
+        {/* Bọc các Provider đúng thứ tự */}
         <NextIntlClientProvider locale={locale} messages={messages}>
           <TranslationsProvider 
             locale={locale} 

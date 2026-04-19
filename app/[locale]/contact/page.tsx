@@ -4,7 +4,6 @@ import Header from "@/components/layout/header/page";
 import Footer from "@/components/layout/footer/page";
 import ContactClient from "./contact-client";
 
-// Metadata giữ nguyên logic cũ
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations("contact");
@@ -35,11 +34,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  
-  // Lấy hàm t từ namespace "contact"
   const t = await getTranslations("contact");
 
-  // ĐỊNH NGHĨA BIẾN NÀY: Gom dữ liệu từ file JSON vào object
   const contactMessages = {
     title: t("title"),
     subtitle: t("subtitle"),
@@ -47,7 +43,6 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
     brand_name: t("brand_name"),
     address_value: t("address_value"),
     phone_value: t("phone_value"),
-    phone_value_2: t("phone_value_2"),
     email_value: t("email_value"),
     info: {
       address_label: t("info.address_label"),
@@ -63,7 +58,6 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       note: t("form.note"),
     },
     attractions_title: t("attractions_title"),
-    // Dùng t.raw cho mảng (list) để không bị lỗi render
     attractions_list: t.raw("attractions_list"),
   };
 
@@ -73,13 +67,13 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
     "name": "Luma Spa Da Nang",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Da Nang",
+      "streetAddress": "190 Nguyen Cong Tru",
       "addressLocality": "Da Nang",
       "addressCountry": "VN"
     },
-    "telephone": "0876712808",
+    "telephone": "0783237168",
     "openingHours": "Mo-Su 09:00-22:00",
-    "image": "https://lumaspa.com/logo.png"
+    "image": "https://lumaspa.com.vn/logo.png"
   };
 
   return (
@@ -91,8 +85,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       
       <Header />
       
-      <main className="flex-grow">
-        {/* Bây giờ contactMessages đã được định nghĩa và có đầy đủ info.address_label */}
+      <main className="flex-grow pt-20"> 
         <ContactClient messages={contactMessages} />
       </main>
 

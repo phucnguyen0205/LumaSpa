@@ -1,16 +1,17 @@
 {
   "about_title": "About Luma Spa",
-  "about_desc": "A sanctuary where natural beauty and energy are restored through professional skin and body care treatments.",
-  "copyright": "© 2026 LumaSpa. All rights reserved.",
+  "about_desc": "A peaceful sanctuary where natural beauty and energy are restored through professional skin and body treatments.",
+  "copyright": "All rights reserved.",
   "links_title": "Quick Links",
   "services_title": "Services",
   "address_value": "190 Nguyen Cong Tru, Da Nang, Vietnam",
   "phone_value": "078 323 7168",
   "email_value": "lumaspadn@gmail.com",
-  "working_hours": "Opening Hours: 09:00 - 21:00 (Mon - Sun)",
+  "working_hours_title": "Working Hours",
+  "working_hours": "09:00 - 21:00 (Monday - Sunday)",
   "privacy_policy": "Privacy Policy",
   "terms_of_service": "Terms of Service",
-  "slogan": "Luma Spa – Soothe your body, calm your mind",
+  "slogan": "Luma Spa – Relax your body, calm your soul",
   "booking": {
     "branch_title": "Da Nang Branch"
   },
@@ -23,9 +24,14 @@
     "booking": "Book Now"
   },
   "services": {
-    "body_massage": "Body Massage",
-    "facial_care": "Facial Care",
-    "herbal_bath": "Herbal Steam Bath",
-    "hot_stone": "Hot Stone Massage"
+    "massage_thai": "Traditional Thai massage",
+    "massage_da_nong": "Hot stone massage",
+    "massage_co_vai_gay": "Neck, shoulder & back massage",
+    "body_massage": "Body massage",
+    "foot_massage": "Foot massage",
+    "goi_dau_thao_moc": "Herbal hair wash",
+    "ocean_abyss": "Ocean abyss scalp therapy",
+    "foot_neck_shoulder": "Foot + Neck & Shoulder (Combo)",
+    "cham_soc_da_mat": "Intensive facial care"
   }
 }

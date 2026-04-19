@@ -20,11 +20,17 @@ export default function Footer() {
 
   const { t } = useTranslation(["common", "footer", "contact"]);
 
-  const serviceItems = [
-    t("services.body_massage", { ns: "footer" }),
-    t("services.facial_care", { ns: "footer" }),
-    t("services.herbal_bath", { ns: "footer" }),
-    t("services.hot_stone", { ns: "footer" }),
+  // Cấu trúc mảng dịch vụ đi kèm slug để link đến trang chi tiết
+  const serviceLinks = [
+    { slug: "thai-massage-da-nang", label: t("services.massage_thai", { ns: "footer" }) },
+    { slug: "hot-stone-massage-da-nang", label: t("services.massage_da_nong", { ns: "footer" }) },
+    { slug: "neck-shoulder-massage-da-nang", label: t("services.massage_co_vai_gay", { ns: "footer" }) },
+    { slug: "body-massage-da-nang", label: t("services.body_massage", { ns: "footer" }) },
+    { slug: "foot-massage-da-nang", label: t("services.foot_massage", { ns: "footer" }) },
+    { slug: "herbal-hair-wash-da-nang", label: t("services.goi_dau_thao_moc", { ns: "footer" }) },
+    { slug: "ocean-abyss-scalp-therapy-da-nang", label: t("services.ocean_abyss", { ns: "footer" }) },
+    { slug: "foot-neck-shoulder-combo-da-nang", label: t("services.foot_neck_shoulder", { ns: "footer" }) },
+    { slug: "facial-treatment-da-nang", label: t("services.cham_soc_da_mat", { ns: "footer" }) },
   ];
 
   return (
@@ -82,7 +88,6 @@ export default function Footer() {
               <p itemProp="email">{t("email_value", { ns: "footer" })}</p>
             </div>
 
-            {/* CẬP NHẬT: Thay đổi đường dẫn ảnh sang qrcode.png */}
             <div className="w-full max-w-[160px] overflow-hidden rounded-md border-[3px] border-[#8b4300] bg-white shadow-sm mt-2">
               <img
                 src="/images/qrcode.png"
@@ -92,19 +97,21 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* CỘT 3: DỊCH VỤ */}
+          {/* CỘT 3: DỊCH VỤ - LINK TỚI TRANG CHI TIẾT */}
           <div className="space-y-4">
             <h4 className="text-lg font-bold uppercase tracking-wider text-[#1d1d1d]">
               {t("services_title", { ns: "footer" })}
             </h4>
 
-            <ul className="space-y-3">
-              {serviceItems.map((item, idx) => (
+            <ul className="space-y-2.5">
+              {serviceLinks.map((item, idx) => (
                 <li
                   key={idx}
-                  className="border-b border-black/5 pb-2 text-[14px] leading-6 text-[#555] hover:text-[#d48a1f] transition-colors"
+                  className="border-b border-black/5 pb-1.5 text-[13px] font-medium leading-6 text-[#555] hover:text-[#d48a1f] transition-colors"
                 >
-                  <Link href={`/${locale}/services`}>{item}</Link>
+                  <Link href={`/${locale}/services/${item.slug}`}>
+                    {item.label}
+                  </Link>
                 </li>
               ))}
             </ul>

@@ -8,6 +8,7 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
+// 1. Metadata chuẩn SEO đa ngôn ngữ
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "contact" });
@@ -40,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ContactPage({ params }: Props) {
   const { locale } = await params;
   
-  // QUAN TRỌNG: Phải truyền { locale } vào đây để lấy đúng file json tương ứng
+  // Lấy dữ liệu từ file json tương ứng với locale
   const t = await getTranslations({ locale, namespace: "contact" });
 
   const contactMessages = {
@@ -85,7 +86,8 @@ export default async function ContactPage({ params }: Props) {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    // Đổi bg-white thành bg-[#FDFBF7] để tiệp màu với ContactClient
+    <div className="min-h-screen flex flex-col bg-[#FDFBF7]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -93,7 +95,7 @@ export default async function ContactPage({ params }: Props) {
       
       <Header />
       
-      <main className="flex-grow pt-20"> {/* Thêm pt-20 để không bị header đè */}
+      <main className="flex-grow pt-20 md:pt-24"> 
         <ContactClient messages={contactMessages} />
       </main>
 

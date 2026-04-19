@@ -4,6 +4,7 @@ import { initTranslations } from "@/i18n";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
+<<<<<<< HEAD
 import { getMessages } from "next-intl/server";
 import { Metadata } from "next"; // Thêm dòng này
 
@@ -16,6 +17,10 @@ export const metadata: Metadata = {
   },
   description: "Best Luxury Spa in Da Nang. Experience Traditional Massage, Herbal Hair Wash and more at 190 Nguyen Cong Tru.",
 };
+=======
+import { getMessages } from "next-intl/server"; // 1. Thêm dòng này
+import FloatingContact from "@/components/home/floating-contact";
+>>>>>>> 6f91964 (update color background)
 
 interface Props {
   children: React.ReactNode;
@@ -63,6 +68,7 @@ export default async function RootLayout({ children, params }: Props) {
             resources={resources}
           >
             {children}
+            <FloatingContact />
           </TranslationsProvider>
         </NextIntlClientProvider>
       </body>

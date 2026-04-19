@@ -1,16 +1,17 @@
 {
   "about_title": "关于 Luma Spa",
-  "about_desc": "一个通过专业皮肤和身体护理疗程恢复自然美与能量的宁静之所。",
-  "copyright": "© 2026 LumaSpa. 版权所有。",
+  "about_desc": "一个宁静的圣地，通过专业的皮肤和身体护理恢复自然美和活力。",
+  "copyright": "版权所有。",
   "links_title": "快速链接",
   "services_title": "服务项目",
   "address_value": "越南岘港市阮公著路190号",
   "phone_value": "078 323 7168",
   "email_value": "lumaspadn@gmail.com",
-  "working_hours": "营业时间：09:00 - 21:00 (周一至周日)",
+  "working_hours_title": "营业时间",
+  "working_hours": "09:00 - 21:00 (周一至周日)",
   "privacy_policy": "隐私政策",
   "terms_of_service": "服务条款",
-  "slogan": "Luma Spa – 抚慰您的身体，平静您的心灵",
+  "slogan": "Luma Spa – 放松身体，宁静心灵",
   "booking": {
     "branch_title": "岘港分店"
   },
@@ -23,9 +24,14 @@
     "booking": "立即预约"
   },
   "services": {
+    "massage_thai": "传统泰式按摩",
+    "massage_da_nong": "热石按摩",
+    "massage_co_vai_gay": "颈肩背按摩",
     "body_massage": "全身按摩",
-    "facial_care": "面部护理",
-    "herbal_bath": "草本熏蒸",
-    "hot_stone": "热石按摩"
+    "foot_massage": "足底按摩",
+    "goi_dau_thao_moc": "草本洗头",
+    "ocean_abyss": "深海头皮理疗",
+    "foot_neck_shoulder": "足部 + 颈肩 (套餐)",
+    "cham_soc_da_mat": "深度面部护理"
   }
 }

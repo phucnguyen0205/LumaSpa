@@ -1,17 +1,18 @@
 {
-    "about_title": "Về Luma Spa",
-    "about_desc": "Một chốn thanh tịnh nơi vẻ đẹp tự nhiên và năng lượng được phục hồi thông qua các liệu trình chăm sóc da và cơ thể chuyên nghiệp.",
-    "copyright": "© 2026 LumaSpa. Tất cả quyền được bảo lưu.",
-    "links_title": "Liên kết nhanh",
-    "services_title": "Dịch vụ",
-    "address_value": "190 Nguyễn Công Trứ, Đà Nẵng, Việt Nam",
-    "phone_value": "078 323 7168",
-    "email_value": "lumaspadn@gmail.com",
-    "working_hours": "Giờ mở cửa: 09:00 - 21:00 (Thứ 2 - Chủ nhật)",
-    "privacy_policy": "Chính sách bảo mật",
-    "terms_of_service": "Điều khoản dịch vụ",
-    "slogan": "Luma Spa – Thư giãn cơ thể, thanh tịnh tâm hồn",
-    "booking": {
+  "about_title": "Về Luma Spa",
+  "about_desc": "Một chốn thanh tịnh nơi vẻ đẹp tự nhiên và năng lượng được phục hồi thông qua các liệu trình chăm sóc da và cơ thể chuyên nghiệp.",
+  "copyright": "Tất cả quyền được bảo lưu.",
+  "links_title": "Liên kết nhanh",
+  "services_title": "Dịch vụ",
+  "address_value": "190 Nguyễn Công Trứ, Đà Nẵng, Việt Nam",
+  "phone_value": "078 323 7168",
+  "email_value": "lumaspadn@gmail.com",
+  "working_hours_title": "Thời gian làm việc",
+  "working_hours": "09:00 - 21:00 (Thứ 2 - Chủ nhật)",
+  "privacy_policy": "Chính sách bảo mật",
+  "terms_of_service": "Điều khoản dịch vụ",
+  "slogan": "Luma Spa – Thư giãn cơ thể, thanh tịnh tâm hồn",
+  "booking": {
     "branch_title": "Chi nhánh Đà Nẵng"
   },
   "header": {
@@ -23,9 +24,14 @@
     "booking": "Đặt lịch ngay"
   },
   "services": {
-    "body_massage": "Massage Toàn Thân",
-    "facial_care": "Chăm sóc da mặt",
-    "herbal_bath": "Xông hơi thảo dược",
-    "hot_stone": "Massage đá nóng"
+    "massage_thai": "Massage thái cổ truyền",
+    "massage_da_nong": "Massage đá nóng",
+    "massage_co_vai_gay": "Massage cổ vai gáy",
+    "body_massage": "Body massage",
+    "foot_massage": "Foot massage",
+    "goi_dau_thao_moc": "Gội đầu thảo mộc",
+    "ocean_abyss": "Ocean abyss scalp therapy",
+    "foot_neck_shoulder": "Foot + neck & shoulder (combo)",
+    "cham_soc_da_mat": "Chăm sóc da mặt chuyên sâu"
   }
 }

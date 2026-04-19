@@ -7,22 +7,24 @@ export default function FloatingContact() {
   const contactActions = [
     {
       name: "Call",
-      icon: <Phone size={22} />,
+      icon: <Phone size={22} fill="currentColor" />,
       link: "tel:0783237168",
     },
     {
-      name: "Zalo",
-      icon: (
-        <svg viewBox="0 0 24 24" className="w-7 h-7">
-          <path d="M22.507 10.957c-.417-.676-1.571-1.631-3.666-2.184-2.18-.574-5.328-.865-8.541-.865-3.214 0-6.36.291-8.541.865-2.095.553-3.25 1.508-3.666 2.184-.452.732-.416 1.547-.143 2.127.273.58.749 1.055 1.45 1.433.04.02.079.04.119.058v3.473c0 .247.13.474.341.597.1.06.21.089.319.089.123 0 .246-.037.35-.11l3.528-2.485c.677.106 1.387.185 2.13.237 1.25.086 2.593.13 3.963.13 3.214 0 6.36-.291 8.541-.865 2.095-.553 3.25-1.508 3.666-2.184.452-.732.416-1.547-.143-2.127z" />
-        </svg>
-      ),
-      link: "https://zalo.me/0783237168",
-    },
+  name: "Zalo",
+  icon: (
+    <img
+      src="/images/zalo.png"
+      alt="Zalo"
+      className="w-8 h-8 object-contain"
+    />
+  ),
+  link: "https://zalo.me/0783237168",
+},
     {
       name: "Messenger",
       icon: (
-        <svg viewBox="0 0 24 24" className="w-6 h-6">
+        <svg viewBox="0 0 24 24" className="w-6 h-6 fill-white">
           <path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.915 1.455 5.51 3.734 7.19.196.145.313.375.313.623v2.336c0 .546.596.887 1.06.613l2.61-1.546a.798.798 0 01.373-.094c.61.085 1.236.128 1.874.128 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.06 12.872l-2.585-2.756-5.045 2.756 5.548-5.894 2.656 2.756 4.974-2.756-5.548 5.894z" />
         </svg>
       ),
@@ -30,7 +32,7 @@ export default function FloatingContact() {
     },
     {
       name: "WhatsApp",
-      icon: <MessageCircle size={24} />,
+      icon: <MessageCircle size={24} fill="currentColor" />,
       link: "https://wa.me/84783237168",
     },
   ];
@@ -39,15 +41,15 @@ export default function FloatingContact() {
     <div className="fixed right-6 bottom-24 z-[99] flex flex-col gap-4">
       {contactActions.map((action, index) => (
         <div key={index} className="relative flex items-center justify-center">
-          {/* Hiệu ứng sóng lan tỏa màu gỗ nhẹ */}
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#8B795E] opacity-30"></span>
+          {/* Hiệu ứng sóng màu vàng cát */}
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#dcc296] opacity-40"></span>
           
           <a
             href={action.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative bg-[#8B795E] w-12 h-12 rounded-full flex items-center justify-center text-[#CC6600] shadow-lg hover:scale-110 transition-transform duration-300 border border-white/20"
-            style={{ fill: "#CC6600" }}
+            className="relative bg-[#dcc296] w-12 h-12 rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform duration-300 border border-white/30"
+            title={action.name}
           >
             {action.icon}
           </a>

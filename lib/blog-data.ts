@@ -56,21 +56,21 @@ export const posts: Post[] = [
         </div>
 
         <ul class="space-y-6 pl-0 list-none">
-          <li class="flex items-start gap-4 bg-white p-6 rounded-2xl shadow-sm border-l-4 border-amber-600">
+          <li class="flex items-start gap-4 #fcfaf7 p-6 rounded-2xl shadow-sm border-l-4 border-amber-600">
             <span class="text-3xl text-amber-600 mt-1">✔</span>
             <div>
               <strong class="block text-stone-800">Giảm stress & căng thẳng</strong>
               <p class="text-stone-600">Kích hoạt hệ thần kinh đối giao cảm, giúp tinh thần thư thái và giảm lo âu.</p>
             </div>
           </li>
-          <li class="flex items-start gap-4 bg-white p-6 rounded-2xl shadow-sm border-l-4 border-amber-600">
+          <li class="flex items-start gap-4 #fcfaf7 p-6 rounded-2xl shadow-sm border-l-4 border-amber-600">
             <span class="text-3xl text-amber-600 mt-1">✔</span>
             <div>
               <strong class="block text-stone-800">Cải thiện giấc ngủ</strong>
               <p class="text-stone-600">Cơ thể được thả lỏng giúp ngủ sâu và ngon giấc hơn.</p>
             </div>
           </li>
-          <li class="flex items-start gap-4 bg-white p-6 rounded-2xl shadow-sm border-l-4 border-amber-600">
+          <li class="flex items-start gap-4 #fcfaf7 p-6 rounded-2xl shadow-sm border-l-4 border-amber-600">
             <span class="text-3xl text-amber-600 mt-1">✔</span>
             <div>
               <strong class="block text-stone-800">Tăng cường lưu thông máu</strong>
@@ -80,7 +80,7 @@ export const posts: Post[] = [
         </ul>
       </section>
 
-      <section class="bg-stone-900 text-stone-100 p-12 md:p-20 rounded-[4rem] shadow-2xl">
+      <section class="bg-[#3d2b1f] text-stone-100 p-12 md:p-20 rounded-[4rem] shadow-2xl">
         <h2 class="text-4xl font-bold text-amber-500 uppercase tracking-tighter mb-12">
           Liệu Trình Massage Toàn Thân Chuyên Sâu Tại Luma Spa
         </h2>
@@ -166,7 +166,7 @@ export const posts: Post[] = [
       </section>
 
       <!-- CTA mạnh mẽ -->
-      <div class="mt-20 p-16 bg-stone-900 text-stone-100 rounded-[5rem] text-center shadow-2xl relative border-b-8 border-amber-600 overflow-hidden">
+      <div class="mt-20 p-16 bg-[#3d2b1f] text-stone-100 rounded-[5rem] text-center shadow-2xl relative border-b-8 border-amber-600 overflow-hidden">
         <div class="absolute -top-24 -right-24 w-64 h-64 bg-amber-600/10 rounded-full blur-3xl"></div>
         <h3 class="text-5xl font-bold mb-8 text-amber-500 uppercase tracking-widest">Sẵn sàng xóa tan cơn đau và lấy lại năng lượng?</h3>
         <p class="text-xl mb-12 max-w-2xl mx-auto opacity-90">Hãy để Luma Spa giúp bạn thư giãn và phục hồi một cách chuyên nghiệp nhất.</p>
@@ -238,21 +238,21 @@ export const posts: Post[] = [
         </div>
 
         <ul class="space-y-6 pl-0 list-none">
-          <li class="flex items-start gap-4 bg-white p-6 rounded-2xl shadow-sm border-l-4 border-amber-600">
+          <li class="flex items-start gap-4 #fcfaf7 p-6 rounded-2xl shadow-sm border-l-4 border-amber-600">
             <span class="text-3xl text-amber-600 mt-1">✔</span>
             <div>
               <strong class="block text-stone-800">Reduces Stress & Anxiety</strong>
               <p class="text-stone-600">Activates the parasympathetic nervous system, helping you feel calm and deeply relaxed.</p>
             </div>
           </li>
-          <li class="flex items-start gap-4 bg-white p-6 rounded-2xl shadow-sm border-l-4 border-amber-600">
+          <li class="flex items-start gap-4 #fcfaf7 p-6 rounded-2xl shadow-sm border-l-4 border-amber-600">
             <span class="text-3xl text-amber-600 mt-1">✔</span>
             <div>
               <strong class="block text-stone-800">Improves Sleep Quality</strong>
               <p class="text-stone-600">When the body is free from pain and tension, falling into deep, restorative sleep becomes much easier.</p>
             </div>
           </li>
-          <li class="flex items-start gap-4 bg-white p-6 rounded-2xl shadow-sm border-l-4 border-amber-600">
+          <li class="flex items-start gap-4 #fcfaf7 p-6 rounded-2xl shadow-sm border-l-4 border-amber-600">
             <span class="text-3xl text-amber-600 mt-1">✔</span>
             <div>
               <strong class="block text-stone-800">Enhances Blood Circulation</strong>
@@ -262,7 +262,7 @@ export const posts: Post[] = [
         </ul>
       </section>
 
-      <section class="bg-stone-900 text-stone-100 p-12 md:p-20 rounded-[4rem] shadow-2xl">
+      <section class="bg-[#3d2b1f] text-stone-100 p-12 md:p-20 rounded-[4rem] shadow-2xl">
         <h2 class="text-4xl font-bold text-amber-500 uppercase tracking-tighter mb-12">
           Our Signature Full Body Massage at Luma Spa
         </h2>
@@ -348,7 +348,7 @@ export const posts: Post[] = [
       </section>
 
       <!-- Strong CTA -->
-      <div class="mt-20 p-16 bg-stone-900 text-stone-100 rounded-[5rem] text-center shadow-2xl relative border-b-8 border-amber-600 overflow-hidden">
+      <div class="mt-20 p-16 bg-[#3d2b1f] text-stone-100 rounded-[5rem] text-center shadow-2xl relative border-b-8 border-amber-600 overflow-hidden">
         <div class="absolute -top-24 -right-24 w-64 h-64 bg-amber-600/10 rounded-full blur-3xl"></div>
         <h3 class="text-5xl font-bold mb-8 text-amber-500 uppercase tracking-widest">Ready to Melt Away Pain and Reclaim Your Energy?</h3>
         <p class="text-xl mb-12 max-w-2xl mx-auto opacity-90">Let Luma Spa help you relax and recover with professional, caring full body massage in Da Nang.</p>
@@ -420,21 +420,21 @@ export const posts: Post[] = [
         </div>
 
         <ul class="space-y-6 pl-0 list-none">
-          <li class="flex items-start gap-4 bg-white p-6 rounded-2xl shadow-sm border-l-4 border-amber-600">
+          <li class="flex items-start gap-4 #fcfaf7 p-6 rounded-2xl shadow-sm border-l-4 border-amber-600">
             <span class="text-3xl text-amber-600 mt-1">✔</span>
             <div>
               <strong class="block text-stone-800">스트레스와 긴장 완화</strong>
               <p class="text-stone-600">부교감신경을 활성화시켜 마음을 편안하게 하고 불안을 줄여줍니다.</p>
             </div>
           </li>
-          <li class="flex items-start gap-4 bg-white p-6 rounded-2xl shadow-sm border-l-4 border-amber-600">
+          <li class="flex items-start gap-4 #fcfaf7 p-6 rounded-2xl shadow-sm border-l-4 border-amber-600">
             <span class="text-3xl text-amber-600 mt-1">✔</span>
             <div>
               <strong class="block text-stone-800">수면의 질 향상</strong>
               <p class="text-stone-600">통증과 긴장이 사라지면 깊고 편안한 수면을 취하기 쉬워집니다.</p>
             </div>
           </li>
-          <li class="flex items-start gap-4 bg-white p-6 rounded-2xl shadow-sm border-l-4 border-amber-600">
+          <li class="flex items-start gap-4 #fcfaf7 p-6 rounded-2xl shadow-sm border-l-4 border-amber-600">
             <span class="text-3xl text-amber-600 mt-1">✔</span>
             <div>
               <strong class="block text-stone-800">혈액순환 개선</strong>
@@ -444,7 +444,7 @@ export const posts: Post[] = [
         </ul>
       </section>
 
-      <section class="bg-stone-900 text-stone-100 p-12 md:p-20 rounded-[4rem] shadow-2xl">
+      <section class="bg-[#3d2b1f] text-stone-100 p-12 md:p-20 rounded-[4rem] shadow-2xl">
         <h2 class="text-4xl font-bold text-amber-500 uppercase tracking-tighter mb-12">
           루마 스파의 전문 풀바디 마사지 프로그램
         </h2>
@@ -530,7 +530,7 @@ export const posts: Post[] = [
       </section>
 
       <!-- CTA mạnh mẽ -->
-      <div class="mt-20 p-16 bg-stone-900 text-stone-100 rounded-[5rem] text-center shadow-2xl relative border-b-8 border-amber-600 overflow-hidden">
+      <div class="mt-20 p-16 bg-[#3d2b1f] text-stone-100 rounded-[5rem] text-center shadow-2xl relative border-b-8 border-amber-600 overflow-hidden">
         <div class="absolute -top-24 -right-24 w-64 h-64 bg-amber-600/10 rounded-full blur-3xl"></div>
         <h3 class="text-5xl font-bold mb-8 text-amber-500 uppercase tracking-widest">통증을 녹이고 에너지를 되찾을 준비가 되셨나요?</h3>
         <p class="text-xl mb-12 max-w-2xl mx-auto opacity-90">루마 스파 다낭에서 전문적이고 세심한 풀바디 마사지로 몸과 마음을 회복하세요.</p>
@@ -601,21 +601,21 @@ export const posts: Post[] = [
         </div>
 
         <ul class="space-y-6 pl-0 list-none">
-          <li class="flex items-start gap-4 bg-white p-6 rounded-2xl shadow-sm border-l-4 border-amber-600">
+          <li class="flex items-start gap-4 #fcfaf7 p-6 rounded-2xl shadow-sm border-l-4 border-amber-600">
             <span class="text-3xl text-amber-600 mt-1">✔</span>
             <div>
               <strong class="block text-stone-800">缓解压力与焦虑</strong>
               <p class="text-stone-600">激活副交感神经系统，让身心快速进入放松状态。</p>
             </div>
           </li>
-          <li class="flex items-start gap-4 bg-white p-6 rounded-2xl shadow-sm border-l-4 border-amber-600">
+          <li class="flex items-start gap-4 #fcfaf7 p-6 rounded-2xl shadow-sm border-l-4 border-amber-600">
             <span class="text-3xl text-amber-600 mt-1">✔</span>
             <div>
               <strong class="block text-stone-800">改善睡眠质量</strong>
               <p class="text-stone-600">身体不再酸痛后，更容易进入深度睡眠。</p>
             </div>
           </li>
-          <li class="flex items-start gap-4 bg-white p-6 rounded-2xl shadow-sm border-l-4 border-amber-600">
+          <li class="flex items-start gap-4 #fcfaf7 p-6 rounded-2xl shadow-sm border-l-4 border-amber-600">
             <span class="text-3xl text-amber-600 mt-1">✔</span>
             <div>
               <strong class="block text-stone-800">促进血液循环</strong>
@@ -625,7 +625,7 @@ export const posts: Post[] = [
         </ul>
       </section>
 
-      <section class="bg-stone-900 text-stone-100 p-12 md:p-20 rounded-[4rem] shadow-2xl">
+      <section class="bg-[#3d2b1f] text-stone-100 p-12 md:p-20 rounded-[4rem] shadow-2xl">
         <h2 class="text-4xl font-bold text-amber-500 uppercase tracking-tighter mb-12">
           Luma Spa专业全身按摩疗程
         </h2>
@@ -711,7 +711,7 @@ export const posts: Post[] = [
       </section>
 
       <!-- CTA mạnh mẽ -->
-      <div class="mt-20 p-16 bg-stone-900 text-stone-100 rounded-[5rem] text-center shadow-2xl relative border-b-8 border-amber-600 overflow-hidden">
+      <div class="mt-20 p-16 bg-[#3d2b1f] text-stone-100 rounded-[5rem] text-center shadow-2xl relative border-b-8 border-amber-600 overflow-hidden">
         <div class="absolute -top-24 -right-24 w-64 h-64 bg-amber-600/10 rounded-full blur-3xl"></div>
         <h3 class="text-5xl font-bold mb-8 text-amber-500 uppercase tracking-widest">准备好告别疼痛，找回轻松了吗？</h3>
         <p class="text-xl mb-12 max-w-2xl mx-auto opacity-90">在岘港Luma Spa，让我们用专业的全身按摩帮您放松身心，恢复活力。</p>
@@ -793,7 +793,7 @@ export const posts: Post[] = [
         </p>
       </section>
 
-      <section class="bg-stone-900 text-stone-100 p-12 md:p-20 rounded-[4rem] shadow-2xl">
+      <section class="bg-[#3d2b1f] text-stone-100 p-12 md:p-20 rounded-[4rem] shadow-2xl">
         <h2 class="text-4xl font-bold text-amber-500 uppercase tracking-tighter mb-12">
           Part II: In-Depth Analysis of Signature Treatments at Luma Spa
         </h2>
@@ -858,11 +858,11 @@ export const posts: Post[] = [
       <section class="bg-stone-100 p-12 rounded-[3rem] border border-stone-200">
         <h2 class="text-3xl font-bold text-stone-900 uppercase mb-8 italic text-center">Why Luma Spa Stands Above Other Da Nang Spas</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-amber-600">
+          <div class="#fcfaf7 p-8 rounded-2xl shadow-sm border-t-4 border-amber-600">
             <h4 class="font-bold text-xl mb-4">Compared to 5-Star Hotel Spas</h4>
             <p class="text-sm">Hotel spas often charge 3–4 times more for standard treatments. Luma delivers equivalent or superior aesthetic standards and therapist expertise at a smarter luxury price point.</p>
           </div>
-          <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-stone-800">
+          <div class="#fcfaf7 p-8 rounded-2xl shadow-sm border-t-4 border-stone-800">
             <h4 class="font-bold text-xl mb-4">Compared to Budget Street Spas</h4>
             <p class="text-sm">Luma adheres to international sterilization standards and only hires therapists with a minimum of 500 specialized training hours. No reused towels or low-quality oils.</p>
           </div>
@@ -918,7 +918,7 @@ export const posts: Post[] = [
       </section>
 
       <!-- Strong CTA -->
-      <div class="mt-24 p-16 bg-stone-900 text-stone-100 rounded-[5rem] text-center shadow-2xl relative border-b-8 border-amber-600 overflow-hidden">
+      <div class="mt-24 p-16 bg-[#3d2b1f] text-stone-100 rounded-[5rem] text-center shadow-2xl relative border-b-8 border-amber-600 overflow-hidden">
         <div class="absolute -top-24 -right-24 w-64 h-64 bg-amber-600/10 rounded-full blur-3xl"></div>
         <h3 class="text-5xl font-bold mb-10 text-amber-500 uppercase tracking-[0.2em]">Ready for the Best Spa Experience in Da Nang 2026?</h3>
         <p class="text-xl mb-12 max-w-3xl mx-auto font-light leading-relaxed opacity-90">
@@ -1010,7 +1010,7 @@ export const posts: Post[] = [
       </section>
 
       <!-- Phần II: Giữ nguyên nhưng mở rộng chi tiết hơn -->
-      <section class="bg-stone-900 text-stone-100 p-12 md:p-20 rounded-[4rem] shadow-2xl">
+      <section class="bg-[#3d2b1f] text-stone-100 p-12 md:p-20 rounded-[4rem] shadow-2xl">
         <h2 class="text-4xl font-bold text-amber-500 uppercase tracking-tighter mb-12">
           Phần II: Phân Tích Chi Tiết Các Liệu Trình Signature Tại Luma Spa
         </h2>
@@ -1078,11 +1078,11 @@ export const posts: Post[] = [
       <section class="bg-stone-100 p-12 rounded-[3rem] border border-stone-200">
         <h2 class="text-3xl font-bold text-stone-900 uppercase mb-8 italic text-center">Tại Sao Luma Spa Vượt Trội Hơn Các Spa Khác Ở Đà Nẵng?</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-amber-600">
+          <div class="#fcfaf7 p-8 rounded-2xl shadow-sm border-t-4 border-amber-600">
             <h4 class="font-bold text-xl mb-4">So với Spa Khách Sạn 5 Sao</h4>
             <p class="text-sm">Giá cao hơn 2–4 lần nhưng chất lượng kỹ thuật viên và nguyên liệu không hơn Luma. Luma mang lại <strong>Smart Luxury</strong> – sang trọng thực sự với giá hợp lý.</p>
           </div>
-          <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-stone-800">
+          <div class="#fcfaf7 p-8 rounded-2xl shadow-sm border-t-4 border-stone-800">
             <h4 class="font-bold text-xl mb-4">So với Spa Giá Rẻ Ven Đường</h4>
             <p class="text-sm">Luma tuân thủ tiêu chuẩn tiệt trùng quốc tế, KTV được đào tạo tối thiểu 500 giờ, nguyên liệu tươi sạch – không tái sử dụng khăn hay dầu kém chất lượng.</p>
           </div>
@@ -1138,7 +1138,7 @@ export const posts: Post[] = [
       </section>
 
       <!-- CTA mạnh mẽ cuối bài -->
-      <div class="mt-24 p-16 bg-stone-900 text-stone-100 rounded-[5rem] text-center shadow-2xl relative border-b-8 border-amber-600 overflow-hidden">
+      <div class="mt-24 p-16 bg-[#3d2b1f] text-stone-100 rounded-[5rem] text-center shadow-2xl relative border-b-8 border-amber-600 overflow-hidden">
         <div class="absolute -top-24 -right-24 w-64 h-64 bg-amber-600/10 rounded-full blur-3xl"></div>
         <h3 class="text-5xl font-bold mb-10 text-amber-500 uppercase tracking-[0.2em]">Sẵn Sàng Trải Nghiệm Spa Tốt Nhất Đà Nẵng 2026?</h3>
         <p class="text-xl mb-12 max-w-3xl mx-auto font-light leading-relaxed opacity-90">
@@ -1226,7 +1226,7 @@ export const posts: Post[] = [
         </p>
       </section>
 
-      <section class="bg-stone-900 text-stone-100 p-12 md:p-20 rounded-[4rem] shadow-2xl">
+      <section class="bg-[#3d2b1f] text-stone-100 p-12 md:p-20 rounded-[4rem] shadow-2xl">
         <h2 class="text-4xl font-bold text-amber-500 uppercase tracking-tighter mb-12">
           第二部分：Luma Spa招牌疗程深度解析
         </h2>
@@ -1291,11 +1291,11 @@ export const posts: Post[] = [
       <section class="bg-stone-100 p-12 rounded-[3rem] border border-stone-200">
         <h2 class="text-3xl font-bold text-stone-900 uppercase mb-8 italic text-center">为什么Luma Spa超越岘港其他水疗中心？</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-amber-600">
+          <div class="#fcfaf7 p-8 rounded-2xl shadow-sm border-t-4 border-amber-600">
             <h4 class="font-bold text-xl mb-4">与五星级酒店水疗相比</h4>
             <p class="text-sm">酒店水疗价格往往高出3–4倍，但Luma以更智能的奢华定价（Smart Luxury）提供同等甚至更高的审美标准与治疗师专业度。</p>
           </div>
-          <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-stone-800">
+          <div class="#fcfaf7 p-8 rounded-2xl shadow-sm border-t-4 border-stone-800">
             <h4 class="font-bold text-xl mb-4">与街边平价水疗相比</h4>
             <p class="text-sm">Luma严格遵守国际消毒标准，只聘用至少接受500小时专业培训的治疗师，绝不使用重复毛巾或低质精油。</p>
           </div>
@@ -1351,7 +1351,7 @@ export const posts: Post[] = [
       </section>
 
       <!-- CTA mạnh mẽ -->
-      <div class="mt-24 p-16 bg-stone-900 text-stone-100 rounded-[5rem] text-center shadow-2xl relative border-b-8 border-amber-600 overflow-hidden">
+      <div class="mt-24 p-16 bg-[#3d2b1f] text-stone-100 rounded-[5rem] text-center shadow-2xl relative border-b-8 border-amber-600 overflow-hidden">
         <div class="absolute -top-24 -right-24 w-64 h-64 bg-amber-600/10 rounded-full blur-3xl"></div>
         <h3 class="text-5xl font-bold mb-10 text-amber-500 uppercase tracking-[0.2em]">准备好体验2026岘港最佳水疗了吗？</h3>
         <p class="text-xl mb-12 max-w-3xl mx-auto font-light leading-relaxed opacity-90">
@@ -1439,7 +1439,7 @@ export const posts: Post[] = [
         </p>
       </section>
 
-      <section class="bg-stone-900 text-stone-100 p-12 md:p-20 rounded-[4rem] shadow-2xl">
+      <section class="bg-[#3d2b1f] text-stone-100 p-12 md:p-20 rounded-[4rem] shadow-2xl">
         <h2 class="text-4xl font-bold text-amber-500 uppercase tracking-tighter mb-12">
           파트 II: 루마 스파 시그니처 트리트먼트 심층 분석
         </h2>
@@ -1504,11 +1504,11 @@ export const posts: Post[] = [
       <section class="bg-stone-100 p-12 rounded-[3rem] border border-stone-200">
         <h2 class="text-3xl font-bold text-stone-900 uppercase mb-8 italic text-center">왜 루마 스파가 다른 다낭 스파보다 뛰어난가?</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-amber-600">
+          <div class="#fcfaf7 p-8 rounded-2xl shadow-sm border-t-4 border-amber-600">
             <h4 class="font-bold text-xl mb-4">5성급 호텔 스파와 비교</h4>
             <p class="text-sm">호텔 스파는 보통 3~4배 비싼 가격을 받지만, 루마는 동등하거나 더 우수한 미적 기준과 테라피스트 전문성을 ‘스마트 럭셔리’ 가격으로 제공합니다.</p>
           </div>
-          <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-stone-800">
+          <div class="#fcfaf7 p-8 rounded-2xl shadow-sm border-t-4 border-stone-800">
             <h4 class="font-bold text-xl mb-4">저가 거리 스파와 비교</h4>
             <p class="text-sm">루마는 국제 살균 기준을 철저히 준수하며, 최소 500시간 전문 교육을 받은 테라피스트만 고용합니다. 재사용 수건이나 저품질 오일은 절대 사용하지 않습니다.</p>
           </div>
@@ -1564,7 +1564,7 @@ export const posts: Post[] = [
       </section>
 
       <!-- CTA mạnh mẽ -->
-      <div class="mt-24 p-16 bg-stone-900 text-stone-100 rounded-[5rem] text-center shadow-2xl relative border-b-8 border-amber-600 overflow-hidden">
+      <div class="mt-24 p-16 bg-[#3d2b1f] text-stone-100 rounded-[5rem] text-center shadow-2xl relative border-b-8 border-amber-600 overflow-hidden">
         <div class="absolute -top-24 -right-24 w-64 h-64 bg-amber-600/10 rounded-full blur-3xl"></div>
         <h3 class="text-5xl font-bold mb-10 text-amber-500 uppercase tracking-[0.2em]">2026 다낭 최고의 스파를 경험할 준비가 되셨나요?</h3>
         <p class="text-xl mb-12 max-w-3xl mx-auto font-light leading-relaxed opacity-90">

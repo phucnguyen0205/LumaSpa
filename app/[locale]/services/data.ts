@@ -49,7 +49,7 @@ export const SERVICES_DATA: ServiceData[] = [
       ko: "다낭 태국 마사지는 휴식, 통증 완화 및 혈액 순환 개선에 도움이 됩니다.",
     },
     price: "360.000đ - 560.000đ",
-    image: "/images/services/thai.jpg",
+    image: "/images/ser-1png",
   },
   {
     keywords: {

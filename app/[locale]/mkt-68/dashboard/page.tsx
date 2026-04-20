@@ -26,12 +26,16 @@ export default function AdminDashboard() {
   const { locale } = useParams();
 
   // Load dữ liệu từ localStorage (Lưu danh sách link online)
-  useEffect(() => {
-    const savedBanners = localStorage.getItem("luma_banners");
-    const savedMenus = localStorage.getItem("luma_service_menus");
-    if (savedBanners) setBanners(JSON.parse(savedBanners));
-    if (savedMenus) setMenus(JSON.parse(savedMenus));
-  }, []);
+useEffect(() => {
+  const fetchInitialData = async () => {
+    const bannerRes = await fetch("/api/settings?key=luma_banners");
+    const menuRes = await fetch("/api/settings?key=luma_service_menus");
+    
+    if (bannerRes.ok) setBanners(await bannerRes.json());
+    if (menuRes.ok) setMenus(await menuRes.json());
+  };
+  fetchInitialData();
+}, []);
 
   // --- LOGIC UPLOAD LÊN CLOUDINARY ---
   const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>, type: TabType) => {
@@ -72,12 +76,18 @@ export default function AdminDashboard() {
     e.target.value = ""; // Reset input file
   };
 
-  const saveData = (key: string, data: string[], setter: (val: string[]) => void) => {
-    setter(data);
-    localStorage.setItem(key, JSON.stringify(data));
-    // Phát sự kiện để các trang khác (như trang dịch vụ) cập nhật ngay lập tức
-    window.dispatchEvent(new Event("storage"));
-  };
+const saveData = async (key: string, data: string[], setter: (val: string[]) => void) => {
+  setter(data);
+  try {
+    await fetch("/api/settings", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ key, data }),
+    });
+  } catch (error) {
+    console.error("Lỗi server:", error);
+  }
+};
 
   const removeItem = (index: number, type: TabType) => {
     const currentList = type === "banners" ? banners : menus;

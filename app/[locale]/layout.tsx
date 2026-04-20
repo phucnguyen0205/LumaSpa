@@ -4,7 +4,7 @@ import { initTranslations } from "@/i18n";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server"; // 1. Thêm dòng này
+import { getMessages } from "next-intl/server";
 import FloatingContact from "@/components/home/floating-contact";
 
 interface Props {
@@ -13,35 +13,36 @@ interface Props {
 }
 
 export default async function RootLayout({ children, params }: Props) {
+  // ✅ 1. Bắt buộc phải await params trước khi truy cập locale (Next.js 15 quy định)
   const { locale } = await params;
 
-  // Kiểm tra locale hợp lệ
+  // ✅ 2. Kiểm tra locale hợp lệ ngay lập tức
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
 
-  // 2. Lấy messages cho NextIntlClientProvider
-  const messages = await getMessages({ locale });
-
-  // 3. Load resources cho i18n (nếu bạn vẫn dùng i18next song song)
+  // ✅ 3. Load dữ liệu ngôn ngữ song song để tối ưu tốc độ (Tránh Waterfall)
   const namespaces = ['common', 'header', 'footer', 'services', 'contact', 'home', 'about', 'review'];
-  const { resources } = await initTranslations(locale, namespaces);
+  
+  const [messages, { resources }] = await Promise.all([
+    getMessages({ locale }),
+    initTranslations(locale, namespaces)
+  ]);
 
-  // 3. Schema SEO
+  // ✅ 4. Schema SEO (Cập nhật chuẩn địa chỉ Luma Spa)
   const schema = {
     "@context": "https://schema.org",
     "@type": "Spa",
-    name: "Luma Spa",
-    image: "https://yourdomain.com/logo.jpg",
-    telephone: "0876712808",
-    address: {
+    "name": "Luma Spa Đà Nẵng",
+    "image": "https://lumaspa.com/images/logo.png", // Thay bằng domain thật của cậu
+    "telephone": "0876712808",
+    "address": {
       "@type": "PostalAddress",
-      streetAddress: "Da Nang, Vietnam",
-      addressLocality: "Da Nang",
-      addressCountry: "VN",
+      "streetAddress": "190 Nguyễn Công Trứ, An Hải Bắc, Sơn Trà",
+      "addressLocality": "Đà Nẵng",
+      "addressCountry": "VN",
     },
   };
-
 
   return (
     <html lang={locale}>
@@ -52,14 +53,18 @@ export default async function RootLayout({ children, params }: Props) {
         />
       </head>
       <body className="antialiased">
-        {/* Bọc các Provider đúng thứ tự */}
+        {/* ✅ 5. Thứ tự Provider: next-intl bọc ngoài, TranslationsProvider bọc trong */}
         <NextIntlClientProvider locale={locale} messages={messages}>
           <TranslationsProvider 
             locale={locale} 
             namespaces={namespaces} 
             resources={resources}
           >
-            {children}
+            {/* Thêm thẻ main để cấu trúc HTML chuẩn SEO */}
+            <main>
+              {children}
+            </main>
+            
             <FloatingContact />
           </TranslationsProvider>
         </NextIntlClientProvider>

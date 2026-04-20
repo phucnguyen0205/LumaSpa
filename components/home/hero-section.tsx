@@ -5,44 +5,38 @@ import ContactModal from "./contact-modal";
 
 export default function HeroSection() {
   const { t } = useTranslation("home");
-  
-  // State quản lý việc đóng/mở Modal liên hệ
   const [isContactOpen, setIsContactOpen] = useState(false);
   
-  // Mặc định ban đầu là ảnh local
+  // Giữ ảnh mặc định để trang web không bị trắng trong lúc chờ load database
   const [banners, setBanners] = useState<string[]>(["/images/hero-banner.jpg"]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    const loadBanners = () => {
-      const saved = localStorage.getItem("luma_banners");
-      if (saved) {
-        try {
-          const parsed = JSON.parse(saved);
-          if (Array.isArray(parsed) && parsed.length > 0) {
-            setBanners(parsed);
+    const loadBannersFromDB = async () => {
+      try {
+        // Gọi API để lấy dữ liệu thật từ MongoDB
+        const res = await fetch("/api/settings?key=luma_banners");
+        if (res.ok) {
+          const data = await res.json();
+          // Nếu database có ảnh thì mới cập nhật, không thì dùng ảnh mặc định
+          if (Array.isArray(data) && data.length > 0) {
+            setBanners(data);
           }
-        } catch (e) {
-          console.error("Lỗi đọc dữ liệu banner từ Cloudinary:", e);
         }
+      } catch (e) {
+        console.error("Lỗi lấy banner từ Database:", e);
       }
     };
 
-    loadBanners();
-
-    window.addEventListener("storage", loadBanners);
-    return () => window.removeEventListener("storage", loadBanners);
+    loadBannersFromDB();
   }, []);
-
-  // Logic chuyển slide tự động
-  useEffect(() => {
+useEffect(() => {
     if (banners.length <= 1) return;
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % banners.length);
     }, 5000);
     return () => clearInterval(interval);
   }, [banners]);
-
   return (
     <section className="relative h-[100vh] w-full flex items-center justify-center overflow-hidden bg-stone-100">
       {/* Background Banners */}

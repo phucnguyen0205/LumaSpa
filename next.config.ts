@@ -4,6 +4,15 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/vi',
+        permanent: true, // SEO sẽ tốt hơn vì xác định /vi là trang chủ chính
+      },
+    ];
+  },
 
   transpilePackages: ["swiper"],
 

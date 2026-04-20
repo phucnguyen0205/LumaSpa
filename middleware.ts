@@ -7,7 +7,7 @@ const PUBLIC_FILE = /\.(.*)$/;
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // 🔥 1. Bỏ qua file tĩnh
+  // 1. Bỏ qua file tĩnh
   if (
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
@@ -16,44 +16,47 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // 🔥 2. XỬ LÝ ROOT "/" (AUTO DETECT + COOKIE)
+  // ✅ 2. ÉP ROOT "/" → "/vi" (QUAN TRỌNG NHẤT)
   if (pathname === "/") {
-    const cookieLocale = request.cookies.get("locale")?.value;
+    const response = NextResponse.redirect(new URL("/vi", request.url));
 
-    // nếu đã có cookie → dùng lại
-    if (cookieLocale && locales.includes(cookieLocale)) {
-      return NextResponse.redirect(
-        new URL(`/${cookieLocale}`, request.url)
-      );
-    }
-
-    // detect từ browser
-    const lang = request.headers.get("accept-language") || "";
-
-    let locale = "vi";
-    if (lang.includes("en")) locale = "en";
-    else if (lang.includes("ko")) locale = "ko";
-    else if (lang.includes("zh")) locale = "zh";
-
-    const response = NextResponse.redirect(
-      new URL(`/${locale}`, request.url)
-    );
-
-    // lưu cookie
-    response.cookies.set("locale", locale, {
+    response.cookies.set("locale", "vi", {
       path: "/",
-      maxAge: 60 * 60 * 24 * 365, // 1 năm
+      maxAge: 60 * 60 * 24 * 365,
     });
 
     return response;
   }
 
-  // 🔥 3. ADMIN ROUTE PROTECTION
-  const currentLocale = pathname.split("/")[1];
-
-  const isAdminRoute = locales.some((locale) =>
-    pathname.startsWith(`/${locale}/mkt-68`)
+  // 3. Check có locale chưa
+  const pathnameHasLocale = locales.some(
+    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
+
+  // 4. Nếu chưa có locale → redirect
+  if (!pathnameHasLocale) {
+    const cookieLocale = request.cookies.get("locale")?.value;
+
+    let locale = "vi";
+    if (cookieLocale && locales.includes(cookieLocale)) {
+      locale = cookieLocale;
+    }
+
+    const response = NextResponse.redirect(
+      new URL(`/${locale}${pathname}`, request.url)
+    );
+
+    response.cookies.set("locale", locale, {
+      path: "/",
+      maxAge: 60 * 60 * 24 * 365,
+    });
+
+    return response;
+  }
+
+  // 5. Protect admin
+  const currentLocale = pathname.split("/")[1];
+  const isAdminRoute = pathname.startsWith(`/${currentLocale}/mkt-68`);
 
   if (isAdminRoute) {
     const adminBase = `/${currentLocale}/mkt-68`;
@@ -68,3 +71,7 @@ export function middleware(request: NextRequest) {
 
   return NextResponse.next();
 }
+
+export const config = {
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
+};

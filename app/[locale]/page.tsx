@@ -17,7 +17,6 @@ interface Props {
   params: { locale: string };
 }
 
-// ✅ SEO metadata
 export async function generateMetadata({ params }: Props) {
   const { locale } = params;
 
@@ -38,17 +37,16 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: titleMap[locale],
     description: descriptionMap[locale],
-
     alternates: {
       canonical: `https://lumaspa.com.vn/${locale}`,
       languages: {
-        vi: `/vi`,
-        en: `/en`,
-        zh: `/zh`,
-        ko: `/ko`,
+        "vi-VN": "https://lumaspa.com.vn/vi",
+        "en-US": "https://lumaspa.com.vn/en",
+        "zh-CN": "https://lumaspa.com.vn/zh",
+        "ko-KR": "https://lumaspa.com.vn/ko",
+        "x-default": "https://lumaspa.com.vn/vi",
       },
     },
-
     openGraph: {
       title: titleMap[locale],
       description: descriptionMap[locale],
@@ -69,38 +67,53 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function HomePage({ params }: Props) {
   const { locale } = params;
-
   const namespaces = ["home", "common", "contact", "services", "header", "footer", "about", "review"];
-
   const { resources } = await initTranslations(locale, namespaces);
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "DaySpa",
+    "name": "Luma Spa Đà Nẵng",
+    "image": "https://lumaspa.com.vn/images/og-image.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "190 Nguyễn Công Trứ, An Hải Bắc, Sơn Trà", 
+      "addressLocality": "Da Nang",
+      "addressCountry": "VN"
+    },
+    "url": `https://lumaspa.com.vn/${locale}`,
+    "telephone": "078 323 7168", // Thay số điện thoại thật của Spa
+    "priceRange": "$$",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "09:00",
+        "closes": "22:00"
+      }
+    ]
+  };
 
   return (
     <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
+      {/* Thêm JSON-LD vào đầu trang */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      
       <main className="min-h-screen flex flex-col">
         <Header />
-
-        {/* HERO */}
         <HeroSection />
-
-        {/* ABOUT */}
         <AboutSection />
         <AboutImageSection imageUrl="/images/sample-spa.jpg" />
-
-        {/* SERVICES */}
         <ServicesSection />
-
-        {/* EXPERIENCE */}
         <Hotel360Section />
         <WhyChooseUs />
-
-        {/* CONTENT */}
         <NewsAndReview />
         <TestimonialSection locale={locale} />
-
-        {/* CTA */}
         <CommitmentSection />
         <ContactSection />
-
         <Footer />
       </main>
     </TranslationsProvider>

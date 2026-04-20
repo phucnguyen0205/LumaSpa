@@ -118,23 +118,50 @@ export const posts: Post[] = [
           Lý Do Nên Chọn Massage Toàn Thân Tại Luma Spa Đà Nẵng
         </h2>
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="p-6 md:p-8 bg-stone-50 rounded-2xl md:rounded-3xl border-t-4 border-amber-600">
-            <div class="text-3xl md:text-4xl mb-4">🧘</div>
-            <h4 class="font-bold text-lg md:text-xl mb-2 md:mb-3">Kỹ thuật viên chuyên nghiệp</h4>
-            <p class="text-xs md:text-sm text-stone-600">Đội ngũ được đào tạo bài bản, giàu kinh nghiệm trong việc xử lý đau cơ và mỏi mệt.</p>
-          </div>
-          <div class="p-6 md:p-8 bg-stone-50 rounded-2xl md:rounded-3xl border-t-4 border-amber-600">
-            <div class="text-3xl md:text-4xl mb-4">🌡️</div>
-            <h4 class="font-bold text-lg md:text-xl mb-2 md:mb-3">Chườm nóng hỗ trợ</h4>
-            <p class="text-xs md:text-sm text-stone-600">Giúp làm mềm cơ nhanh chóng trước và trong quá trình massage.</p>
-          </div>
-          <div class="p-6 md:p-8 bg-stone-50 rounded-2xl md:rounded-3xl border-t-4 border-amber-600">
-            <div class="text-3xl md:text-4xl mb-4">✨</div>
-            <h4 class="font-bold text-lg md:text-xl mb-2 md:mb-3">Không gian thư giãn</h4>
-            <p class="text-xs md:text-sm text-stone-600">Thiết kế ấm áp, yên tĩnh, giúp bạn thực sự thả lỏng từ khi bước vào.</p>
-          </div>
-        </div>
+       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+  <div class="p-6 md:p-8 bg-stone-50 rounded-2xl md:rounded-3xl border-t-4 border-amber-600 shadow-sm hover:shadow-md transition-shadow">
+    <div class="mb-4 text-amber-600">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+        <circle cx="9" cy="7" r="4"></circle>
+        <path d="M19 8v6"></path>
+        <path d="M22 11h-6"></path>
+      </svg>
+    </div>
+    <h4 class="font-bold text-lg md:text-xl mb-2 md:mb-3 text-stone-800">Kỹ thuật viên chuyên nghiệp</h4>
+    <p class="text-xs md:text-sm text-stone-600 leading-relaxed">Đội ngũ được đào tạo bài bản, giàu kinh nghiệm trong việc xử lý đau cơ và mỏi mệt.</p>
+  </div>
+
+  <div class="p-6 md:p-8 bg-stone-50 rounded-2xl md:rounded-3xl border-t-4 border-amber-600 shadow-sm hover:shadow-md transition-shadow">
+    <div class="mb-4 text-amber-600">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 7c1.93 0 3.5 1.57 3.5 3.5S13.93 14 12 14s-3.5-1.57-3.5-3.5S10.07 7 12 7z"></path>
+        <path d="M2 14c.2-1.1.7-2.1 1.5-2.8l2.1-2.1"></path>
+        <path d="M18.4 9.1l2.1 2.1c.8.7 1.3 1.7 1.5 2.8"></path>
+        <path d="M7.5 18a4.5 4.5 0 0 1 9 0"></path>
+        <path d="M12 2v2"></path>
+        <path d="m4.9 4.9 1.4 1.4"></path>
+        <path d="m17.7 6.3 1.4-1.4"></path>
+      </svg>
+    </div>
+    <h4 class="font-bold text-lg md:text-xl mb-2 md:mb-3 text-stone-800">Chườm nóng hỗ trợ</h4>
+    <p class="text-xs md:text-sm text-stone-600 leading-relaxed">Giúp làm mềm cơ nhanh chóng trước và trong quá trình massage.</p>
+  </div>
+
+  <div class="p-6 md:p-8 bg-stone-50 rounded-2xl md:rounded-3xl border-t-4 border-amber-600 shadow-sm hover:shadow-md transition-shadow">
+    <div class="mb-4 text-amber-600">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+        <path d="M5 3v4"></path>
+        <path d="M19 17v4"></path>
+        <path d="M3 5h4"></path>
+        <path d="M17 19h4"></path>
+      </svg>
+    </div>
+    <h4 class="font-bold text-lg md:text-xl mb-2 md:mb-3 text-stone-800">Không gian thư giãn</h4>
+    <p class="text-xs md:text-sm text-stone-600 leading-relaxed">Thiết kế ấm áp, yên tĩnh, giúp bạn thực sự thả lỏng từ khi bước vào.</p>
+  </div>
+</div>
       </section>
 
       <section class="max-w-7xl mx-auto px-6 py-10 md:py-16">
@@ -306,22 +333,46 @@ export const posts: Post[] = [
         </h2>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="p-6 md:p-8 bg-stone-50 rounded-2xl md:rounded-3xl border-t-4 border-amber-600">
-            <div class="text-3xl md:text-4xl mb-4">🧘</div>
-            <h4 class="font-bold text-lg md:text-xl mb-2 md:mb-3">Experienced Therapists</h4>
-            <p class="text-xs md:text-sm text-stone-600">Our team is professionally trained and skilled in treating muscle pain and fatigue.</p>
-          </div>
-          <div class="p-6 md:p-8 bg-stone-50 rounded-2xl md:rounded-3xl border-t-4 border-amber-600">
-            <div class="text-3xl md:text-4xl mb-4">🌡️</div>
-            <h4 class="font-bold text-lg md:text-xl mb-2 md:mb-3">Warm Compress Therapy</h4>
-            <p class="text-xs md:text-sm text-stone-600">Helps soften muscles quickly before and during the massage for better results.</p>
-          </div>
-          <div class="p-6 md:p-8 bg-stone-50 rounded-2xl md:rounded-3xl border-t-4 border-amber-600">
-            <div class="text-3xl md:text-4xl mb-4">✨</div>
-            <h4 class="font-bold text-lg md:text-xl mb-2 md:mb-3">Calming Environment</h4>
-            <p class="text-xs md:text-sm text-stone-600">Luxurious and peaceful ambiance that helps you truly unwind from the moment you arrive.</p>
-          </div>
-        </div>
+  <div class="p-6 md:p-8 bg-stone-50 rounded-2xl md:rounded-3xl border-t-4 border-amber-600 shadow-sm hover:shadow-md transition-all duration-300">
+    <div class="mb-4 text-amber-600">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"></path>
+        <path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"></path>
+        <path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"></path>
+        <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path>
+      </svg>
+    </div>
+    <h4 class="font-bold text-lg md:text-xl mb-2 md:mb-3 text-stone-800">Experienced Therapists</h4>
+    <p class="text-xs md:text-sm text-stone-600 leading-relaxed">Our team is professionally trained and skilled in treating muscle pain and fatigue.</p>
+  </div>
+
+  <div class="p-6 md:p-8 bg-stone-50 rounded-2xl md:rounded-3xl border-t-4 border-amber-600 shadow-sm hover:shadow-md transition-all duration-300">
+    <div class="mb-4 text-amber-600">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"></path>
+        <path d="M9 15c.6 0 1-.4 1-1"></path>
+      </svg>
+    </div>
+    <h4 class="font-bold text-lg md:text-xl mb-2 md:mb-3 text-stone-800">Warm Compress Therapy</h4>
+    <p class="text-xs md:text-sm text-stone-600 leading-relaxed">Helps soften muscles quickly before and during the massage for better results.</p>
+  </div>
+
+  <div class="p-6 md:p-8 bg-stone-50 rounded-2xl md:rounded-3xl border-t-4 border-amber-600 shadow-sm hover:shadow-md transition-all duration-300">
+    <div class="mb-4 text-amber-600">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 10V2"></path>
+        <path d="m4.93 10.93 1.41-1.41"></path>
+        <path d="M2 18h20"></path>
+        <path d="M19.07 10.93l-1.41-1.41"></path>
+        <path d="M22 22H2"></path>
+        <path d="m16 18-4-4-4 4"></path>
+        <circle cx="12" cy="18" r="4"></circle>
+      </svg>
+    </div>
+    <h4 class="font-bold text-lg md:text-xl mb-2 md:mb-3 text-stone-800">Calming Environment</h4>
+    <p class="text-xs md:text-sm text-stone-600 leading-relaxed">Luxurious and peaceful ambiance that helps you truly unwind from the moment you arrive.</p>
+  </div>
+</div>
       </section>
 
       <section class="max-w-7xl mx-auto px-6 py-10 md:py-16">
@@ -491,23 +542,47 @@ export const posts: Post[] = [
           왜 루마 스파 다낭의 풀바디 마사지를 선택해야 할까?
         </h2>
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="p-6 md:p-8 bg-stone-50 rounded-2xl md:rounded-3xl border-t-4 border-amber-600 text-center md:text-left">
-            <div class="text-3xl md:text-4xl mb-4">🧘</div>
-            <h4 class="font-bold text-lg md:text-xl mb-2 md:mb-3">전문 테라피스트</h4>
-            <p class="text-xs md:text-sm text-stone-600">근육 통증과 피로 케어에 전문적으로 훈련받은 테라피스트들이 진행합니다.</p>
-          </div>
-          <div class="p-6 md:p-8 bg-stone-50 rounded-2xl md:rounded-3xl border-t-4 border-amber-600 text-center md:text-left">
-            <div class="text-3xl md:text-4xl mb-4">🌡️</div>
-            <h4 class="font-bold text-lg md:text-xl mb-2 md:mb-3">온찜질 테라피</h4>
-            <p class="text-xs md:text-sm text-stone-600">마사지 전후에 온찜질을 통해 근육을 빠르게 부드럽게 만들어 효과를 높입니다.</p>
-          </div>
-          <div class="p-6 md:p-8 bg-stone-50 rounded-2xl md:rounded-3xl border-t-4 border-amber-600 text-center md:text-left">
-            <div class="text-3xl md:text-4xl mb-4">✨</div>
-            <h4 class="font-bold text-lg md:text-xl mb-2 md:mb-3">편안한 공간</h4>
-            <p class="text-xs md:text-sm text-stone-600">고급스럽고 조용한 분위기에서 처음 들어서는 순간부터 깊이 이완할 수 있습니다.</p>
-          </div>
-        </div>
+       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+  <div class="p-6 md:p-8 bg-stone-50 rounded-2xl md:rounded-3xl border-t-4 border-amber-600 shadow-sm hover:shadow-md transition-all duration-300 text-center md:text-left">
+    <div class="mb-4 text-amber-600 flex justify-center md:justify-start">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"></path>
+        <path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"></path>
+        <path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"></path>
+        <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path>
+      </svg>
+    </div>
+    <h4 class="font-bold text-lg md:text-xl mb-2 md:mb-3 text-stone-800">전문 테라피스트</h4>
+    <p class="text-xs md:text-sm text-stone-600 leading-relaxed">근육 통증과 피로 케어에 전문적으로 훈련받은 테라피스트들이 진행합니다.</p>
+  </div>
+
+  <div class="p-6 md:p-8 bg-stone-50 rounded-2xl md:rounded-3xl border-t-4 border-amber-600 shadow-sm hover:shadow-md transition-all duration-300 text-center md:text-left">
+    <div class="mb-4 text-amber-600 flex justify-center md:justify-start">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"></path>
+        <path d="M9 15c.6 0 1-.4 1-1"></path>
+      </svg>
+    </div>
+    <h4 class="font-bold text-lg md:text-xl mb-2 md:mb-3 text-stone-800">온찜질 테라피</h4>
+    <p class="text-xs md:text-sm text-stone-600 leading-relaxed">마사지 전후에 온찜질을 통해 근육을 빠르게 부드럽게 만들어 효과를 높입니다.</p>
+  </div>
+
+  <div class="p-6 md:p-8 bg-stone-50 rounded-2xl md:rounded-3xl border-t-4 border-amber-600 shadow-sm hover:shadow-md transition-all duration-300 text-center md:text-left">
+    <div class="mb-4 text-amber-600 flex justify-center md:justify-start">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 10V2"></path>
+        <path d="m4.93 10.93 1.41-1.41"></path>
+        <path d="M2 18h20"></path>
+        <path d="M19.07 10.93l-1.41-1.41"></path>
+        <path d="M22 22H2"></path>
+        <path d="m16 18-4-4-4 4"></path>
+        <circle cx="12" cy="18" r="4"></circle>
+      </svg>
+    </div>
+    <h4 class="font-bold text-lg md:text-xl mb-2 md:mb-3 text-stone-800">편안한 공간</h4>
+    <p class="text-xs md:text-sm text-stone-600 leading-relaxed">고급스럽고 조용한 분위기에서 처음 들어서는 순간부터 깊이 이완할 수 있습니다.</p>
+  </div>
+</div>
       </section>
 
       <section class="max-w-7xl mx-auto px-6 py-10 md:py-16">
@@ -676,23 +751,47 @@ export const posts: Post[] = [
           为什么选择Luma Spa的全身按摩？
         </h2>
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="p-6 md:p-8 bg-stone-50 rounded-2xl md:rounded-3xl border-t-4 border-amber-600">
-            <div class="text-3xl md:text-4xl mb-4">🧘</div>
-            <h4 class="font-bold text-lg md:text-xl mb-2 md:mb-3">专业按摩师</h4>
-            <p class="text-xs md:text-sm text-stone-600">经过系统培训，擅长处理肌肉酸痛和疲劳问题。</p>
-          </div>
-          <div class="p-6 md:p-8 bg-stone-50 rounded-2xl md:rounded-3xl border-t-4 border-amber-600">
-            <div class="text-3xl md:text-4xl mb-4">🌡️</div>
-            <h4 class="font-bold text-lg md:text-xl mb-2 md:mb-3">热敷辅助</h4>
-            <p class="text-xs md:text-sm text-stone-600">在按摩前后使用热敷，帮助肌肉更快放松，提升疗效。</p>
-          </div>
-          <div class="p-6 md:p-8 bg-stone-50 rounded-2xl md:rounded-3xl border-t-4 border-amber-600">
-            <div class="text-3xl md:text-4xl mb-4">✨</div>
-            <h4 class="font-bold text-lg md:text-xl mb-2 md:mb-3">舒适环境</h4>
-            <p class="text-xs md:text-sm text-stone-600">高雅安静的空间，让您从进门那一刻就开始深度放松。</p>
-          </div>
-        </div>
+       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+  <div class="p-6 md:p-8 bg-stone-50 rounded-2xl md:rounded-3xl border-t-4 border-amber-600 shadow-sm hover:shadow-md transition-all duration-300">
+    <div class="mb-4 text-amber-600">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"></path>
+        <path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"></path>
+        <path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"></path>
+        <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path>
+      </svg>
+    </div>
+    <h4 class="font-bold text-lg md:text-xl mb-2 md:mb-3 text-stone-800">专业按摩师</h4>
+    <p class="text-xs md:text-sm text-stone-600 leading-relaxed">经过系统培训，擅长处理肌肉酸痛和疲劳问题。</p>
+  </div>
+
+  <div class="p-6 md:p-8 bg-stone-50 rounded-2xl md:rounded-3xl border-t-4 border-amber-600 shadow-sm hover:shadow-md transition-all duration-300">
+    <div class="mb-4 text-amber-600">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"></path>
+        <path d="M9 15c.6 0 1-.4 1-1"></path>
+      </svg>
+    </div>
+    <h4 class="font-bold text-lg md:text-xl mb-2 md:mb-3 text-stone-800">热敷辅助</h4>
+    <p class="text-xs md:text-sm text-stone-600 leading-relaxed">在按摩前后使用热敷，帮助肌肉更快放松，提升疗效。</p>
+  </div>
+
+  <div class="p-6 md:p-8 bg-stone-50 rounded-2xl md:rounded-3xl border-t-4 border-amber-600 shadow-sm hover:shadow-md transition-all duration-300">
+    <div class="mb-4 text-amber-600">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 10V2"></path>
+        <path d="m4.93 10.93 1.41-1.41"></path>
+        <path d="M2 18h20"></path>
+        <path d="M19.07 10.93l-1.41-1.41"></path>
+        <path d="M22 22H2"></path>
+        <path d="m16 18-4-4-4 4"></path>
+        <circle cx="12" cy="18" r="4"></circle>
+      </svg>
+    </div>
+    <h4 class="font-bold text-lg md:text-xl mb-2 md:mb-3 text-stone-800">舒适环境</h4>
+    <p class="text-xs md:text-sm text-stone-600 leading-relaxed">高雅安静的空间，让您从进门那一刻就开始深度放松。</p>
+  </div>
+</div>
       </section>
 
       <section class="max-w-7xl mx-auto px-6 py-10 md:py-16">

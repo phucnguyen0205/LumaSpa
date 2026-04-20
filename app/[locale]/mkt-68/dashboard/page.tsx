@@ -13,7 +13,6 @@ import Cookies from "js-cookie";
 
 type TabType = "banners" | "menus";
 
-// Đã cập nhật thông số Cloudinary của bạn
 const CLOUD_NAME = "dd1vk7hhg"; 
 const UPLOAD_PRESET = "Lumaspa";
 
@@ -21,23 +20,45 @@ export default function AdminDashboard() {
   const [activeTab, setActiveTab] = useState<TabType>("banners");
   const [banners, setBanners] = useState<string[]>([]);
   const [menus, setMenus] = useState<string[]>([]);
-  const [isUploading, setIsUploading] = useState(false); // Trạng thái chờ khi upload
+  const [isUploading, setIsUploading] = useState(false);
   const router = useRouter();
   const { locale } = useParams();
 
-  // Load dữ liệu từ localStorage (Lưu danh sách link online)
-useEffect(() => {
-  const fetchInitialData = async () => {
-    const bannerRes = await fetch("/api/settings?key=luma_banners");
-    const menuRes = await fetch("/api/settings?key=luma_service_menus");
-    
-    if (bannerRes.ok) setBanners(await bannerRes.json());
-    if (menuRes.ok) setMenus(await menuRes.json());
-  };
-  fetchInitialData();
-}, []);
+  // Load dữ liệu từ MongoDB
+  useEffect(() => {
+    const loadAllData = async () => {
+      try {
+        const [bannerRes, menuRes] = await Promise.all([
+          fetch("/api/settings?key=luma_banners"),
+          fetch("/api/settings?key=luma_service_menus")
+        ]);
 
-  // --- LOGIC UPLOAD LÊN CLOUDINARY ---
+        if (bannerRes.ok) setBanners(await bannerRes.json());
+        if (menuRes.ok) setMenus(await menuRes.json());
+      } catch (error) {
+        console.error("Lỗi khi tải dữ liệu:", error);
+      }
+    };
+    loadAllData();
+  }, []);
+
+  // --- HÀM LƯU DỮ LIỆU ---
+  const saveData = async (key: string, data: string[], setter: (val: string[]) => void) => {
+    setter(data); 
+    try {
+      const response = await fetch("/api/settings", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ key, data }),
+      });
+      if (!response.ok) throw new Error("Lỗi lưu DB");
+    } catch (error) {
+      console.error(error);
+      alert("Lỗi: Dữ liệu chưa được lưu vào Database!");
+    }
+  };
+
+  // --- HÀM UPLOAD ---
   const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>, type: TabType) => {
     const files = e.target.files;
     if (!files || files.length === 0) return;
@@ -47,16 +68,14 @@ useEffect(() => {
       const formData = new FormData();
       formData.append("file", file);
       formData.append("upload_preset", UPLOAD_PRESET);
-
       try {
-        const res = await fetch(
-          `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`,
-          { method: "POST", body: formData }
-        );
+        const res = await fetch(`https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`, { 
+          method: "POST", 
+          body: formData 
+        });
         const data = await res.json();
         return data.secure_url; 
       } catch (error) {
-        console.error("Lỗi upload:", error);
         return null;
       }
     });
@@ -65,43 +84,33 @@ useEffect(() => {
 
     if (uploadedUrls.length > 0) {
       if (type === "banners") {
-        const newList = [...banners, ...uploadedUrls];
-        saveData("luma_banners", newList, setBanners);
+        saveData("luma_banners", [...banners, ...uploadedUrls], setBanners);
       } else {
-        const newList = [...menus, ...uploadedUrls];
-        saveData("luma_service_menus", newList, setMenus);
+        saveData("luma_service_menus", [...menus, ...uploadedUrls], setMenus);
       }
     }
     setIsUploading(false);
-    e.target.value = ""; // Reset input file
+    e.target.value = "";
   };
 
-const saveData = async (key: string, data: string[], setter: (val: string[]) => void) => {
-  setter(data);
-  try {
-    await fetch("/api/settings", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ key, data }),
-    });
-  } catch (error) {
-    console.error("Lỗi server:", error);
-  }
-};
-
-  const removeItem = (index: number, type: TabType) => {
+  // --- HÀM XÓA (BỔ SUNG) ---
+  const removeItem = async (index: number, type: TabType) => {
     const currentList = type === "banners" ? banners : menus;
     const newList = currentList.filter((_, i) => i !== index);
-    if (type === "banners") saveData("luma_banners", newList, setBanners);
-    else saveData("luma_service_menus", newList, setMenus);
+    
+    if (type === "banners") {
+      await saveData("luma_banners", newList, setBanners);
+    } else {
+      await saveData("luma_service_menus", newList, setMenus);
+    }
   };
 
+  // --- HÀM ĐĂNG XUẤT (FIX LỖI) ---
   const handleLogout = () => {
     Cookies.remove("admin_token", { path: '/' });
     router.push(`/${locale}/mkt-@68/login`);
     router.refresh();
   };
-
   return (
     <div className="min-h-screen bg-[#fcfaf7] p-4 md:p-8">
       <div className="max-w-6xl mx-auto">

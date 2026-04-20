@@ -11,20 +11,31 @@ export default function FloatingContact() {
       link: "tel:0783237168",
     },
     {
-  name: "Zalo",
+      name: "Zalo",
+      icon: (
+        <img
+          src="/images/zalo.png"
+          alt="Zalo"
+          className="w-8 h-8 object-contain"
+        />
+      ),
+      link: "https://zalo.me/0783237168",
+    },
+    {
+  name: "KakaoTalk",
   icon: (
     <img
-      src="/images/zalo.png"
-      alt="Zalo"
-      className="w-8 h-8 object-contain"
+      src="/images/iconkakaotalk.png"
+      alt="KakaoTalk"
+      className="w-10 h-10 object-contain scale-140" // scale-110 giúp icon to tràn viền một chút
     />
   ),
-  link: "https://zalo.me/0783237168",
+  link: "https://open.kakao.com/o/s7X66X6g", // Đã cập nhật link của bạn
 },
     {
       name: "Messenger",
       icon: (
-        <svg viewBox="0 0 24 24" className="w-6 h-6 fill-white">
+        <svg viewBox="0 0 24 24" className="w-10 h-10 object-contain scale-90 fill-white">
           <path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.915 1.455 5.51 3.734 7.19.196.145.313.375.313.623v2.336c0 .546.596.887 1.06.613l2.61-1.546a.798.798 0 01.373-.094c.61.085 1.236.128 1.874.128 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.06 12.872l-2.585-2.756-5.045 2.756 5.548-5.894 2.656 2.756 4.974-2.756-5.548 5.894z" />
         </svg>
       ),
@@ -32,7 +43,13 @@ export default function FloatingContact() {
     },
     {
       name: "WhatsApp",
-      icon: <MessageCircle size={24} fill="currentColor" />,
+      icon: (
+        <img
+          src="/images/iconwhatsapp.png"
+          alt="WhatsApp"
+          className="w-10 h-10 object-contain scale-110"
+        />
+      ),
       link: "https://wa.me/84783237168",
     },
   ];

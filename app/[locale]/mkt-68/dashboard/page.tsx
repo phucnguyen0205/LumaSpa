@@ -44,26 +44,19 @@ export default function AdminDashboard() {
 
   // --- HÀM LƯU DỮ LIỆU ---
   const saveData = async (key: string, data: string[], setter: (val: string[]) => void) => {
-  setter(data);
-  try {
-    // 1. Lưu vào Database như bình thường
-    const response = await fetch("/api/settings", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ key, data }),
-    });
-
-    // 2. Nếu là banner, lưu link ảnh đầu tiên vào Cookie để load nhanh
-    if (key === "luma_banners" && data.length > 0) {
-      // Lưu trong 7 ngày, đường dẫn cho toàn bộ trang web
-      Cookies.set("first_banner", data[0], { expires: 7, path: '/' });
+    setter(data); 
+    try {
+      const response = await fetch("/api/settings", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ key, data }),
+      });
+      if (!response.ok) throw new Error("Lỗi lưu DB");
+    } catch (error) {
+      console.error(error);
+      alert("Lỗi: Dữ liệu chưa được lưu vào Database!");
     }
-
-    if (!response.ok) throw new Error("Lỗi lưu DB");
-  } catch (error) {
-    alert("Lỗi lưu dữ liệu!");
-  }
-};
+  };
 
   // --- HÀM UPLOAD ---
   const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>, type: TabType) => {

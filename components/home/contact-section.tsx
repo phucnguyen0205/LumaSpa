@@ -3,6 +3,7 @@
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
+import Link from "next/link"; // Import thêm Link nếu cần quay về trang chủ
 import { MapPin, Phone, Mail, Map as MapIcon } from "lucide-react";
 
 export default function ContactSection() {
@@ -15,7 +16,7 @@ export default function ContactSection() {
 
   return (
     <section
-      className="py-16 bg-[#3d2b1f]" /* Đổi sang nền nâu tối */
+      className="py-16 bg-[#3d2b1f]"
       id="contact"
       itemScope
       itemType="https://schema.org/LocalBusiness"
@@ -26,14 +27,22 @@ export default function ContactSection() {
           {/* LEFT: INFO */}
           <div className="w-full md:w-5/12 space-y-8 flex flex-col">
             
-            <div>
-              <h2
-                className="text-3xl font-serif font-bold text-[#fcfaf7] mb-2 uppercase"
-                itemProp="name"
-              >
-                LUMA SPA
-              </h2>
-              <div className="w-42 h-1 bg-[#CD6839]"></div> {/* Thanh gạch màu đồng */}
+            <div className="space-y-4">
+              {/* THAY THẾ CHỮ BẰNG LOGO TẠI ĐÂY */}
+              <div className="relative w-50 h-20 mb-2"> {/* Chỉnh width/height phù hợp với logo của bạn */}
+                <Image
+                  src="/images/logo.png" 
+                  alt="Luma Spa Logo"
+                  fill
+                  className="object-contain object-left"
+                  priority
+                />
+              </div>
+              
+              {/* Giữ lại tên cho SEO nhưng ẩn đi với người dùng */}
+              <span className="sr-only" itemProp="name">LUMA SPA</span>
+              
+              <div className="w-42 h-1 bg-[#ffffff]"></div>
 
               <meta itemProp="priceRange" content="$$" />
               <meta itemProp="image" content="https://lumaspa.vn/images/spa-branch.jpg" />
@@ -43,21 +52,20 @@ export default function ContactSection() {
               </div>
             </div>
 
-          <div className="space-y-8 text-[#fcfaf7]/80 flex-grow"> {/* Tăng gap giữa các mục từ space-y-6 lên 8 */}
-
+            <div className="space-y-8 text-[#fcfaf7]/80 flex-grow">
               {/* ADDRESS */}
               <div
-                className="flex gap-5" /* Tăng gap giữa icon và chữ */
+                className="flex gap-5"
                 itemProp="address"
                 itemScope
                 itemType="https://schema.org/PostalAddress"
               >
-                <MapPin className="text-[#CC6600] shrink-0" size={28} /> {/* Tăng size icon */}
+                <MapPin className="text-[#CC6600] shrink-0" size={28} />
                 <div>
-                  <p className="font-bold uppercase text-base mb-1 text-[#f3d5b5]"> {/* text-sm -> text-base */}
+                  <p className="font-bold uppercase text-base mb-1 text-[#f3d5b5]">
                     {t("address_label")}
                   </p>
-                  <p className="text-lg leading-relaxed text-[#fcfaf7]" itemProp="streetAddress"> {/* text-sm -> text-lg & làm sáng màu chữ */}
+                  <p className="text-lg leading-relaxed text-[#fcfaf7]" itemProp="streetAddress">
                     {t("address_value")}
                   </p>
                 </div>
@@ -67,12 +75,12 @@ export default function ContactSection() {
               <div className="flex gap-5">
                 <Phone className="text-[#CC6600] shrink-0" size={28} />
                 <div>
-                  <p className="font-bold uppercase text-base mb-1 text-[#f3d5b5]"> {/* text-sm -> text-base */}
+                  <p className="font-bold uppercase text-base mb-1 text-[#f3d5b5]">
                     {t("phone_label")}
                   </p>
                   <a
                     href={`tel:${t("phone_value")}`}
-                    className="text-md font-bold text-[#fcfaf7] hover:text-[#CC6600] transition-colors tracking-tight" /* text-sm -> text-2xl để SĐT thật nổi bật */
+                    className="text-md font-bold text-[#fcfaf7] hover:text-[#CC6600] transition-colors tracking-tight"
                     itemProp="telephone"
                   >
                     {t("phone_value")}
@@ -84,12 +92,12 @@ export default function ContactSection() {
               <div className="flex gap-5">
                 <Mail className="text-[#CC6600] shrink-0" size={28} />
                 <div>
-                  <p className="font-bold uppercase text-base mb-1 text-[#f3d5b5]"> {/* text-sm -> text-base */}
+                  <p className="font-bold uppercase text-base mb-1 text-[#f3d5b5]">
                     {t("email_label")}
                   </p>
                   <a 
                     href={`mailto:${t("email_value")}`}
-                    className="text-lg font-semibold text-[#fcfaf7] hover:text-[#CC6600] transition-colors underline underline-offset-4 decoration-[#8B795E]" /* text-sm -> text-lg */
+                    className="text-lg font-semibold text-[#fcfaf7] hover:text-[#CC6600] transition-colors underline underline-offset-4 decoration-[#8B795E]"
                     itemProp="email"
                   >
                     {t("email_value")}
@@ -123,7 +131,7 @@ export default function ContactSection() {
 
               <iframe
                 title="Vị trí Luma Spa trên bản đồ Đà Nẵng"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.967745319754!2d108.23160771006347!3d16.067163484547834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142182bc828bdcb%3A0xae3e3ccbd687f481!2zMTkwIE5ndXnhu4VuIEPDtG5nIFRy4bupLCBBbiBI4bqjaSwgU8ahbiBUcsOgLCDEkMOgIE7hurVuZyA1OTAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1773061290970!5m2!1svi!2s"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.916867761821!2d108.219803!3d16.059434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDAzJzM0LjAiTiAxMDjCsDEzJzExLjMiRQ!5e0!3m2!1svi!2svn!4v1712345678901!5m2!1svi!2svn" 
                 className="w-full h-full rounded-xl grayscale-[0.3] invert-[0.05] hover:grayscale-0 transition-all duration-700"
                 style={{ border: 0 }}
                 allowFullScreen

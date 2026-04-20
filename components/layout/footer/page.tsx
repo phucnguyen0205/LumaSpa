@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image"; // Import component Image của Next.js
 import { useTranslation } from "react-i18next";
 import { useParams } from "next/navigation";
 import {
@@ -20,7 +21,6 @@ export default function Footer() {
 
   const { t } = useTranslation(["common", "footer", "contact"]);
 
-  // Cấu trúc mảng dịch vụ đi kèm slug để link đến trang chi tiết
   const serviceLinks = [
     { slug: "thai-massage-da-nang", label: t("services.massage_thai", { ns: "footer" }) },
     { slug: "hot-stone-massage-da-nang", label: t("services.massage_da_nong", { ns: "footer" }) },
@@ -54,9 +54,16 @@ export default function Footer() {
           <div className="space-y-5">
             <Link
               href={`/${locale}`}
-              className="inline-block text-4xl font-serif font-bold tracking-tight text-[#d48a1f]"
+              className="inline-block"
             >
-              <span itemProp="name">LUMA<span className="text-[#6b3d12]">SPA</span></span>
+              {/* THAY THẾ CHỮ BẰNG LOGO TẠI ĐÂY */}
+              <img 
+                src="/images/logospa.png" 
+                alt="Luma Spa Logo" 
+                className="h-22 w-auto object-contain" // Chỉnh lại h-16 tùy theo kích thước logo của bạn
+                itemProp="logo"
+              />
+              <span className="sr-only" itemProp="name">Luma Spa</span>
             </Link>
 
             <p className="text-xs font-medium uppercase tracking-[0.25em] text-[#9c6b3d]">
@@ -72,6 +79,7 @@ export default function Footer() {
             </p>
           </div>
 
+          {/* CÁC CỘT CÒN LẠI GIỮ NGUYÊN... */}
           {/* CỘT 2: THÔNG TIN + QR */}
           <div className="space-y-4">
             <h4 className="text-lg font-bold uppercase tracking-wider text-[#1d1d1d]">
@@ -97,7 +105,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* CỘT 3: DỊCH VỤ - LINK TỚI TRANG CHI TIẾT */}
+          {/* CỘT 3: DỊCH VỤ */}
           <div className="space-y-4">
             <h4 className="text-lg font-bold uppercase tracking-wider text-[#1d1d1d]">
               {t("services_title", { ns: "footer" })}

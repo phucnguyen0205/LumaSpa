@@ -40,9 +40,9 @@ const CommitmentSection = () => {
         
         {/* --- TIÊU ĐỀ CAM KẾT (Dùng key từ JSON) --- */}
         <div className="text-center mb-20 space-y-4">
-          <h2 className="text-[#b08b57] text-sm font-bold tracking-[0.5em] uppercase">
-            {t("commitments.label")}
-          </h2>
+        <h2 className="text-[#b08b57] text-2xl md:text-3xl font-extrabold tracking-[0.2em] uppercase">
+          {t("commitments.label")}
+        </h2>
           <div className="flex justify-center items-center gap-4">
             <div className="h-[1px] w-12 bg-[#b08b57]/40"></div>
             <div className="w-2 h-2 rounded-full border border-[#b08b57]"></div>

@@ -27,7 +27,7 @@ export default function FloatingContact() {
     <img
       src="/images/iconkakaotalk.png"
       alt="KakaoTalk"
-      className="w-10 h-10 object-contain scale-140" // scale-110 giúp icon to tràn viền một chút
+      className="w-10 h-40 object-contain scale-150" // scale-110 giúp icon to tràn viền một chút
     />
   ),
   link: "https://open.kakao.com/o/s7X66X6g", // Đã cập nhật link của bạn

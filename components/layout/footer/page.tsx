@@ -169,7 +169,7 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* SOCIAL ICONS */}
+            {/* SOCIAL ICONS - UPDATED WITH INSTAGRAM LINK */}
             <div className="flex items-center gap-4">
               <Link
                 href="https://www.facebook.com/profile.php?id=61576220537133"
@@ -181,14 +181,18 @@ export default function Footer() {
                 <Facebook size={20} className="text-[#a85a11] group-hover:text-white transition-colors" strokeWidth={1.5} />
               </Link>
               <Link
-                href="#"
+                href="https://www.instagram.com/lumaspa.dn/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group flex h-9 w-9 items-center justify-center rounded-full border border-[#a85a11] transition-all hover:bg-[#a85a11]"
                 aria-label="Instagram"
               >
                 <Instagram size={20} className="text-[#a85a11] group-hover:text-white transition-colors" strokeWidth={1.5} />
               </Link>
               <Link
-                href="#"
+                href="https://www.youtube.com/@LumaSpaDaNang"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group flex h-9 w-9 items-center justify-center rounded-full border border-[#a85a11] transition-all hover:bg-[#a85a11]"
                 aria-label="Youtube"
               >

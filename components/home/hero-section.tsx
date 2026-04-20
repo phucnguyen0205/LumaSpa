@@ -2,25 +2,31 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import ContactModal from "./contact-modal";
+import Cookies from "js-cookie"; // Đảm bảo bạn đã cài: pnpm add js-cookie @types/js-cookie
 
 export default function HeroSection() {
   const { t } = useTranslation("home");
   const [isContactOpen, setIsContactOpen] = useState(false);
   
-  // Giữ ảnh mặc định để trang web không bị trắng trong lúc chờ load database
-  const [banners, setBanners] = useState<string[]>(["/images/hero-banner.jpg"]);
+  // CHIẾN THUẬT COOKIE:
+  // Lấy link ảnh đã lưu từ lần truy cập trước. Nếu chưa có, dùng ảnh local mặc định.
+  const [banners, setBanners] = useState<string[]>(() => {
+    const savedBanner = Cookies.get("luma_first_banner");
+    return savedBanner ? [savedBanner] : ["/images/hero-banner.jpg"];
+  });
+  
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const loadBannersFromDB = async () => {
       try {
-        // Gọi API để lấy dữ liệu thật từ MongoDB
         const res = await fetch("/api/settings?key=luma_banners");
         if (res.ok) {
           const data = await res.json();
-          // Nếu database có ảnh thì mới cập nhật, không thì dùng ảnh mặc định
           if (Array.isArray(data) && data.length > 0) {
             setBanners(data);
+            // Lưu lại tấm ảnh đầu tiên vào Cookie để lần sau vào web là thấy ngay
+            Cookies.set("luma_first_banner", data[0], { expires: 7, path: "/" });
           }
         }
       } catch (e) {
@@ -30,13 +36,15 @@ export default function HeroSection() {
 
     loadBannersFromDB();
   }, []);
-useEffect(() => {
+
+  useEffect(() => {
     if (banners.length <= 1) return;
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % banners.length);
     }, 5000);
     return () => clearInterval(interval);
   }, [banners]);
+
   return (
     <section className="relative h-[100vh] w-full flex items-center justify-center overflow-hidden bg-stone-100">
       {/* Background Banners */}
@@ -51,6 +59,7 @@ useEffect(() => {
             src={src}
             alt={`Luma Spa Banner ${index + 1}`}
             className="w-full h-full object-cover brightness-[0.75]"
+            // Tấm đầu tiên (index 0) luôn để eager để trình duyệt tải ngay lập tức
             loading={index === 0 ? "eager" : "lazy"} 
           />
         </div>

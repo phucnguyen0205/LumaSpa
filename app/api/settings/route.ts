@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { connectDB } from "@/lib/mongodb";
-import { Setting } from "@/models/Setting";
+import { Setting } from "@/app/models/Setting";
 
 // API Lấy dữ liệu (Dùng cho cả Admin và Trang chủ)
 export async function GET(request: Request) {

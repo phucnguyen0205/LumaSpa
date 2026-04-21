@@ -11,6 +11,8 @@ export function middleware(request: NextRequest) {
   if (
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
+    pathname === "/sitemap.xml" || // Thêm dòng này
+    pathname === "/robots.txt" ||
     PUBLIC_FILE.test(pathname)
   ) {
     return NextResponse.next();
@@ -73,5 +75,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)"],
 };

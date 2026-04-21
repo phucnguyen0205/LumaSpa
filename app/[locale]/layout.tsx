@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import FloatingContact from "@/components/home/floating-contact";
+import "flag-icons/css/flag-icons.min.css";
 
 interface Props {
   children: React.ReactNode;

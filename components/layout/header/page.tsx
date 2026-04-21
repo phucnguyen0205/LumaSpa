@@ -9,10 +9,10 @@ import { useRouter, usePathname, useParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
 const languages = [
-  { code: "vi", label: "Tiếng Việt", flag: "🇻🇳" },
-  { code: "en", label: "English", flag: "🇺🇸" },
-  { code: "zh", label: "中文", flag: "🇨🇳" },
-  { code: "ko", label: "한국어", flag: "🇰🇷" },
+  { code: "vi", label: "Tiếng Việt", flagClass: "fi-vn" },
+  { code: "en", label: "English", flagClass: "fi-us" },
+  { code: "zh", label: "中文", flagClass: "fi-cn" },
+  { code: "ko", label: "한국어", flagClass: "fi-kr" },
 ];
 
 const SERVICES_LIST = [
@@ -124,7 +124,7 @@ export default function Header() {
               <div className="absolute right-0 top-full hidden group-hover:block bg-white shadow-xl rounded-md border border-stone-100 min-w-[170px] font-serif overflow-hidden">
                 {languages.map((lang) => (
                   <button key={lang.code} onClick={() => changeLanguage(lang.code.toLowerCase())} className={`flex items-center gap-3 px-5 py-3 text-xs w-full text-left font-bold transition hover:bg-stone-50 ${locale === lang.code.toLowerCase() ? "text-[#d48a1f] bg-stone-50" : "text-stone-700"}`}>
-                    <span className="text-lg">{lang.flag}</span> {lang.label}
+                    <span className={`fi ${lang.flagClass} text-lg`}></span> {lang.label}
                   </button>
                 ))}
               </div>
@@ -157,7 +157,7 @@ export default function Header() {
                     locale === lang.code.toLowerCase() ? "text-[#d48a1f] border-[#d48a1f] bg-[#d48a1f]/5" : "text-stone-400 border-stone-100"
                   }`}
                 >
-                  <span className="text-base">{lang.flag}</span>
+                    <span className={`fi ${lang.flagClass} text-lg`}></span>
                   <span>{lang.code.toUpperCase()}</span>
                 </button>
               ))}

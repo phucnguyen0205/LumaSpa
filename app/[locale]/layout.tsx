@@ -27,8 +27,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 
   return {
-    title: titles[locale] || titles.vi,
-    description: descriptions[locale] || descriptions.vi,
+    title: titles[locale] || titles.en,
+    description: descriptions[locale] || descriptions.en,
     icons: {
       icon: "/favicon.ico", // Đảm bảo bạn có file này trong folder public
     },

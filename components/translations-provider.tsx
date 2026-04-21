@@ -24,15 +24,13 @@ export default function TranslationsProvider({
       .use(
         resourcesToBackend(
           (language: string, namespace: string) =>
-            // Nếu file này nằm trong src/components/providers/
-            // Ta dùng ../../../ để ra thư mục gốc
             import(`@/locales/${language}/${namespace}.json`)
         )
       )
       .init({
         lng: locale,
         resources, 
-        fallbackLng: 'vi',
+        fallbackLng: 'en', // Đổi từ 'vi' thành 'en'
         supportedLngs: ['vi', 'en', 'zh', 'ko'],
         ns: namespaces,
         defaultNS: namespaces[0],
@@ -46,6 +44,7 @@ export default function TranslationsProvider({
       .find(row => row.startsWith('NEXT_LOCALE='))
       ?.split('=')[1];
 
+    // Nếu cookie có ngôn ngữ hợp lệ, cập nhật instance i18n
     if (savedLanguage && i18n.language !== savedLanguage) {
       i18n.changeLanguage(savedLanguage);
     }

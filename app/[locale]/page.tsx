@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: Props) {
         "en-US": "https://lumaspa.com.vn/en",
         "zh-CN": "https://lumaspa.com.vn/zh",
         "ko-KR": "https://lumaspa.com.vn/ko",
-        "x-default": "https://lumaspa.com.vn/vi",
+        "x-default": "https://lumaspa.com.vn/en",
       },
     },
     openGraph: {

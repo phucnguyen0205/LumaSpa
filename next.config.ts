@@ -4,15 +4,19 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 
 const nextConfig: NextConfig = {
+  // ❌ XÓA HOẶC COMMENT ĐOẠN REDIRECTS NÀY
+  // Vì nó ghi đè và làm mất tác dụng của Middleware khi xử lý Cookie
+  /*
   async redirects() {
     return [
       {
         source: '/',
-        destination: '/vi',
-        permanent: true, // SEO sẽ tốt hơn vì xác định /vi là trang chủ chính
+        destination: '/en',
+        permanent: true,
       },
     ];
   },
+  */
 
   transpilePackages: ["swiper"],
 

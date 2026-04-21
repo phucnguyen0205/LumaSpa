@@ -5,7 +5,7 @@ import resourcesToBackend from 'i18next-resources-to-backend';
 // Cấu hình các ngôn ngữ hỗ trợ
 export const i18nConfig = {
   locales: ['vi', 'en', 'zh', 'ko'],
-  defaultLocale: 'vi',
+  defaultLocale: 'en',
 };
 
 export async function initTranslations(locale: string, namespaces: string[]) {

@@ -1,21 +1,36 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Giả sử bạn có danh sách dịch vụ
-  // const services = await getServices(); 
+  const baseUrl = "https://lumaspa.com.vn";
+  const locales = ["vi", "en", "zh", "ko"];
+  
+  const pages = ["/about", "/contact", "/news", "/services"];
 
-  return [
-    {
-      url: 'https://lumaspa.com.vn',
+  const sitemapEntries: MetadataRoute.Sitemap = [];
+  sitemapEntries.push({
+    url: baseUrl,
+    lastModified: new Date(),
+    changeFrequency: "daily",
+    priority: 1.0,
+  });
+
+  // 2. Tạo link cho từng ngôn ngữ
+  locales.forEach((locale) => {
+    sitemapEntries.push({
+      url: `${baseUrl}/${locale}`,
       lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 1,
-    },
-    {
-      url: 'https://lumaspa.com.vn/services',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-  ]
+      changeFrequency: "daily",
+      priority: 1.0,
+    });
+    pages.forEach((page) => {
+      sitemapEntries.push({
+        url: `${baseUrl}/${locale}${page}`,
+        lastModified: new Date(),
+        changeFrequency: "weekly",
+        priority: 0.8,
+      });
+    });
+  });
+
+  return sitemapEntries;
 }

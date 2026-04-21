@@ -50,15 +50,13 @@ export default function HeroSection() {
             index === currentIndex ? "opacity-100" : "opacity-0"
           }`}
         >
-          <img
-            src={src}
-            alt={`Luma Spa Banner ${index + 1}`}
-            className="w-full h-full object-cover brightness-[0.75]"
-            // 4. Ưu tiên load ảnh đầu tiên (thường là ảnh mặc định) cực nhanh
-            loading={index === 0 ? "eager" : "lazy"} 
-            // 5. Đảm bảo ảnh chiếm hết không gian từ đầu
-            style={{ position: 'absolute', top: 0, left: 0 }}
-          />
+         <img
+  src={src}
+  alt={index === 0 ? "Luma Spa - Không gian thư giãn đẳng cấp tại Đà Nẵng" : `Dịch vụ massage trị liệu Luma Spa ${index}`}
+  className="w-full h-full object-cover brightness-[0.75]"
+  loading={index === 0 ? "eager" : "lazy"} 
+  style={{ position: 'absolute', top: 0, left: 0 }}
+/>
         </div>
       ))}
 

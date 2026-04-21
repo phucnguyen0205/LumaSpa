@@ -11,25 +11,42 @@ interface Props {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }
-
-export default async function RootLayout({ children, params }: Props) {
-  // ✅ 1. Bắt buộc phải await params trước khi truy cập locale (Next.js 15 quy định)
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  
+  // Bạn có thể tùy chỉnh tiêu đề theo ngôn ngữ ở đây
+  const titles: Record<string, string> = {
+    vi: "Luma Spa - Massage Body & Foot Trị Liệu Chuyên Sâu tại Đà Nẵng",
+    en: "Luma Spa - Professional Body & Foot Massage in Da Nang",
+  };
 
-  // ✅ 2. Kiểm tra locale hợp lệ ngay lập tức
+  const descriptions: Record<string, string> = {
+    vi: "Chào mừng đến với Luma Spa. Nơi tâm hồn và cơ thể tìm thấy sự giao thoa nhẹ nhàng giữa không gian tinh tế và kỹ thuật trị liệu chuyên sâu.",
+    en: "Welcome to Luma Spa. A sanctuary for body and soul with professional therapeutic techniques.",
+  };
+
+  return {
+    title: titles[locale] || titles.vi,
+    description: descriptions[locale] || descriptions.vi,
+    icons: {
+      icon: "/favicon.ico", // Đảm bảo bạn có file này trong folder public
+    },
+    openGraph: {
+      images: ['/images/interior.png'], 
+    },
+  };
+}
+export default async function RootLayout({ children, params }: Props) {
+  const { locale } = await params;
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
-
-  // ✅ 3. Load dữ liệu ngôn ngữ song song để tối ưu tốc độ (Tránh Waterfall)
   const namespaces = ['common', 'header', 'footer', 'services', 'contact', 'home', 'about', 'review'];
   
   const [messages, { resources }] = await Promise.all([
     getMessages({ locale }),
     initTranslations(locale, namespaces)
   ]);
-
-  // ✅ 4. Schema SEO (Cập nhật chuẩn địa chỉ Luma Spa)
   const schema = {
     "@context": "https://schema.org",
     "@type": "Spa",

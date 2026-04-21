@@ -11,31 +11,122 @@ interface Props {
 
 const DOMAIN = "https://lumaspa.com.vn";
 
+/**
+ * 🔥 METADATA SEO (BLOG = KÉO TRAFFIC)
+ */
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "news" });
+
+  const seoMap: any = {
+    vi: {
+      title: "Blog Spa Đà Nẵng | Kinh nghiệm massage & chăm sóc da | Luma Spa",
+      desc: "Tổng hợp kinh nghiệm chọn spa Đà Nẵng, massage thư giãn, chăm sóc da, review spa uy tín giúp bạn lựa chọn tốt nhất.",
+    },
+    en: {
+      title: "Da Nang Spa Blog | Massage & Skincare Tips | Luma Spa",
+      desc: "Explore spa tips, massage guides, and skincare advice in Da Nang.",
+    },
+  };
+
+  const currentSEO = seoMap[locale] || seoMap["vi"];
 
   return {
-    title: t("seo.title"),
-    description: t("seo.description"),
+    title: currentSEO.title,
+    description: currentSEO.desc,
+
+    keywords: [
+      "spa Đà Nẵng",
+      "review spa Đà Nẵng",
+      "massage Đà Nẵng",
+      "kinh nghiệm đi spa",
+      "spa uy tín Đà Nẵng",
+    ],
+
     alternates: {
       canonical: `${DOMAIN}/${locale}/news`,
+      languages: {
+        vi: `${DOMAIN}/vi/news`,
+        en: `${DOMAIN}/en/news`,
+      },
+    },
+
+    openGraph: {
+      title: currentSEO.title,
+      description: currentSEO.desc,
+      url: `${DOMAIN}/${locale}/news`,
+      siteName: "Luma Spa",
+      images: [
+        {
+          url: `${DOMAIN}/images/blog-og.jpg`,
+          width: 1200,
+          height: 630,
+        },
+      ],
+      type: "website",
     },
   };
 }
 
+/**
+ * 🔥 PAGE
+ */
 export default async function NewsPage({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "news" });
+
   const filteredPosts = posts.filter((post) => post.locale === locale);
+
+  /**
+   * 🔥 BLOG SCHEMA
+   */
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Blog Spa Đà Nẵng - Luma Spa",
+    "url": `${DOMAIN}/${locale}/news`,
+    "description": "Chia sẻ kinh nghiệm spa, massage, chăm sóc da tại Đà Nẵng",
+  };
+
+  /**
+   * 🔥 LIST ARTICLE SCHEMA
+   */
+  const articleListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": filteredPosts.map((post, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "Article",
+        headline: post.title,
+        image: post.image,
+        url: `${DOMAIN}/${locale}/news/${post.slug}`,
+      },
+    })),
+  };
 
   return (
     <>
       <Header />
+
       <main className="min-h-screen pt-32 pb-16 bg-[#3d2b1f]">
+        
+        {/* 🔥 SCHEMA */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleListSchema) }} />
+
         <section className="container mx-auto px-4">
-          
-          {/* Header section - Đã giảm cỡ chữ title từ 3xl xuống 2xl */}
+
+          {/* 🔥 SEO CONTENT (ẨN - GOOGLE ĐỌC) */}
+          <section className="hidden">
+            <h1>Spa Đà Nẵng - Blog chia sẻ kinh nghiệm</h1>
+            <p>
+              Blog Luma Spa chia sẻ kinh nghiệm chọn spa Đà Nẵng uy tín, review massage thư giãn,
+              chăm sóc da và các dịch vụ làm đẹp giúp bạn tìm được địa chỉ phù hợp nhất.
+            </p>
+          </section>
+
+          {/* HEADER */}
           <div className="flex items-center gap-3 mb-12 border-b border-[#fcfaf7]/10 pb-6">
             <div className="bg-[#d48a1f] p-2 rounded-lg text-[#fcfaf7] text-sm">📸</div>
             <div>
@@ -46,6 +137,7 @@ export default async function NewsPage({ params }: Props) {
             </div>
           </div>
 
+          {/* LIST POST */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             {filteredPosts.map((post) => (
               <Link 
@@ -56,24 +148,25 @@ export default async function NewsPage({ params }: Props) {
                 <div className="overflow-hidden aspect-[16/9]">
                   <img 
                     src={post.image} 
-                    alt={post.title} 
+                    alt={`${post.title} - spa Đà Nẵng`} // 🔥 thêm keyword vào alt
                     className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
                   />
                 </div>
                 
-                {/* Content card - Đã giảm các cỡ chữ bên trong */}
                 <div className="p-6 md:p-8 flex flex-col flex-grow">
                   <span className="text-[#d48a1f] text-[10px] font-bold tracking-widest uppercase mb-3 block">
                     {post.date}
                   </span>
-                  {/* Giảm tiêu đề từ 2xl xuống xl */}
+
                   <h3 className="text-lg md:text-xl font-serif font-bold text-[#3d2b1f] mb-3 group-hover:text-[#d48a1f] transition-colors line-clamp-2 leading-snug">
                     {post.title}
                   </h3>
-                  {/* Giảm text mô tả từ base xuống sm */}
+
                   <p className="text-stone-600 text-sm line-clamp-3 leading-relaxed mb-6 flex-grow">
                     {post.description}
                   </p>
+
+                  {/* 🔥 INTERNAL LINK */}
                   <div className="mt-auto flex items-center text-[11px] font-bold text-[#3d2b1f] uppercase tracking-wider group-hover:gap-3 transition-all">
                     <span className="border-b border-[#d48a1f] pb-1">
                        {t("readMore")}
@@ -85,14 +178,17 @@ export default async function NewsPage({ params }: Props) {
             ))}
           </div>
 
-          {/* Button Xem thêm - Giảm padding và text size */}
+          {/* CTA */}
           <div className="flex justify-center mt-16">
-            <button className="bg-transparent border border-[#fcfaf7]/30 hover:border-[#d48a1f] hover:bg-[#d48a1f] text-[#fcfaf7] px-8 py-3 rounded-full flex items-center gap-3 text-xs font-bold transition-all duration-300 uppercase tracking-widest">
-              {t("seeMore")}
-            </button>
+            <Link href={`/${locale}/services`}>
+              <button className="bg-[#d48a1f] text-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest">
+                Xem dịch vụ spa Đà Nẵng
+              </button>
+            </Link>
           </div>
         </section>
       </main>
+
       <Footer />
     </>
   );

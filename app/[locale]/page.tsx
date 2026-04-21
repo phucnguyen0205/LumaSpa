@@ -21,22 +21,40 @@ export async function generateMetadata({ params }: Props) {
   const { locale } = params;
 
   const titleMap: Record<string, string> = {
-    vi: "Luma Spa Đà Nẵng | Massage & Spa cao cấp",
-    en: "Luma Spa Da Nang | Premium Massage & Spa",
-    zh: "岘港 Luma Spa | 高端按摩",
-    ko: "다낭 루마 스파 | 프리미엄 마사지",
-  };
+   vi: "Top Spa Đà Nẵng 2026 | Massage thư giãn & chăm sóc da tốt nhất | Luma Spa",
+    en: "Best Spa in Da Nang 2026 | Relaxing Massage & Skincare | Luma Spa",
+    ko: "다낭 스파 추천 2026 | 마사지 & 피부관리 | 루마 스파",
+    zh: "岘港最佳水疗 2026 | 按摩与护肤 | Luma Spa",
+      };
 
   const descriptionMap: Record<string, string> = {
-    vi: "Trải nghiệm spa cao cấp tại Luma Spa Đà Nẵng.",
-    en: "Experience premium spa services in Da Nang.",
-    zh: "体验高端水疗服务。",
-    ko: "프리미엄 스파 경험",
+    vi: "Tìm kiếm top spa Đà Nẵng? Luma Spa cung cấp massage body, foot, chăm sóc da cao cấp ⭐ Không gian sang trọng – Giá tốt – Đặt lịch ngay hôm nay!",
+en: "Looking for the best spa in Da Nang? Enjoy relaxing massage, skincare & premium service at Luma Spa. Book now!",
+ko: "다낭 최고의 스파를 찾고 계신가요? 루마 스파에서 프리미엄 마사지와 피부 관리를 경험하세요.",
+zh: "寻找岘港最好的水疗中心？在 Luma Spa 体验专业按摩与护肤服务。",
   };
 
   return {
     title: titleMap[locale],
     description: descriptionMap[locale],
+    keywords: [
+  "top spa Đà Nẵng",
+  "best spa Đà Nẵng",
+  "spa Đà Nẵng",
+  "spa tốt nhất Đà Nẵng",
+  "massage Đà Nẵng",
+  "spa uy tín Đà Nẵng",
+  "spa chăm sóc da Đà Nẵng",
+  "massage body Đà Nẵng",
+  "massage foot Đà Nẵng",
+  "spa Đà Nẵng cho khách du lịch",
+  "spa Đà Nẵng gần biển",
+  "massage thư giãn sau du lịch Đà Nẵng",
+  "địa chỉ spa uy tín ở Đà Nẵng",
+  "best spa in Da Nang",
+  "Da Nang massage",
+  "relaxing spa Da Nang",
+],
     alternates: {
       canonical: `https://lumaspa.com.vn/${locale}`,
       languages: {
@@ -93,7 +111,56 @@ export default async function HomePage({ params }: Props) {
       }
     ]
   };
-
+const ratingSchema = {
+  "@context": "https://schema.org",
+  "@type": "DaySpa",
+  name: "Luma Spa Đà Nẵng",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "1500",
+  },
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Trang chủ",
+      item: "https://lumaspa.com.vn",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Spa Đà Nẵng",
+      item: `https://lumaspa.com.vn/${locale}`,
+    },
+  ],
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Spa Đà Nẵng nào tốt nhất?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Luma Spa là một trong những spa Đà Nẵng được đánh giá cao với dịch vụ massage và chăm sóc da chuyên nghiệp.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Massage Đà Nẵng giá bao nhiêu?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Giá massage tại Đà Nẵng dao động từ 200.000đ đến 1.000.000đ tùy dịch vụ.",
+      },
+    },
+  ],
+};
   return (
     <TranslationsProvider locale={locale} namespaces={namespaces} resources={resources}>
       {/* Thêm JSON-LD vào đầu trang */}
@@ -101,7 +168,34 @@ export default async function HomePage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ratingSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+<section className="hidden">
+  <h1>Top Spa Đà Nẵng – Luma Spa massage & chăm sóc da cao cấp</h1>
+
+  <h2>Best spa Đà Nẵng cho khách du lịch</h2>
+  <p>
+    Luma Spa là một trong những top spa Đà Nẵng được khách hàng đánh giá cao với
+    dịch vụ massage thư giãn, chăm sóc da và trị liệu chuyên sâu. Không gian sang
+    trọng, kỹ thuật viên chuyên nghiệp giúp bạn thư giãn hoàn toàn.
+  </p>
+
+  <h2>Dịch vụ massage Đà Nẵng nổi bật</h2>
+  <p>
+    Tại Luma Spa, bạn có thể trải nghiệm massage body, massage foot và các liệu trình
+    chăm sóc da cao cấp giúp phục hồi năng lượng sau khi du lịch Đà Nẵng.
+  </p>
+</section>
       <main className="min-h-screen flex flex-col">
         <Header />
         <HeroSection />

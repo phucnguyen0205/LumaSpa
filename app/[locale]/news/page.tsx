@@ -26,6 +26,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: "Da Nang Spa Blog | Massage & Skincare Tips | Luma Spa",
       desc: "Explore spa tips, massage guides, and skincare advice in Da Nang.",
     },
+    ko: {
+      title: "다낭 스파 블로그 | 마사지 & 스킨케어 팁 | Luma Spa",
+      desc: "다낭의 스파 팁, 마사지 가이드, 스킨케어 조언을 탐색하세요.",
+    },
+    zh: {
+      title: "岘港 Spa 博客 | 按摩 & 护肤技巧 | Luma Spa",
+      desc: "探索岘港的 Spa 小贴士、按摩指南和护肤建议。",
+    }
   };
 
   const currentSEO = seoMap[locale] || seoMap["vi"];
@@ -35,12 +43,35 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: currentSEO.desc,
 
     keywords: [
-      "spa Đà Nẵng",
-      "review spa Đà Nẵng",
-      "massage Đà Nẵng",
-      "kinh nghiệm đi spa",
-      "spa uy tín Đà Nẵng",
-    ],
+  "top spa Đà Nẵng",
+  "best spa Đà Nẵng",
+  "spa Đà Nẵng",
+  "spa nổi tiếng Đà Nẵng",
+  "spa tốt nhất Đà Nẵng",
+  "spa uy tín Đà Nẵng",
+  "review spa Đà Nẵng",
+  "massage Đà Nẵng",
+  "massage body Đà Nẵng",
+  "massage foot Đà Nẵng",
+  "spa chăm sóc da Đà Nẵng",
+  "spa thư giãn Đà Nẵng",
+  "spa cao cấp Đà Nẵng",
+  "spa Đà Nẵng giá rẻ",
+  "spa Đà Nẵng gần biển",
+  "spa Đà Nẵng gần trung tâm",
+  "spa Đà Nẵng cho khách du lịch",
+  "massage thư giãn sau khi du lịch Đà Nẵng",
+  "spa phục hồi năng lượng Đà Nẵng",
+  "spa Đà Nẵng mở khuya",
+  "địa chỉ spa uy tín ở Đà Nẵng",
+  "kinh nghiệm đi spa Đà Nẵng",
+  "nên đi spa nào ở Đà Nẵng",
+  "best spa in Da Nang",
+  "Da Nang massage service",
+  "Da Nang spa review",
+  "relaxing massage Da Nang",
+  "body massage Da Nang",
+],
 
     alternates: {
       canonical: `${DOMAIN}/${locale}/news`,

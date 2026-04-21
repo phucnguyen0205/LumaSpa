@@ -19,11 +19,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const titles: Record<string, string> = {
     vi: "Luma Spa - Massage Body & Foot Trị Liệu Chuyên Sâu tại Đà Nẵng",
     en: "Luma Spa - Professional Body & Foot Massage in Da Nang",
+    ko: "Luma Spa - 다낭 전문 바디 & 풋 마사지",
+    zh: "Luma Spa - 岘港专业身体和足部按摩",
   };
 
   const descriptions: Record<string, string> = {
     vi: "Chào mừng đến với Luma Spa. Nơi tâm hồn và cơ thể tìm thấy sự giao thoa nhẹ nhàng giữa không gian tinh tế và kỹ thuật trị liệu chuyên sâu.",
     en: "Welcome to Luma Spa. A sanctuary for body and soul with professional therapeutic techniques.",
+    ko: "Luma Spa에 오신 것을 환영합니다. 전문 치료 기술과 함께 몸과 마음을 위한 안식처입니다.",
+    zh: "欢迎来到Luma Spa。身体和心灵的避风港，提供专业的治疗技术。",
   };
 
   return {

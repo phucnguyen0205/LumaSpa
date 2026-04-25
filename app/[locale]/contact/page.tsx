@@ -7,32 +7,75 @@ import ContactClient from "./contact-client";
 type Props = {
   params: Promise<{ locale: string }>;
 };
-
-// 1. Metadata chuẩn SEO đa ngôn ngữ
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "contact" });
 
   return {
-    title: `${t("seo.meta_title")} | Luma Spa Da Nang`,
-    description: t("seo.meta_desc"),
+    title: `${t("seo.meta_title")} | Top Spa Đà Nẵng | Best Spa Da Nang | 다낭 스파 | 岘港水疗`,
+    
+    description:
+      t("seo.meta_desc") ||
+      "Luma Spa - top spa Đà Nẵng cung cấp foot & body massage, trị liệu thư giãn. Best spa in Da Nang for relaxing massage. 다낭 최고의 스파, 岘港最佳水疗体验.",
+
+    keywords: [
+      // 🇻🇳
+      "spa Đà Nẵng",
+      "top spa Đà Nẵng",
+      "spa gần đây",
+      "massage Đà Nẵng",
+      "foot massage",
+      "body massage",
+      "trị liệu thư giãn",
+
+      // 🇺🇸
+      "best spa Da Nang",
+      "top spa in Da Nang",
+      "Da Nang spa near me",
+      "massage Da Nang",
+      "foot and body massage",
+      "wellness spa Da Nang",
+
+      // 🇰🇷
+      "다낭 스파",
+      "다낭 마사지",
+      "다낭 최고의 스파",
+      "다낭 근처 스파",
+      "다낭 힐링 마사지",
+
+      // 🇨🇳
+      "岘港水疗",
+      "岘港按摩",
+      "岘港最佳水疗",
+      "岘港附近水疗",
+      "岘港养生水疗",
+    ],
+
     openGraph: {
-      title: t("seo.meta_title"),
-      description: t("seo.meta_desc"),
+      title:
+        "Top Spa Đà Nẵng | Best Spa Da Nang | 다낭 스파 | 岘港水疗 - Luma Spa",
+      description:
+        "Trải nghiệm spa Đà Nẵng với foot & body massage, trị liệu chuyên sâu. Best spa in Da Nang. 다낭 최고의 스파, 岘港最佳水疗.",
       url: `https://lumaspa.com.vn/${locale}/contact`,
       siteName: "Luma Spa",
       images: [{ url: "/images/og-contact.jpg" }],
       locale: locale,
       type: "website",
     },
+
     alternates: {
       canonical: `https://lumaspa.com.vn/${locale}/contact`,
       languages: {
-        'vi-VN': 'https://lumaspa.com.vn/vi/contact',
-        'en-US': 'https://lumaspa.com.vn/en/contact',
-        'ko-KR': 'https://lumaspa.com.vn/ko/contact',
-        'zh-CN': 'https://lumaspa.com.vn/zh/contact',
+        "vi-VN": "https://lumaspa.com.vn/vi/contact",
+        "en-US": "https://lumaspa.com.vn/en/contact",
+        "ko-KR": "https://lumaspa.com.vn/ko/contact",
+        "zh-CN": "https://lumaspa.com.vn/zh/contact",
       },
+    },
+
+    robots: {
+      index: true,
+      follow: true,
     },
   };
 }

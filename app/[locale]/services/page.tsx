@@ -43,33 +43,47 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: currentSEO.title,
     description: currentSEO.desc,
-
-    keywords: [
-  "top spa Đà Nẵng",
-  "best spa Đà Nẵng",
+keywords: [
+  // 🇻🇳 Core 
   "spa Đà Nẵng",
-  "spa tốt nhất Đà Nẵng",
-  "spa nổi tiếng Đà Nẵng",
-  "spa uy tín Đà Nẵng",
-  "review spa Đà Nẵng",
+  "top spa Đà Nẵng",
   "massage Đà Nẵng",
   "massage body Đà Nẵng",
   "massage foot Đà Nẵng",
-  "spa chăm sóc da Đà Nẵng",
   "spa thư giãn Đà Nẵng",
-  "spa cao cấp Đà Nẵng",
-  "spa Đà Nẵng giá rẻ",
+  "spa uy tín Đà Nẵng",
   "spa Đà Nẵng gần biển",
   "spa Đà Nẵng cho khách du lịch",
-  "massage thư giãn sau khi du lịch Đà Nẵng",
-  "địa chỉ spa uy tín ở Đà Nẵng",
-  "kinh nghiệm đi spa Đà Nẵng",
-  "best spa in Da Nang",
-  "Da Nang massage service",
-  "relaxing massage Da Nang",
-  "body massage Da Nang",
-],
 
+  // 🇻🇳 Intent 
+  "spa gần đây",
+  "massage gần đây",
+  "địa chỉ spa uy tín ở Đà Nẵng",
+  "nên đi spa nào ở Đà Nẵng",
+
+  // 🇺🇸 English
+  "best spa in Da Nang",
+  "top spa in Da Nang",
+  "Da Nang spa near me",
+  "massage Da Nang",
+  "body massage Da Nang",
+  "relaxing massage Da Nang",
+  "wellness spa Da Nang",
+
+  // 🇰🇷 Korean 
+  "다낭 스파",
+  "다낭 마사지",
+  "다낭 최고의 스파",
+  "다낭 근처 마사지",
+  "다낭 힐링 마사지",
+
+  // 🇨🇳 Chinese
+  "岘港水疗",
+  "岘港按摩",
+  "岘港最佳水疗",
+  "岘港附近按摩",
+  "岘港放松按摩",
+],
     alternates: {
       canonical: `https://lumaspa.com.vn/${locale}/services`,
       languages: {

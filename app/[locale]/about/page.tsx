@@ -15,17 +15,69 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "about" });
 
   return {
-    title: t("seo.title") || "Về Luma Spa",
-    description: t("seo.description"),
-    alternates: {
-      canonical: `${DOMAIN}/${locale}/about`,
-    },
-    openGraph: {
-      title: t("seo.title"),
-      description: t("seo.description"),
-      images: [`${DOMAIN}/images/og-about.jpg`],
-    },
-  };
+  title: t("seo.title") || "Top Spa Đà Nẵng | Luma Spa - Foot & Body Massage",
+  description:
+    t("seo.description") ||
+    "Luma Spa - top spa Đà Nẵng chuyên trị liệu, foot & body massage, spa gần đây uy tín, thư giãn và phục hồi năng lượng.",
+  
+  keywords: [
+  // 🇻🇳 Vietnamese
+  "spa Đà Nẵng",
+  "top spa Đà Nẵng",
+  "spa gần đây",
+  "massage Đà Nẵng",
+  "foot massage",
+  "body massage",
+  "foot & body massage",
+  "trị liệu thư giãn",
+  "spa uy tín Đà Nẵng",
+  "massage gần đây",
+
+  // 🇺🇸 English
+  "best spa Da Nang",
+  "top spa in Da Nang",
+  "Da Nang spa near me",
+  "massage Da Nang",
+  "foot massage Da Nang",
+  "body massage Da Nang",
+  "foot and body massage",
+  "wellness spa Da Nang",
+  "relaxing spa treatment",
+  "therapeutic massage Da Nang",
+
+  // 🇰🇷 Korean
+  "다낭 스파",
+  "다낭 마사지",
+  "다낭 최고의 스파",
+  "다낭 근처 스파",
+  "발 마사지 다낭",
+  "바디 마사지 다낭",
+  "다낭 힐링 마사지",
+  "다낭 웰니스 스파",
+
+  // 🇨🇳 Chinese
+  "岘港水疗",
+  "岘港按摩",
+  "岘港最佳水疗",
+  "岘港附近水疗",
+  "足部按摩 岘港",
+  "全身按摩 岘港",
+  "岘港放松按摩",
+  "岘港养生水疗",
+],
+
+  alternates: {
+    canonical: `${DOMAIN}/${locale}/about`,
+  },
+
+  openGraph: {
+    title:
+      "Top Spa Đà Nẵng | Luma Spa - Foot & Body Massage & Trị Liệu",
+    description:
+      "Trải nghiệm top spa Đà Nẵng với dịch vụ foot & body massage, trị liệu chuyên sâu, không gian thư giãn chuẩn quốc tế.",
+    images: [`${DOMAIN}/images/og-about.jpg`],
+  },
+};
 }
 
 export default async function AboutPage({ params }: Props) {

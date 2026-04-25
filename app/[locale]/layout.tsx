@@ -7,6 +7,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import FloatingContact from "@/components/home/floating-contact";
 import "flag-icons/css/flag-icons.min.css";
+import { Analytics } from '@vercel/analytics/react';
 
 interface Props {
   children: React.ReactNode;
@@ -85,6 +86,7 @@ export default async function RootLayout({ children, params }: Props) {
             {/* Thêm thẻ main để cấu trúc HTML chuẩn SEO */}
             <main>
               {children}
+              <Analytics />
             </main>
             
             <FloatingContact />

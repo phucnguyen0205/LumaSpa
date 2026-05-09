@@ -40,9 +40,9 @@ export async function generateMetadata({ params }: Props) {
     title: titleMap[locale],
     description: descriptionMap[locale],
     keywords: [
-      "spa Đà Nẵng", "top spa Đà Nẵng", "massage Đà Nẵng", "spa uy tín Đà Nẵng",
-      "spa thư giãn Đà Nẵng", "spa gần đây", "massage gần đây", "massage near me",
-      "massage body Đà Nẵng", "massage foot Đà Nẵng", "다낭 마사지", "岘港按摩"
+      "spa DaNang", "top spa DaNang", "massage DaNang", "spa uy tín DaNang",
+      "spa thư giãn DaNang", "spa gần đây", "massage gần đây", "massage near me",
+      "massage body DaNang", "massage foot DaNang", "다낭 마사지", "岘港按摩"
     ],
     alternates: {
       canonical: `https://lumaspa.com.vn/${locale}`,
